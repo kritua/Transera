@@ -1,0 +1,82 @@
+
+//Colors
+
+$bg-darkblue: #1d2631;
+$clr-darkblue: #283645;
+
+$clr-white: #ffffff;
+
+$clr-lightgrey: #f2f2f2;
+$clr-lightgrey-1: #eeeeee;
+$clr-lightgrey-2: #e5e5e5;
+$clr-grey: #cccccc;
+$clr-black: #000000;
+
+$no-bg-color: transparent;
+
+$clr-pink: #d22856;
+$clr-red: #f25b26;
+
+$clr-lightgreen: #3dc644;
+$clr-green: #2aab6d;
+$clr-darkgreen: #1c9b5e;
+
+//Margin Padding
+
+$content-padding: 0 20px;
+
+//Media queries
+$mobile-width: 320px;
+$tablet-width: 700px;
+$desktop-width: 1200px;
+$retina-res: "min-resolution: 144dpi";
+$retina-dpi: "min-resolution: 1.5dppx";
+
+//Mixins
+
+@mixin font-regular() {
+  font-family: "OpenSans", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
+}
+
+@mixin font-light() {
+  font-family: "OpenSansLight", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: lighter;
+}
+
+@mixin font-semibold() {
+  font-family: "OpenSans", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+@mixin font-bold() {
+  font-family: "OpenSansBold", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+@mixin adaptive($media) {
+  @if $media == tablet {
+    @media (min-width: $tablet-width) {
+      @content;
+    }
+  }
+  @if $media == desktop {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
+  }
+  @if $media == retina {
+    @media ($retina-res), ($retina-dpi) {
+      @content;
+    }
+  }
+}
+
+@mixin placeholder-style() {
+  @include font-regular();
+  font-size: 18px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  opacity: 1;
+}
+
