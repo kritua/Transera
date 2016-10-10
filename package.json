@@ -6,12 +6,12 @@
   "author": "Никита Брежнев",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/kritua/Transera.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/kritua/Transera/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/kritua/Transera",
   "devDependencies": {
     "autoprefixer": "6.4.1",
     "browser-sync": "2.15.0",
