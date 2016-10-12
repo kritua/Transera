@@ -8,51 +8,48 @@
 </head>
 <body>
 <header class="header header--index header--background header--menu-opened">
-  <div class="main-container">
-    <div class="header__navbar">
-      <div class="header__logo">
-        <div class="header__logo-img">
-          <picture>
-            <source media="(min-width: 700px)" srcset="./img/logo-full.svg">
-            <img src="./img/logo-alone.svg" alt="Pink" width="250">
-          </picture>
-        </div>
-        <div class="header__button-menu">
-          <button class="header__button-burger header__button--hidden" type="button"><img
-            src="./img/icon-menu-burger.svg" width="50" height="24"></button>
-          <button class="header__button-close" type="button"><img src="./img/icon-menu-cross.svg" width="24" height="24"></button>
-        </div>
+	<div class="header__adjust"></div>
+  <div class="header__navbar">
+    <div class="header__logo">
+      <div class="header__logo-img">
+        <picture>
+          <source media="(min-width: 700px)" srcset="./img/logo-full.svg">
+          <img src="./img/logo-alone.svg" alt="Pink">
+        </picture>
       </div>
-      <nav class="header__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item"><a href="#">Главная</a></li>
-          <li class="header__menu-item"><a href="#">Преимущества</a></li>
-          <li class="header__menu-item"><a href="#">Услуги</a></li>
-          <li class="header__menu-item"><a href="#">Как мы работаем</a></li>
-          <li class="header__menu-item"><a href="#">Тарифы</a></li>
-          <li class="header__menu-item"><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="header__button-menu">
+        <button class="header__button header__button-burger header__button--hidden" type="button"><img
+          src="./img/icon-menu-burger.svg" width="50" height="24"></button>
+        <button class="header__button header__button-close" type="button"><img src="./img/icon-menu-cross.svg" width="24" height="24"></button>
+      </div>
     </div>
-    <section class="page-headers">
-      <div class="main-container">
-        <h1 class="page-headers__h1">Серьёзные тёрки</h1>
-        <p class="page-headers__text">Все очень серьёзно</p>
-        <h2 class="page-headers__h2">Нам есть, что вам предложить!</h2>
-        <p class="page-headers__text page-headers__text--small">Полное сопровождение вашей компании по всем вопросам в
-          области маркетинга, рекламы и продвижения в поисковых системах</p>
-        <a href="#" class="standart-button">Get a quote</a>
-      </div>
-    </section>
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item"><a href="#">Главная</a></li>
+        <li class="header__menu-item"><a href="#">Преимущества</a></li>
+        <li class="header__menu-item"><a href="#">Услуги</a></li>
+        <li class="header__menu-item"><a href="#">Как мы работаем</a></li>
+        <li class="header__menu-item"><a href="#">Тарифы</a></li>
+        <li class="header__menu-item"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
   </div>
+	<section class="page-headers">
+		<div class="main-container">
+			<h1 class="page-headers__h1">Trans<span>era</span><br>service</h1>
+			<h2 class="page-headers__h2">Перевозим негабаритные грузы</h2>
+			<p class="page-headers__text">В любую погоду, по дорогам и без них, быстро и надёжно</p>
+			<a href="#" class="standart-button">Отправить заявку</a>
+		</div>
+	</section>
 </header>
 <main>
   <section class="transport-types">
     <div class="main-container">
       <div class="transport-types__wrapper">
         <div class="transport-types__item">
-          <div class="transport-types__image">
-            <img src="http://placehold.it/150x150">
+	        <div class="transport-types__image-block">
+		        <img class="transport-types__image" src="./img/truck.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
             <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
@@ -62,8 +59,8 @@
           </div>
         </div>
         <div class="transport-types__item">
-          <div class="transport-types__image">
-            <img src="http://placehold.it/150x150">
+          <div class="transport-types__image-block">
+	          <img class="transport-types__image" src="./img/train.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
             <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
@@ -73,8 +70,8 @@
           </div>
         </div>
         <div class="transport-types__item">
-          <div class="transport-types__image">
-            <img src="http://placehold.it/150x150">
+	        <div class="transport-types__image-block">
+		        <img class="transport-types__image" src="./img/plane.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
             <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
@@ -84,8 +81,8 @@
           </div>
         </div>
         <div class="transport-types__item">
-          <div class="transport-types__image">
-            <img src="http://placehold.it/150x150">
+	        <div class="transport-types__image-block">
+		        <img class="transport-types__image" src="./img/ship.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
             <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
@@ -133,11 +130,157 @@
           </div>
         </div>
         <div class="about-us__item about-us__item--image">
-
+					<img src="" class="about-us__image">
         </div>
       </div>
     </div>
   </section>
+	<section class="features-slide">
+		<div class="features-slide__item">
+			<h3 class="features-slide__h3">The Real <span>King</span> of Logistic</h3>
+			<a href="#" class="features-slide__button">Оставить заявку</a>
+		</div>
+		<div class="features-slide__item features-slide__item-double-width">
+			<h3 class="features-slide__h3 features-slide__h3--custom">Custom <span>Solution</span> That Fit</h3>
+			<h4 class="features-slide__h4">We offer logistic that just make good business sense</h4>
+			<p class="features-slide__text">Here are a few helpful suggestions that you may take on board, and below you will find a couple of simple tips that can quickly move you in the direction of manifesting your destiny to accomplish many great things in your life.</p>
+		</div>
+	</section>
+	<section class="feature-block">
+		<div class="main-container">
+			<div class="section-headers">
+				<h2 class="feature-block__h2">Feature</h2>
+				<h4 class="feature-block__h4">Our featured skills</h4>
+			</div>
+			<div class="feature-block__items-wrapper">
+				<div class="feature-block__item">
+					<img src="./img/pointer.svg" width="112" height="93">
+					<div class="feature-block__text-block">
+						<h4 class="feature-block__h4">100% Safe Delivery</h4>
+						<p class="feature-block__text">Here are a few helpful suggestions that you may take on board, and below.</p>
+						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
+					</div>
+				</div>
+				<div class="feature-block__item">
+					<img src="./img/pointer.svg" width="112" height="93">
+					<div class="feature-block__text-block">
+						<h4 class="feature-block__h4">100% Safe Delivery</h4>
+						<p class="feature-block__text">Here are a few helpful suggestions that you may take on board, and below.</p>
+						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
+					</div>
+				</div>
+				<div class="feature-block__item">
+					<img src="./img/pointer.svg" width="112" height="93">
+					<div class="feature-block__text-block">
+						<h4 class="feature-block__h4">100% Safe Delivery</h4>
+						<p class="feature-block__text">Here are a few helpful suggestions that you may take on board, and below.</p>
+						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
+					</div>
+				</div>
+				<div class="feature-block__item">
+					<img src="./img/pointer.svg" width="112" height="93">
+					<div class="feature-block__text-block">
+						<h4 class="feature-block__h4">100% Safe Delivery</h4>
+						<p class="feature-block__text">Here are a few helpful suggestions that you may take on board, and below.</p>
+						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
+					</div>
+				</div>
+				<div class="feature-block__item">
+					<img src="./img/pointer.svg" width="112" height="93">
+					<div class="feature-block__text-block">
+						<h4 class="feature-block__h4">100% Safe Delivery</h4>
+						<p class="feature-block__text">Here are a few helpful suggestions that you may take on board, and below.</p>
+						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="quote">
+		<div class="main-container">
+			<div class="section-headers">
+				<h2 class="section-headers__h2">Get a quote</h2>
+				<h4 class="section-headers__h4">For best price and serve</h4>
+			</div>
+			<form>
+				<fieldset>
+					<div class="quote__item">
+						<input class="quote__text-input" type="tel" name="Phone" id="Phone">
+						<label class="quote__label" for="Phone">Ваш номер телефона</label>
+					</div>
+					<div class="quote__item">
+						<input class="quote__text-input" type="text" name="From" id="From">
+						<label class="quote__label" for="From">Откуда забрать груз</label>
+					</div>
+					<div class="quote__item">
+						<input class="quote__text-input" type="text" name="To" id="To">
+						<label class="quote__label" for="To">Куда отвезти груз</label>
+					</div>
+				</fieldset>
+				<a href="#" class="standart-button">Оставить заявку</a>
+			</form>
+		</div>
+	</section>
+	<section class="facts">
+		<div class="main-container">
+			<div class="section-headers">
+				<h2 class="section-headers__h2">Get a quote</h2>
+				<h4 class="section-headers__h4">For best price and serve</h4>
+			</div>
+			<div class="facts__items-wrapper">
+				<div class="facts__text-block">
+					<div class="facts__item facts__item--full">
+						<h4 class="facts__item-header">Длинный заголовок например</h4>
+						<p class="facts__item-text">Тут много текста</p>
+					</div>
+					<div class="facts__item">
+						<img class="facts__image" src="http://placehold.it/60x60">
+						<div class="facts__text-wrapper">
+							<h4 class="facts__item-header">Короткий заголовок</h4>
+							<p class="facts__item-text">Тут немного текста</p>
+						</div>
+					</div>
+					<div class="facts__item">
+						<img class="facts__image" src="http://placehold.it/60x60">
+						<div class="facts__text-wrapper">
+							<h4 class="facts__item-header">Короткий заголовок</h4>
+							<p class="facts__item-text">Тут немного текста</p>
+						</div>
+					</div>
+					<div class="facts__item">
+						<img class="facts__image" src="http://placehold.it/60x60">
+						<div class="facts__text-wrapper">
+							<h4 class="facts__item-header">Короткий заголовок</h4>
+							<p class="facts__item-text">Тут немного текста</p>
+						</div>
+					</div>
+					<div class="facts__item">
+						<img class="facts__image" src="http://placehold.it/60x60">
+						<div class="facts__text-wrapper">
+							<h4 class="facts__item-header">Короткий заголовок</h4>
+							<p class="facts__item-text">Тут немного текста</p>
+						</div>
+					</div>
+				</div>
+				<div class="facts__image-block">
+					<img src="http://placehold.it/250x250" class="facts__image">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="question">
+		<div class="question__request">
+			<h2 class="question__h2">Вам нужно отправить груз?</h2>
+			<p class="question__text">Вы уже знаете все необходимые подробности и вам нужно срочно подать транспорт? Нажмите эту кнопку и наши специалисты свяжутся с вами для уточнения сроков</p>
+			<a href="#" class="standart-button">Отправить груз</a>
+		</div>
+		<div class="question__request">
+			<h2 class="question__h2">Вам нужно уточнить подробности?</h2>
+			<p class="question__text">Вы хотите больше информации о нашей компании, транспорте, сроках и стоимости перевозки? Эта кнопка создана для таких задач - нажмите её и наши менеджеры ответят на все вопросы</p>
+			<a href="#" class="standart-button">Узнать подробности</a>
+		</div>
+	</section>
 </main>
+<script src="js/script.js"></script>
 </body>
 </html>

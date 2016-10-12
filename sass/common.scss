@@ -1,0 +1,57 @@
+@import 'vars';
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  src: url('../fonts/opensans.woff'),
+  url('../fonts/opensans.woff2');
+}
+
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url('../fonts/opensans.woff'),
+  url('../fonts/opensans.woff2');
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url('../fonts/opensansbold.woff'),
+  url('../fonts/opensansbold.woff2');
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url('../fonts/opensanslight.woff'),
+  url('../fonts/opensanslight.woff2');
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url('../fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: "RobotoThin";
+  src: url('../fonts/Roboto-Thin.ttf');
+}
+
+@font-face {
+  font-family: "RobotoMedium";
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+
+
+.main-container {
+  padding: 0 20px;
+}

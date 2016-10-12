@@ -1,8 +1,11 @@
 
 //Colors
 
-$bg-darkblue: #1d2631;
-$clr-darkblue: #283645;
+$clr-darkblue: #18364a;
+$clr-darkblue-1: #1d2631;
+$clr-darkblue-2: #283645;
+$clr-blue-gray: #0c1f2e;
+$clr-purple: #010028;
 
 $clr-white: #ffffff;
 
@@ -51,6 +54,26 @@ $retina-dpi: "min-resolution: 1.5dppx";
 
 @mixin font-bold() {
   font-family: "OpenSansBold", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+@mixin font-regular-roboto() {
+  font-family: "RobotoMedium", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
+}
+
+@mixin font-light-roboto() {
+  font-family: "RobotoLight", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: lighter;
+}
+
+@mixin font-thin-roboto() {
+  font-family: "RobotoThin", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+@mixin font-bold-roboto() {
+  font-family: "RobotoBold", 'Helvetica Neue', Arial, sans-serif;
   font-weight: bold;
 }
 
