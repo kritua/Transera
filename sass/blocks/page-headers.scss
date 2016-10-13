@@ -9,7 +9,7 @@
 
 .page-headers__h1 {
   position: relative;
-  @include font-bold-roboto();
+  @include font-bold();
   font-size: 7.5vh;
   line-height: 7.5vh;
   color: $clr-white;
@@ -23,8 +23,8 @@
   content: '';
   position: absolute;
   bottom: -16px;
-  left: 20px;
-  right: 20px;
+  left: 30%;
+  right: 30%;
   height: 2px;
   background-color: $clr-pink;
   @include adaptive(tablet) {
@@ -37,14 +37,14 @@
 }
 
 .page-headers__text {
-  @include font-thin-roboto();
+  @include font-thin();
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 45px;
 }
 
 .page-headers__h2 {
-  @include font-regular-roboto();
+  @include font-regular();
   font-size: 24px;
   line-height: 30px;
   margin-top: 0;

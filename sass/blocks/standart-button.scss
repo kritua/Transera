@@ -1,7 +1,7 @@
 @import '../vars';
 
 .standart-button {
-  @include font-regular-roboto();
+  @include font-regular();
   font-size: 16px;
   line-height: 24px;
   color: $clr-white;
@@ -9,4 +9,7 @@
   background-color: $clr-pink;
   padding: 10px 20px;
   border-radius: 20px;
+  &--features {
+    background-color: $clr-darkblue;
+  }
 }

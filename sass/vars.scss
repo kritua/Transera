@@ -4,7 +4,7 @@
 $clr-darkblue: #18364a;
 $clr-darkblue-1: #1d2631;
 $clr-darkblue-2: #283645;
-$clr-blue-gray: #0c1f2e;
+$clr-blue-gray: #071721;
 $clr-purple: #010028;
 
 $clr-white: #ffffff;
@@ -13,6 +13,8 @@ $clr-lightgrey: #f2f2f2;
 $clr-lightgrey-1: #eeeeee;
 $clr-lightgrey-2: #e5e5e5;
 $clr-grey: #cccccc;
+$clr-grey-2: #666c72;
+
 $clr-black: #000000;
 
 $no-bg-color: transparent;
@@ -37,44 +39,30 @@ $retina-dpi: "min-resolution: 1.5dppx";
 
 //Mixins
 
+
 @mixin font-regular() {
-  font-family: "OpenSans", 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Roboto", 'Helvetica Neue', Arial, sans-serif;
   font-weight: normal;
 }
 
 @mixin font-light() {
-  font-family: "OpenSansLight", 'Helvetica Neue', Arial, sans-serif;
-  font-weight: lighter;
+  font-family: "RobotoLight", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
 }
 
-@mixin font-semibold() {
-  font-family: "OpenSans", 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
+@mixin font-thin() {
+  font-family: "RobotoThin", 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
 }
 
-@mixin font-bold() {
-  font-family: "OpenSansBold", 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
-}
-
-@mixin font-regular-roboto() {
+@mixin font-medium() {
   font-family: "RobotoMedium", 'Helvetica Neue', Arial, sans-serif;
   font-weight: normal;
 }
 
-@mixin font-light-roboto() {
-  font-family: "RobotoLight", 'Helvetica Neue', Arial, sans-serif;
-  font-weight: lighter;
-}
-
-@mixin font-thin-roboto() {
-  font-family: "RobotoThin", 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
-}
-
-@mixin font-bold-roboto() {
+@mixin font-bold() {
   font-family: "RobotoBold", 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 @mixin adaptive($media) {

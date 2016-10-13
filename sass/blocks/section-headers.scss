@@ -1,0 +1,42 @@
+@import '../vars';
+
+.section-headers {
+  text-align: center;
+  color: $clr-darkblue;
+  @include adaptive(tablet) {
+    display: none;
+  }
+}
+
+.section-headers__h2 {
+  position: relative;
+  @include font-bold();
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 20%;
+    right: 20%;
+    height: 3px;
+    background: linear-gradient(to right, $clr-pink 30%, $clr-white 30%, $clr-white 70%, $clr-pink 70%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -29px;
+    left: 40%;
+    width: 60px;
+    height: 20px;
+    background: url('../../img/red-arrow.svg') no-repeat center;
+  }
+}
+
+.section-headers__h4 {
+  margin-top: 0;
+  letter-spacing: 3px;
+}
+
