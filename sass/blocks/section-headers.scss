@@ -3,8 +3,16 @@
 .section-headers {
   text-align: center;
   color: $clr-darkblue;
-  @include adaptive(tablet) {
-    display: none;
+  &--hidden {
+    @include adaptive(tablet) {
+      display: none;
+    }
+  }
+  &--quote {
+    .section-headers__h2,
+    .section-headers__h4 {
+      color: white;
+    }
   }
 }
 
@@ -19,19 +27,27 @@
     content: '';
     position: absolute;
     top: -15px;
-    left: 20%;
-    right: 20%;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
     height: 3px;
-    background: linear-gradient(to right, $clr-pink 30%, $clr-white 30%, $clr-white 70%, $clr-pink 70%);
+    background: linear-gradient(to right, $clr-pink 30%, transparent 30%, transparent 70%, $clr-pink 70%);
   }
   &::after {
     content: '';
     position: absolute;
     top: -29px;
-    left: 40%;
+    left: 50%;
+    margin-left: -30px;
     width: 60px;
     height: 20px;
     background: url('../../img/red-arrow.svg') no-repeat center;
+    @include adaptive(tablet) {
+      top: -37px;
+      margin-left: -33px;
+      width: 66px;
+      height: 37px;
+    }
   }
 }
 

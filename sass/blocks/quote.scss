@@ -1,0 +1,66 @@
+@import '../vars';
+
+.quote {
+  margin-top: 20px;
+  padding: 30px 0;
+  text-align: center;
+  background: linear-gradient(transparentize($clr-darkblue, 0.3), transparentize($clr-darkblue, 0.3)), url('../../img/bg-full-1.jpg')center no-repeat;
+}
+
+.quote__item-wrapper {
+  display: flex;
+}
+
+.quote__item {
+  position: relative;
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.quote__label {
+  @include font-regular();
+  font-size: 14px;
+  color: $clr-grey;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    width: 0;
+    background-color: $clr-blue-gray;
+  }
+  &::before {
+    left: 50%;
+  }
+  &::after {
+    right: 50%;
+  }
+}
+
+.quote__text-input {
+  background: transparent;
+  outline: none;
+  border: 1px solid $clr-blue-grey;
+  border-radius: 3px;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 4px;
+  @include font-regular();
+  font-size: 16px;
+  color: $clr-grey;
+  &:focus ~ .quote__label {
+    transform: translateY(-30px);
+  }
+}
+
+.quote__text-input ~ .quote__label {
+  &::before,
+  &::after {
+    width: 50%;
+  }
+}

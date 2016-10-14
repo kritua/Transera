@@ -2,4 +2,70 @@
 
 .feature-block {
   margin-top: 66px;
+  text-align: center;
+}
+
+.feature-block__items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature-block__item {
+  margin-bottom: 20px;
+  flex-basis: 100%;
+  @include adaptive(tablet) {
+    flex-basis: 33.33%;
+    padding: 10px;
+  }
+  &:hover {
+    .feature-block__image {
+      transform: rotate(90deg);
+      transition: all 0.5s ease;
+      fill: $clr-pink;
+      .st1 {
+        transform: rotate(-90deg) translateX(-100px);
+        transition: all ease;
+      }
+    }
+  }
+}
+
+.feature-block__h4 {
+  @include font-medium();
+  font-size: 18px;
+  line-height: 26px;
+  color: $clr-darkblue;
+  margin-bottom: 0;
+}
+
+.feature-block__text {
+  @include font-regular();
+  font-size: 14px;
+  line-height: 24px;
+  color: $clr-grey-2;
+  margin-top: 0;
+}
+
+.feature-block__link {
+  position: relative;
+  @include font-regular();
+  font-size: 16px;
+  line-height: 30px;
+  color: $clr-darkblue;
+  margin-left: 20px;
+  text-decoration: none;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -40px;
+    background: url('../../img/white-arrow.svg') no-repeat center;
+  }
+}
+
+.feature-block__image {
+  fill: $clr-darkblue;
+  transition: all 0.5s ease;
 }
