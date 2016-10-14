@@ -84,10 +84,5 @@ $retina-dpi: "min-resolution: 1.5dppx";
   }
 }
 
-@mixin placeholder-style() {
-  @include font-regular();
-  font-size: 18px;
-  line-height: 30px;
-  color: $clr-darkblue;
-  opacity: 1;
-}
+
+
