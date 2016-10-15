@@ -8,10 +8,11 @@
       display: none;
     }
   }
-  &--quote {
+  &--quote,
+  &--price {
     .section-headers__h2,
     .section-headers__h4 {
-      color: white;
+      color: $clr-white;
     }
   }
 }
