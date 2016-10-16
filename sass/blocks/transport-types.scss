@@ -1,7 +1,6 @@
 @import '../vars';
 
 .transport-types {
-  padding: 50px 0;
   @include adaptive(tablet) {
     padding: 0 0 100px;
     margin-top: -100px;
