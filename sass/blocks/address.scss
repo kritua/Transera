@@ -1,2 +1,65 @@
 @import '../vars';
 
+.address {
+  text-align: left;
+}
+
+.address__item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.address__item {
+  position: relative;
+  margin-bottom: 30px;
+  flex-basis: 100%;
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -27px;
+    width: 100px;
+    height: 1px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: $clr-darkblue;
+  }
+}
+
+.address__item-header {
+  @include font-medium();
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $clr-pink;
+  text-align: center;
+}
+
+.address__text-block {
+  margin-left: 30px;
+}
+
+.address__text {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  color: $clr-darkblue;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background: url('../../img/spot.svg') no-repeat center;
+  }
+  &--contact {
+    text-decoration: none;
+    &::before {
+      background: url('../../img/mail.svg') no-repeat center;
+    }
+  }
+  &--phone {
+    font-size: 20px;
+    &::before {
+      background: url('../../img/phone.svg') no-repeat center;
+    }
+  }
+}
