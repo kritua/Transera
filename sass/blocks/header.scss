@@ -9,6 +9,10 @@
    .header__logo {
      border-bottom: 2px solid $clr-black;
      background-color: transparentize($clr-purple, 0.3);
+     @include adaptive(desktop) {
+       border: none;
+       background-color: transparent;
+     }
    }
   }
 }
@@ -25,6 +29,9 @@
   flex-basis: 100%;
   padding: 20px;
   justify-content: space-between;
+  @include adaptive(desktop) {
+    flex-basis: 20%;
+  }
 }
 
 .header__logo-img {
@@ -38,12 +45,19 @@
   &--hidden {
     display: none;
   }
+  @include adaptive(desktop) {
+    flex-basis: 60%;
+  }
 }
 
 .header__menu-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  @include adaptive(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .header__menu-item {
@@ -53,20 +67,32 @@
   border-bottom: 2px solid $clr-black;
   padding: 15px 0;
   a {
-    @include font-bold();
+    @include font-thin();
     font-size: 18px;
     line-height: 30px;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
+    @include adaptive(desktop) {
+      font-size: 15px;
+      text-transform: none;
+    }
   }
   &:last-child {
     border-bottom: none;
+  }
+  @include adaptive(desktop) {
+    padding: 20px 0;
+    border: none;
+    background-color: transparent;
   }
 }
 
 .header__button-menu {
   align-self: center;
+  @include adaptive(desktop) {
+    display: none;
+  }
 }
 
 .header__button {

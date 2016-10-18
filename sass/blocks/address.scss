@@ -2,6 +2,9 @@
 
 .address {
   text-align: left;
+  .main-container {
+    padding: 0;
+  }
 }
 
 .address__item-wrapper {
@@ -22,6 +25,13 @@
     left: 50%;
     margin-left: -50px;
     background-color: $clr-darkblue;
+    @include adaptive(tablet) {
+      display: none;
+    }
+  }
+  @include adaptive(tablet) {
+    flex-basis: 33%;
+    padding: 0 10px;
   }
 }
 
@@ -31,6 +41,12 @@
   text-transform: uppercase;
   color: $clr-pink;
   text-align: center;
+  br {
+    display: none;
+    @include adaptive(tablet) {
+      display: block;
+    }
+  }
 }
 
 .address__text-block {

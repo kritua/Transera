@@ -19,13 +19,16 @@
   }
   &--image {
     display: none;
-    background: url('../../img/bg-full.jpg') no-repeat center;
+    background: url(../../img/bg-full.jpg) no-repeat 30% 50%;
     background-size: cover;
     @include adaptive(tablet) {
       display: block;
       border-radius: 20px;
       box-shadow: 15px 15px 5px 0 transparentize($clr-darkblue, 0.3);
       flex-basis: 60%;
+    }
+    @include adaptive(desktop) {
+      background-position: 30% 82%;
     }
   }
   &--text {
@@ -40,6 +43,9 @@
     flex-basis: 15%;
     @include adaptive(tablet) {
       flex-basis: 9%;
+    }
+    @include adaptive(desktop) {
+      flex-basis: 4%;
     }
   }
 }
@@ -66,6 +72,9 @@
     bottom: 0;
     width: 2px;
     background-color: $clr-lightgrey-1;
+  }
+  @include adaptive(desktop) {
+    min-height: 380px;
   }
 }
 

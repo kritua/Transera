@@ -3,6 +3,9 @@
 .features-slide {
   text-align: center;
   color: white;
+  @include adaptive(desktop) {
+    display: flex;
+  }
 }
 
 .features-slide__h3 {
@@ -25,8 +28,8 @@
   }
   &--custom {
     span {
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 34px;
+      line-height: 36px;
       color: $clr-pink;
       @include adaptive(tablet) {
         font-size: 40px;
@@ -66,9 +69,15 @@
   @include adaptive(tablet) {
     padding: 20px 40px 40px;
   }
+  @include adaptive(desktop) {
+    flex-basis: 33%;
+  }
   background: #d22856;
   &--double-width {
     background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url('../../img/bg-full-1.jpg')center no-repeat;
+    @include adaptive(desktop) {
+      flex-basis: 67%;
+    }
   }
 }
 
