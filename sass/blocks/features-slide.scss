@@ -9,6 +9,10 @@
   @include font-regular();
   font-size: 24px;
   line-height: 30px;
+  @include adaptive(tablet) {
+    font-size: 36px;
+    line-height: 40px;
+  }
   span {
     @include font-bold();
     text-transform: uppercase;
@@ -24,10 +28,24 @@
       font-size: 24px;
       line-height: 24px;
       color: $clr-pink;
+      @include adaptive(tablet) {
+        font-size: 40px;
+      }
     }
     @include adaptive(tablet) {
+      position: relative;
+      margin-bottom: 20px;
       br {
         display: none;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        height: 1px;
+        left: 0;
+        right: 0;
+        background-color: $clr-lightgrey;
       }
     }
   }
@@ -38,10 +56,16 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1px;
+  @include adaptive(tablet) {
+    margin-top: 0;
+  }
 }
 
 .features-slide__item {
   padding: 20px 20px 40px;
+  @include adaptive(tablet) {
+    padding: 20px 40px 40px;
+  }
   background: #d22856;
   &--double-width {
     background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url('../../img/bg-full-1.jpg')center no-repeat;

@@ -9,6 +9,9 @@
   background-color: $clr-pink;
   padding: 10px 20px;
   border-radius: 20px;
+  @include adaptive(tablet) {
+    font-size: 20px;
+  }
   &--features {
     background-color: $clr-darkblue;
   }

@@ -2,7 +2,6 @@
 
 .transport-types {
   @include adaptive(tablet) {
-    padding: 0 0 100px;
     margin-top: -100px;
   }
   .main-container {
@@ -23,7 +22,7 @@
   background-color: $clr-white;
   @include adaptive(tablet) {
     border-radius: 20px;
-    box-shadow: 0 1px 2px 1px #ccc;
+    box-shadow: 0 1px 2px 1px $clr-grey;
     padding: 30px;
   }
 }
@@ -80,7 +79,7 @@
 
 .transport-types__image {
   border-radius: 50%;
-  box-shadow: 0 1px 6px 1px #ccc;
+  box-shadow: 0 1px 6px 1px $clr-grey;
   max-width: 100%;
   height: auto;
 

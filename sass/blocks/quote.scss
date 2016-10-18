@@ -7,6 +7,10 @@
 
 .quote__item-wrapper {
   display: flex;
+  @include adaptive(tablet) {
+    width: 50%;
+    margin: 30px auto;
+  }
 }
 
 .quote__item {
