@@ -1,7 +1,7 @@
 @import '../vars';
 
 .price {
-  background: linear-gradient(transparentize($clr-darkblue, 0.3), transparentize($clr-darkblue, 0.3)), url('../../img/bg-full-1.jpg')center no-repeat;
+  background: linear-gradient(transparentize($clr-darkblue, 0.3), transparentize($clr-darkblue, 0.3)), url('../img/bg-full-1.jpg')center no-repeat;
 }
 
 .price__items-wrapper {
@@ -22,6 +22,9 @@
   @include adaptive(tablet) {
     flex-basis: 46%;
   }
+  @include adaptive(desktop) {
+    flex-basis: 23%;
+  }
 }
 
 .price__list-item {
@@ -37,6 +40,7 @@
     color: $clr-white;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    text-transform: uppercase;
   }
 }
 
@@ -46,6 +50,10 @@
   line-height: 59px;
   color: $clr-grey-2;
   text-transform: uppercase;
+  @include adaptive(desktop) {
+    font-size: 20px;
+    line-height: 36px;
+  }
 }
 
 .price__amount {

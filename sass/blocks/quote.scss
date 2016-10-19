@@ -2,7 +2,7 @@
 
 .quote {
   text-align: center;
-  background: linear-gradient(transparentize($clr-darkblue, 0.3), transparentize($clr-darkblue, 0.3)), url('../../img/bg-full-1.jpg')center no-repeat;
+  background: linear-gradient(transparentize($clr-darkblue, 0.3), transparentize($clr-darkblue, 0.3)), url('../img/bg-full-1.jpg')center no-repeat;
 }
 
 .quote__item-wrapper {
@@ -28,8 +28,9 @@
   color: $clr-grey;
   position: absolute;
   top: 16px;
-  left: 16px;
+  left: 20px;
   pointer-events: none;
+  transition: all 0.5s ease;
 }
 
 .quote__text-input {
@@ -43,7 +44,12 @@
   @include font-regular();
   font-size: 16px;
   color: $clr-grey;
-  &:focus ~ .quote__label {
-    animation: quote-input 1s forwards;
+  transition: padding 0.5s ease;
+  &:focus,
+  &:valid {
+    padding-top: 30px;
+    &~ .quote__label {
+      transform: translateY(-5px);
+    }
   }
 }

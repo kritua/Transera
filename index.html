@@ -13,8 +13,8 @@
     <div class="header__logo">
       <div class="header__logo-img">
         <picture>
-          <source media="(min-width: 700px)" srcset="./img/logo-full.svg">
-          <img src="./img/logo-alone.svg" alt="Logo">
+          <source media="(min-width: 700px)" srcset="./img/logo.svg">
+          <img src="./img/logo.svg" alt="Logo">
         </picture>
       </div>
       <div class="header__button-menu">
@@ -29,15 +29,20 @@
         <li class="header__menu-item"><a href="#">Главная</a></li>
         <li class="header__menu-item"><a href="#">Преимущества</a></li>
         <li class="header__menu-item"><a href="#">Услуги</a></li>
-        <li class="header__menu-item"><a href="#">Как мы работаем</a></li>
+	      <li class="header__menu-item"><a href="#">Проекты</a></li>
         <li class="header__menu-item"><a href="#">Тарифы</a></li>
+	      <li class="header__menu-item"><a href="#">Сертификаты</a></li>
+	      <li class="header__menu-item"><a href="#">Тендеры</a></li>
         <li class="header__menu-item"><a href="#">Контакты</a></li>
       </ul>
     </nav>
+	  <div class="header__button-order">
+		  <a href="#" class="standart-button standart-button--header">Заказать звонок</a>
+	  </div>
   </div>
   <section class="page-headers">
     <div class="main-container">
-      <h1 class="page-headers__h1">Trans<span>era</span><br>service</h1>
+      <h1 class="page-headers__h1">Спец<span>Транс</span><br>Сервис</h1>
       <h2 class="page-headers__h2">Перевозим негабаритные грузы</h2>
       <p class="page-headers__text">В любую погоду, по дорогам и без них, быстро и надёжно</p>
       <a href="#" class="standart-button">Отправить заявку</a>
@@ -187,7 +192,7 @@
       <h3 class="features-slide__h3 features-slide__h3--custom">Уникальные<br> <span>Решения</span><br> для перевозок
       </h3>
       <h4 class="features-slide__h4">Индивидуальный подход к каждому клиенту</h4>
-      <p class="features-slide__text">Наши специалисты - профессионалы своего дела, знающие специфику труднодоступных регионов. Любые ваши требования и пожелания будут выполнены в чётком соответствии с техническим заданием</p>
+      <p class="features-slide__text">Наши специалисты - профессионалы своего дела, знающие специфику труднодоступных регионов. Любые ваши требования и пожелания будут выполнены в чётком соответствии с техническим заданием. Наша компания с 2008 года производит транспортировку любых негабаритных грузов в самые отдалённые места нашей страны - преимущетсвенно, это регионы Ямало-Ненецкого и Ханты-Мансийского Автономных Округов, а также Свердловская и Тюменская области. Практически полное отсутствие дорожного покрытия - не помеха. Мы привезём ваш груз в любую местность </p>
     </div>
   </section>
   <section class="feature-block">
@@ -292,15 +297,15 @@
       <form>
         <fieldset class="quote__item-wrapper">
           <div class="quote__item">
-            <input class="quote__text-input" type="tel" name="Phone" id="Phone">
+            <input class="quote__text-input" type="tel" name="Phone" id="Phone" required>
             <label class="quote__label" for="Phone">Ваш номер телефона</label>
           </div>
           <div class="quote__item">
-            <input class="quote__text-input" type="text" name="From" id="From">
+            <input class="quote__text-input" type="text" name="From" id="From" required>
             <label class="quote__label" for="From">Откуда забрать груз</label>
           </div>
           <div class="quote__item">
-            <input class="quote__text-input" type="text" name="To" id="To">
+            <input class="quote__text-input" type="text" name="To" id="To" required>
             <label class="quote__label" for="To">Куда отвезти груз</label>
           </div>
         </fieldset>
@@ -324,34 +329,32 @@
             <div class="circle">65%</div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Крупнотоннажные перевозки</h4>
-              <p class="facts__item-text">В рамках данного типа перевозок мы транспортируем любые изделия, агрегаты и технику с большой массой, но относительно небольшими габаритами</p>
+              <p class="facts__item-text">Перевозка больших по массе, но компактных по габаритам грузов</p>
             </div>
           </div>
           <div class="facts__item">
-            <div class="circle">6%</div>
+            <div class="circle">65%</div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Негабаритные перевозки</h4>
-              <p class="facts__item-text">Транспортировка негабаритной техники и агрегатов связана с серьёзными сложностями и требует большого профессионализма перевозчика</p>
+              <p class="facts__item-text">Транспортировка тяжелых и больших по габаритам изделий и техники</p>
             </div>
           </div>
           <div class="facts__item">
             <div class="circle">46%</div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Проектные перевозки</h4>
-              <p class="facts__item-text">Перевозки такого типа подразумевает транспортировку большого количества оборудования одновременно</p>
+              <p class="facts__item-text">Перевозка оборудования и оснащения предприятий в рамках проекта</p>
             </div>
           </div>
           <div class="facts__item">
             <div class="circle">99%</div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Мультимодальные перевозки</h4>
-              <p class="facts__item-text">Смешанный тип перевозки, в котором задействованны несколько видов транспорта - автомобильный, ж\д, авиа или водный</p>
+              <p class="facts__item-text">Смешанный тип перевозки с применением оптимальных видов транспорта</p>
             </div>
           </div>
         </div>
-        <div class="facts__image-block">
-          <img src="http://placehold.it/250x250" class="facts__image">
-        </div>
+        <div class="facts__image-block"></div>
       </div>
     </div>
   </section>
@@ -376,7 +379,7 @@
       <div class="price__items-wrapper">
         <ul class="price__item">
           <li class="price__list-item">
-            <p class="price__header">Тариф "Базовый"</p>
+            <p class="price__header">Тариф <br> "Базовый"</p>
             <p class="price__amount">от <span>70</span> руб / км</p>
           </li>
           <li class="price__list-item">Один автомобиль</li>
@@ -387,7 +390,7 @@
         </ul>
         <ul class="price__item">
           <li class="price__list-item">
-            <p class="price__header">Тариф "Расширенный"</p>
+            <p class="price__header">Тариф <br> "Расширенный"</p>
             <p class="price__amount">от <span>85</span> руб / км</p>
           </li>
           <li class="price__list-item">Один автомобиль</li>
@@ -398,7 +401,7 @@
         </ul>
         <ul class="price__item">
           <li class="price__list-item">
-            <p class="price__header">Тариф "Негабарит"</p>
+            <p class="price__header">Тариф <br> "Негабарит"</p>
             <p class="price__amount">от <span>95</span> руб / км</p>
           </li>
           <li class="price__list-item">Специальный трал</li>
@@ -409,7 +412,7 @@
         </ul>
         <ul class="price__item">
           <li class="price__list-item">
-            <p class="price__header">Тариф "Проектная перевозка"</p>
+            <p class="price__header">Тариф <br> "Проект"</p>
             <p class="price__amount">от <span>110</span> руб / км</p>
           </li>
           <li class="price__list-item">Парк техники</li>
@@ -423,7 +426,7 @@
   </section>
   <section class="address">
     <div class="main-container">
-      <div class="section-headers">
+      <div class="section-headers section-headers--address">
         <h2 class="section-headers__h2">Наши офисы</h2>
         <h4 class="section-headers__h4">Адреса и телефоны</h4>
       </div>
@@ -460,8 +463,8 @@
       <div class="footer__wrapper">
         <div class="footer__item">
 	        <picture>
-		        <source media="(min-width: 700px)" srcset="./img/logo-full.svg">
-		        <img src="./img/logo-alone.svg" alt="Pink" width="100" height="50">
+		        <source media="(min-width: 700px)" srcset="./img/logo.svg">
+		        <img src="./img/logo.svg" alt="Pink" width="100" height="50">
 	        </picture>
         </div>
 	      <div class="footer__item">

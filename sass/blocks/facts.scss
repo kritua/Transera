@@ -13,12 +13,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include adaptive(desktop) {
+    flex-basis: 50%;
+  }
 }
 
 .facts__image-block {
   display: none;
   @include adaptive(desktop) {
     display: block;
+    background: url(../img/map.png) no-repeat center;
+    background-size: contain;
+    flex-basis: 46%;
+    margin-left: auto;
   }
 }
 
@@ -38,6 +45,12 @@
     flex-basis: 45%;
     margin: 10px;
   }
+  @include adaptive(desktop) {
+    &:not(:first-child) {
+      display: flex;
+      align-items: center;
+    }
+  }
   &::before {
     content: '';
     position: absolute;
@@ -47,6 +60,9 @@
     margin-left: -100px;
     height: 1px;
     background-color: $clr-lightgrey-2;
+    @include adaptive(desktop) {
+      display: none;
+    }
   }
   &--full {
     @include adaptive(tablet) {

@@ -18,6 +18,10 @@ footer {
     @include adaptive(tablet) {
       flex-basis: 33.33%;
     }
+    @include adaptive(desktop) {
+      flex-basis: 15%;
+      margin-left: auto;
+    }
   }
   &--social {
     justify-content: space-between;

@@ -49,6 +49,10 @@
         left: 0;
         right: 0;
         background-color: $clr-lightgrey;
+        @include adaptive(desktop) {
+          left: 22%;
+          right: 22%;
+        }
       }
     }
   }
@@ -72,9 +76,9 @@
   @include adaptive(desktop) {
     flex-basis: 33%;
   }
-  background: #d22856;
+  background: $clr-pink;
   &--double-width {
-    background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url('../../img/bg-full-1.jpg')center no-repeat;
+    background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url('../img/bg-full-1.jpg')center no-repeat;
     @include adaptive(desktop) {
       flex-basis: 67%;
     }

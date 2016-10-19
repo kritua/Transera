@@ -5,6 +5,10 @@
   .main-container {
     padding: 0;
   }
+  @include adaptive(desktop) {
+    margin-top: 0;
+    background-color: $clr-darkblue;
+  }
 }
 
 .address__item-wrapper {
@@ -33,6 +37,13 @@
     flex-basis: 33%;
     padding: 0 10px;
   }
+  @include adaptive(desktop) {
+    flex-basis: 25%;
+    margin: 0 auto;
+  }
+  @include adaptive(desktop-ext) {
+    flex-basis: 21%;
+  }
 }
 
 .address__item-header {
@@ -46,11 +57,15 @@
     @include adaptive(tablet) {
       display: block;
     }
+    @include adaptive(desktop) {
+      display: none;
+    }
   }
 }
 
 .address__text-block {
   margin-left: 40px;
+
 }
 
 .address__text {
@@ -64,18 +79,30 @@
     left: -30px;
     width: 20px;
     height: 20px;
-    background: url('../../img/spot.svg') no-repeat center;
+    background: url('../img/spot.svg') no-repeat center;
+    @include adaptive(desktop) {
+      background: url('../img/spot-white.svg') no-repeat center;
+    }
   }
   &--contact {
     text-decoration: none;
     &::before {
-      background: url('../../img/mail.svg') no-repeat center;
+      background: url('../img/mail.svg') no-repeat center;
+      @include adaptive(desktop) {
+        background: url('../img/mail-white.svg') no-repeat center;
+      }
     }
   }
   &--phone {
     font-size: 20px;
     &::before {
-      background: url('../../img/phone.svg') no-repeat center;
+      background: url('../img/phone.svg') no-repeat center;
+      @include adaptive(desktop) {
+        background: url('../img/phone-white.svg') no-repeat center;
+      }
     }
+  }
+  @include adaptive(desktop) {
+    color: $clr-white;
   }
 }
