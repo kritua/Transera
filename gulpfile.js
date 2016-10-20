@@ -29,10 +29,10 @@ gulp.task('style', function() {
 				'last 2 Edge versions'
 			]})
 		]))
-		.pipe(gulp.dest('build/css'))
-		.pipe(minify())
-		.pipe(rename('style.min.css'))
-		.pipe(gulp.dest('build/css'))
+		.pipe(gulp.dest('css'))
+		//.pipe(minify())
+		//.pipe(rename('style.min.css'))
+		//.pipe(gulp.dest('build/css'))
 		.pipe(server.stream());
 });
 
@@ -63,6 +63,7 @@ gulp.task('scripts', function () {
 
 gulp.task('raster', function () {
 	gulp.src([
+		'img/*/*.{png,jpg,gif}',
 		'img/*.{png,jpg,gif}'
 	])
 		.pipe(imagemin([

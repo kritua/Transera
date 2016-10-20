@@ -7,6 +7,17 @@ footer {
 .footer__wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
+  @include adaptive(tablet) {
+    padding-top: 5px;
+  }
+}
+
+.footer__image {
+  margin-top: -5px;
+  @include adaptive(tablet) {
+    margin-top: 0;
+  }
 }
 
 .footer__item {

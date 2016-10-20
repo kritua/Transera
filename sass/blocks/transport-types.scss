@@ -2,15 +2,13 @@
 
 .transport-types {
   @include adaptive(tablet) {
-    margin-top: -100px;
-  }
-  .main-container {
-    max-width: 1170px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    @include adaptive(tablet) {
-      padding: 0 40px;
-    }
+  }
+  overflow: visible;
+  .main-container {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -20,17 +18,15 @@
   flex-wrap: wrap;
   align-items: center;
   background-color: $clr-white;
-  @include adaptive(tablet) {
-    border-radius: 20px;
-    box-shadow: 0 1px 2px 1px $clr-grey;
-    padding: 30px;
-  }
 }
 
 .transport-types__item {
+  position: relative;
   flex-basis: 50%;
   text-align: center;
   padding: 10px;
+  background-color: $clr-white;
+  transition: margin 0.5s ease;
   &:nth-child(2n+1) {
     border-right: 1px solid $clr-lightgrey;
     @include adaptive(tablet) {
@@ -45,6 +41,11 @@
     padding-bottom: 0;
     &:not(:last-child) {
       border-right: 1px solid $clr-lightgrey;
+    }
+  }
+  @include adaptive(desktop) {
+    &:hover {
+      margin-top: -70px;
     }
   }
 }
@@ -78,9 +79,6 @@
 }
 
 .transport-types__image {
-  border-radius: 50%;
-  box-shadow: 0 1px 6px 1px $clr-grey;
   max-width: 100%;
   height: auto;
-
 }

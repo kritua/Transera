@@ -156,7 +156,7 @@
     width: 30px;
     height: 30px;
     left: -40px;
-    background: url('../img/white-arrow-blue.svg') no-repeat center;
+    @include item-color($clr-pink, $white-arrow);
   }
   &:visited {
     color: $clr-darkblue;

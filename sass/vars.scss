@@ -23,13 +23,16 @@ $clr-black: #000000;
 
 $no-bg-color: transparent;
 
-$clr-pink: #3571a3;
+$clr-pink: #d22856;
 $clr-red: #f25b26;
 
 
-//Margin Padding
+//Items
 
-$content-padding: 0 20px;
+$main-theme-color: #d22856;
+$arrow: 'arrow';
+$white-arrow: 'white-arrow';
+
 
 //Media queries
 $mobile-width: 320px;
@@ -41,6 +44,14 @@ $retina-dpi: "min-resolution: 1.5dppx";
 
 //Mixins
 
+@mixin item-color($clr, $item) {
+  @if $clr == $main-theme-color {
+    background: url('../img/'+ $item + '-red.svg') no-repeat center;
+  }
+  @else {
+    background: url('../img/'+ $item + '-blue.svg') no-repeat center;
+  }
+}
 
 @mixin font-regular() {
   font-family: "Roboto", 'Helvetica Neue', Arial, sans-serif;
