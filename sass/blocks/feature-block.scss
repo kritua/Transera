@@ -2,12 +2,27 @@
 
 .feature-block {
   text-align: center;
+  margin-top: 0;
 }
 
 .feature-block__items-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.feature-block__svg-wrapper {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -21px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid $clr-darkblue;
+    visibility: hidden;
+    transition: border 0.3s ease;
+  }
 }
 
 .feature-block__item {
@@ -22,16 +37,21 @@
   }
   &:hover {
     .feature-block__image {
-      transform: rotate(90deg);
-      transition: all 0.5s ease;
+      border-color: $clr-pink;
+      transition: all 0.3s ease;
       fill: $clr-pink;
-      .st1 {
-        transform: rotate(-90deg) translateX(-100px);
-        transition: all ease;
+    }
+    .feature-block__svg-wrapper {
+      &::before {
+        visibility: visible;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid $clr-pink;
       }
     }
   }
 }
+
 
 .feature-block__h4 {
   @include font-medium();
@@ -55,7 +75,7 @@
   font-size: 16px;
   line-height: 30px;
   color: $clr-darkblue;
-  margin-left: 20px;
+  margin-left: -20px;
   text-decoration: none;
   svg {
     width: 45px;
@@ -68,6 +88,6 @@
 }
 
 .feature-block__image {
-  fill: $clr-darkblue;
+  border: 10px solid $clr-darkblue;
   transition: all 0.5s ease;
 }

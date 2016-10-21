@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E6E6E6;}
+	.st1{fill:#D22856;}
+	.st2{fill:#F2F2F2;}
+	.st3{fill:#999999;}
+	.st4{fill:#96E0DE;}
+	.st5{fill:#666666;}
+	.st6{fill:#4D4D4D;}
+	.st7{fill:#808080;}
+	.st8{fill:#A01F47;}
+</style>
+<g>
+	<g id="XMLID_8_">
+		<g>
+			<path class="st0" d="M279,73.8v82.3h-58V73.8C239.5,65.7,260.5,65.7,279,73.8z"/>
+			<path class="st1" d="M279,42.2v31.6c-18.5-8.1-39.6-8.1-58.1,0V42.2c9.3-4,19.1-6,29-6C259.9,36.1,269.8,38.1,279,42.2z"/>
+		</g>
+	</g>
+	<polyline class="st2" points="369.2,260.2 358.4,156.1 141.6,156.1 130.9,260.2 	"/>
+	<rect x="125.5" y="148.6" class="st3" width="249.1" height="15"/>
+	<rect x="301.5" y="177.6" class="st4" width="40.1" height="15"/>
+	<rect x="203" y="205.1" class="st4" width="137.3" height="15"/>
+	<rect x="158.4" y="205.1" class="st4" width="31.2" height="15"/>
+	<rect x="158.4" y="177.6" class="st4" width="129.8" height="15"/>
+	<polygon class="st5" points="421.2,281 379.3,386.3 373.6,400.7 359.6,435.9 250,463.9 140.4,435.9 126.4,400.7 120.7,386.3 
+		78.8,281 250,212.5 	"/>
+	<polygon class="st6" points="421.2,281 359.6,435.9 250,463.9 250,212.5 	"/>
+	<path class="st1" d="M379.3,386.3l-5.7,14.4L250,383.9l-123.6,16.8l-5.7-14.4L249,368.9c0.3,0,0.7-0.1,1-0.1s0.7,0,1,0.1
+		L379.3,386.3z"/>
+	<g>
+		<ellipse class="st7" cx="290.2" cy="302.7" rx="11.1" ry="19.6"/>
+		<ellipse class="st7" cx="209.8" cy="302.7" rx="11.1" ry="19.6"/>
+	</g>
+	<path class="st8" d="M379.3,386.3l-5.7,14.4L250,383.9v-15.1c0.3,0,0.7,0,1,0.1L379.3,386.3z"/>
+</g>
+</svg>
