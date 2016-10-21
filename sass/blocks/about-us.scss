@@ -23,7 +23,6 @@
     background-size: cover;
     @include adaptive(tablet) {
       display: block;
-      border-radius: 20px;
       box-shadow: 15px 15px 5px 0 transparentize($clr-darkblue, 0.3);
       flex-basis: 60%;
     }
@@ -60,10 +59,9 @@
 .about-us__radio-block {
   position: relative;
   display: flex;
-  flex-direction: column;
-  min-height: 422px;
-  justify-content: space-between;
-  margin-bottom: 29px;
+  justify-content: space-around;
+  margin: 50px auto 0;
+  width: 100px;
   &::before {
     content: '';
     position: absolute;
@@ -74,7 +72,6 @@
     background-color: $clr-lightgrey-1;
   }
   @include adaptive(desktop) {
-    min-height: 380px;
   }
 }
 
@@ -90,26 +87,26 @@
     border-radius: 50%;
   }
   &::before {
-    top: -15px;
-    height: 30px;
-    width: 30px;
+    top: -8px;
+    height: 16px;
+    width: 16px;
     background-color: $clr-lightgrey;
   }
   &::after {
-    top: -7px;
-    left: 8px;
-    width: 14px;
-    height: 14px;
+    top: -4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
     background-color: $clr-lightgrey-2;
   }
 }
 
 .about-us__input:checked ~ .about-us__label {
   &::after {
-    top: -7px;
-    left: 8px;
-    width: 14px;
-    height: 14px;
+    top: -4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
     background-color: $clr-pink;
   }
 }
@@ -144,22 +141,21 @@
 .about-us__link {
   text-decoration: none;
   position: relative;
-  margin-left: 40px;
   @include font-regular();
   font-size: 16px;
   line-height: 30px;
   color: $clr-darkblue;
   cursor: pointer;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    left: -40px;
-    @include item-color($clr-pink, $white-arrow);
-  }
   &:visited {
     color: $clr-darkblue;
+  }
+  svg {
+    width: 45px;
+    height: 45px;
+    vertical-align: middle;
+    .st1 {
+      fill: $clr-pink;
+    }
   }
 }
 

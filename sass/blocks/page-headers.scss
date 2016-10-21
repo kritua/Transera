@@ -1,7 +1,7 @@
 @import '../vars';
 
 .page-headers {
-  padding: 7vh 20px 25vh;
+  padding: 7vh 20px 14vh;
   color: $clr-white;
   position: relative;
   z-index: 2;
@@ -16,6 +16,7 @@
   text-transform: uppercase;
   span {
     color: $clr-pink;
+    font-size: 9.5vh;
   }
 }
 

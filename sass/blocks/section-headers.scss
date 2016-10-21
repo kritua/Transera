@@ -47,7 +47,6 @@
     margin-left: -30px;
     width: 60px;
     height: 20px;
-    @include item-color($clr-pink, 'arrow');
     @include adaptive(tablet) {
       top: -37px;
       margin-left: -33px;
