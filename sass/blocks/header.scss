@@ -23,8 +23,9 @@
   position: relative;
   z-index: 2;
   @include adaptive(desktop) {
-    padding: 20px 100px;
+    padding: 5px 100px;
     align-items: center;
+    background: $clr-white;
   }
 }
 
@@ -45,11 +46,7 @@
 
 .header__logo-img {
   width: 100px;
-  @include adaptive(tablet) {
-    margin-top: -5px;
-  }
   @include adaptive(desktop) {
-    margin-top: -8px;
     width: 120px;
   }
 }
@@ -91,7 +88,7 @@
     @include font-thin();
     font-size: 18px;
     line-height: 30px;
-    color: white;
+    color: $clr-darkblue;
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
@@ -139,5 +136,62 @@
   }
   @include adaptive(desktop-ext) {
     margin-left: 10px;
+    text-align: right;
+  }
+}
+
+
+.header__top-bar {
+  display: none;
+  background-color: $clr-white;
+  padding: 0 100px;
+  border-bottom: 1px solid $clr-grey-2;
+  @include adaptive(desktop) {
+    display: flex;
+  }
+}
+
+.header__item {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  &--social {
+    justify-content: space-between;
+  }
+  &:last-child {
+    margin-left: auto;
+    flex-basis: 20%;
+  }
+}
+
+.header__social {
+  display: block;
+  margin-right: 10px;
+  svg {
+    fill: $clr-grey-2;
+    width: 20px;
+    height: 20px;
+  }
+  @include adaptive(tablet) {
+    margin-left: auto;
+  }
+}
+
+.header__contact-item {
+  display: block;
+  position: relative;
+  padding: 5px;
+  color: $clr-grey-2;
+  text-decoration: none;
+  @include font-regular();
+  font-size: 16px;
+  line-height: 24px;
+  &:last-child {
+    margin-left: 20px;
+  }
+  svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    fill: $clr-grey-2;
   }
 }

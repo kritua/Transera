@@ -6,6 +6,10 @@
   flex-direction: column;
   margin-top: 0;
   background: linear-gradient($clr-pink 50%, $clr-darkblue 50%);
+  @include adaptive(desktop) {
+    flex-direction: row;
+    background: linear-gradient(to right, transparentize($clr-pink, 0.1) 50%, transparentize($clr-darkblue, 0.1) 50%), url('../img/bg-slim.jpg') bottom no-repeat;
+  }
 }
 
 .question__request {
@@ -16,6 +20,9 @@
   padding: 0 40px 20px;
   &:first-child {
     margin-bottom: 30px;
+    @include adaptive(desktop) {
+      margin-bottom: 0;
+    }
   }
   @include adaptive(tablet) {
     min-height: 230px;
