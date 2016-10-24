@@ -45,12 +45,6 @@
     flex-basis: 45%;
     margin: 10px;
   }
-  @include adaptive(desktop) {
-    &:not(:first-child) {
-      display: flex;
-      align-items: center;
-    }
-  }
   &::before {
     content: '';
     position: absolute;
