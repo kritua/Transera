@@ -27,7 +27,10 @@
     "gulp-sass": "2.3.2",
     "gulp-svgmin": "^1.2.3",
     "gulp-uglify": "^2.0.0",
-    "run-sequence": "^1.2.2"
+    "jquery": "^3.1.1",
+    "requirejs": "^2.3.2",
+    "run-sequence": "^1.2.2",
+    "vegas": "^2.3.1"
   },
   "scripts": {
     "build": "gulp build",

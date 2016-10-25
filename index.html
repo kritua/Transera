@@ -8,7 +8,8 @@
 </head>
 <body>
 <header class="header header--index header--background header--menu-opened">
-  <div class="header__adjust"></div>
+	<button class="slider slider--previous" type="button" id="header-previous"></button>
+	<button class="slider slider--next" type="button" id="header-next"></button>
   <div class="header__navbar">
     <div class="header__logo">
       <div class="header__logo-img">
@@ -20,18 +21,19 @@
       <div class="header__button-menu">
         <button class="header__button header__button-burger header__button--hidden" type="button"><img
           src="./img/icon-menu-burger.svg" width="50" height="24"></button>
-        <button class="header__button header__button-close" type="button"><img src="./img/icon-menu-cross.svg"
-                                                                               width="24" height="24"></button>
+        <button class="header__button header__button-close" type="button">
+	        <img src="./img/icon-menu-cross.svg" width="24" height="24">
+        </button>
       </div>
     </div>
     <nav class="header__menu">
       <ul class="header__menu-list">
         <li class="header__menu-item"><a href="#">Главная</a></li>
-        <li class="header__menu-item"><a href="#">Преимущества</a></li>
+	      <li class="header__menu-item"><a href="#">О компании</a></li>
+	      <li class="header__menu-item"><a href="#">Преимущества</a></li>
         <li class="header__menu-item"><a href="#">Услуги</a></li>
-	      <li class="header__menu-item"><a href="#">Проекты</a></li>
-        <li class="header__menu-item"><a href="#">Тарифы</a></li>
-	      <li class="header__menu-item"><a href="#">Сертификаты</a></li>
+	      <li class="header__menu-item"><a href="#">Нащ опыт</a></li>
+	      <li class="header__menu-item"><a href="#">Документация</a></li>
 	      <li class="header__menu-item"><a href="#">Тендеры</a></li>
         <li class="header__menu-item"><a href="#">Контакты</a></li>
       </ul>
@@ -42,9 +44,9 @@
   </div>
   <section class="page-headers">
     <div class="main-container">
-      <h1 class="page-headers__h1">Спец<span>Транс</span><br>Сервис</h1>
-      <h2 class="page-headers__h2">Перевозим негабаритные грузы</h2>
-      <p class="page-headers__text">В любую погоду, по дорогам и без них, быстро и надёжно</p>
+      <h1 class="page-headers__h1">Перевозим<br> <span>негабаритные</span><br>грузы</h1>
+      <h2 class="page-headers__h2">В любую погоду, по асфальту и бездорожью, быстро и надёжно</h2>
+      <p class="page-headers__text"></p>
       <a href="#" class="standart-button">Отправить заявку</a>
     </div>
   </section>
@@ -59,46 +61,46 @@
       <div class="transport-types__wrapper">
         <div class="transport-types__item">
           <div class="transport-types__image-block">
-            <img class="transport-types__image" src="./img/truck.svg" width="120" height="120">
+            <img class="transport-types__image" src="./img/types/oil.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
-            <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
+            <h3 class="transport-types__header-text">Нефтяная отрасль</h3>
           </div>
           <div class="transport-types__text-block">
-            <p class="transport-types__text">Любой тип автомобильных перевозок</p>
+            <p class="transport-types__text">Мы осуществляем транспортировку любого типа грузов для нефтяной отрасли - вышки, буровые установки, насосы - перевезём всё!</p>
           </div>
         </div>
         <div class="transport-types__item">
           <div class="transport-types__image-block">
-            <img class="transport-types__image" src="./img/train.svg" width="120" height="120">
+            <img class="transport-types__image" src="./img/types/gas.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
-            <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
+            <h3 class="transport-types__header-text">Газовая отрасль</h3>
           </div>
           <div class="transport-types__text-block">
-            <p class="transport-types__text">Любой тип автомобильных перевозок</p>
+            <p class="transport-types__text">Перевозим все необходимые компоненты, устройства и агрегаты для добычи, хранения и перемещения продукции газовой отрасли</p>
           </div>
         </div>
         <div class="transport-types__item">
           <div class="transport-types__image-block">
-            <img class="transport-types__image" src="./img/plane.svg" width="120" height="120">
+            <img class="transport-types__image" src="./img/types/electric.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
-            <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
+            <h3 class="transport-types__header-text">Энергетическая отрасль</h3>
           </div>
           <div class="transport-types__text-block">
-            <p class="transport-types__text">Любой тип автомобильных перевозок</p>
+            <p class="transport-types__text">Наш автопарк включает в себя все необходимые технические средства для транспортировки изделий для энергетической отрасли</p>
           </div>
         </div>
         <div class="transport-types__item">
           <div class="transport-types__image-block">
-            <img class="transport-types__image" src="./img/ship.svg" width="120" height="120">
+            <img class="transport-types__image" src="./img/types/coal.svg" width="120" height="120">
           </div>
           <div class="transport-types__header-block">
-            <h3 class="transport-types__header-text">Автомобильный транспорт</h3>
+            <h3 class="transport-types__header-text">Угольная отрасль</h3>
           </div>
           <div class="transport-types__text-block">
-            <p class="transport-types__text">Любой тип автомобильных перевозок</p>
+            <p class="transport-types__text">Мы можем перевезти любые технические средства для добычи и транспортировки продукции горнодобывающей и угольной отрасли</p>
           </div>
         </div>
       </div>
@@ -129,16 +131,32 @@
 	      </div>
         <div class="about-us__item about-us__item--text">
           <div class="about-us__info-block">
-            <div class="about-us__text-block"><p class="about-us__text">Здесь какой-то текст, много текста на самом
-              деле, но откуда мне взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне
-              взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста.
-              Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста.</p></div>
+            <div class="about-us__text-block">
+	            <p class="about-us__text">
+		            Компания ООО «СпецТрансСервис» специализируется на транспортировке тяжеловесных,
+		            негабаритных и наливных грузов. Так же предоставляем погрузочно-разгрузочную технику любой
+		            грузоподъемности, вместе с бригадой стропальщиков. По согласованию с заказчиком погрузочно-
+		            разгрузочные работы могут осуществляться такелажным способом, с предоставлением бригады
+		            такелажников и необходимым оборудованием.
+	            </p>
+              <p class="about-us__text">
+	              Все работы выполняются с высоким качеством и производительностью, в соответствии с
+	              требованиями стандартов, норм и правил, в полном взаимодействии с Заказчиками и
+	              Партнерами.
+              </p>
+	            <p class="about-us__text about-us__text--">
+		            Подвижной состав компании и партнеров состоит из:
+	            </p>
+            </div>
             <div class="about-us__list-block">
               <ul class="about-us__list">
-                <li class="about-us__list-item">Первая причина это ты</li>
-                <li class="about-us__list-item">А вторая все твои мечты</li>
-                <li class="about-us__list-item">Третья причина это бровь</li>
-                <li class="about-us__list-item">А четвертая - морковь</li>
+                <li class="about-us__list-item">Тягачи на базе шоссейных и полноприводных автомобилей</li>
+                <li class="about-us__list-item">Полуприцепы открытые площадки</li>
+                <li class="about-us__list-item">Полуприцепы тралы грузоподъемностью от 20 до 100 тн</li>
+                <li class="about-us__list-item">Полуприцепы тралы телескопические, погрузочной длиной до 30 м</li>
+	              <li class="about-us__list-item">Полуприцепы тент/борт</li>
+	              <li class="about-us__list-item">Автоцистерны (для транспортировки наливных грузов)</li>
+	              <li class="about-us__list-item">Автокрановая техника на базе шоссейных и полноприводных автомобилей грузоподъемностью от 15 до 220 тн</li>
               </ul>
             </div>
             <div class="about-us__link-block">
@@ -189,10 +207,9 @@
       <a href="#" class="standart-button standart-button--features">Оставить заявку</a>
     </div>
     <div class="features-slide__item features-slide__item--double-width">
-      <h3 class="features-slide__h3 features-slide__h3--custom">Уникальные<br> <span>Решения</span><br> для перевозок
-      </h3>
+      <h3 class="features-slide__h3 features-slide__h3--custom">Простое<br> <span>Решение</span><br> сложных задач</h3>
       <h4 class="features-slide__h4">Индивидуальный подход к каждому клиенту</h4>
-      <p class="features-slide__text">Наши специалисты - профессионалы своего дела, знающие специфику труднодоступных регионов. Любые ваши требования и пожелания будут выполнены в чётком соответствии с техническим заданием. Наша компания с 2008 года производит транспортировку любых негабаритных грузов в самые отдалённые места нашей страны - преимущетсвенно, это регионы Ямало-Ненецкого и Ханты-Мансийского Автономных Округов, а также Свердловская и Тюменская области. Практически полное отсутствие дорожного покрытия - не помеха. Мы привезём ваш груз в любую местность </p>
+      <p class="features-slide__text">Наши специалисты - профессионалы своего дела, знающие специфику труднодоступных регионов. Любые ваши требования и пожелания будут выполнены в чётком соответствии с техническим заданием. Наша компания с 2008 года осуществляет транспортировку любых негабаритных грузов в самые отдалённые места нашей страны - преимущетсвенно, это регионы Ямало-Ненецкого и Ханты-Мансийского Автономных Округов, Дальний Восток, Саха-Якутия, Красноярский край, а также Свердловская и Тюменская области. Практически полное отсутствие дорожного покрытия - не помеха. Мы привезём ваш груз в любую местность </p>
     </div>
   </section>
   <section class="feature-block">
@@ -215,7 +232,7 @@
           </svg>
           <div class="feature-block__text-block">
             <h4 class="feature-block__h4">Гарантия доставки</h4>
-            <p class="feature-block__text">Мы отвечаем своей репутацией за каждый взятый в работу груз и гарантируем доставку</p>
+            <p class="feature-block__text">Мы несём ответственность за взятые на себя обязательства</p>
             <a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
           </div>
         </div>
@@ -227,8 +244,8 @@
             </g>
           </svg>
           <div class="feature-block__text-block">
-            <h4 class="feature-block__h4">В любых условиях</h4>
-            <p class="feature-block__text">Не важно, идёт ли снег, дождь или на пути возникли другие трудности - груз будет доставлен</p>
+            <h4 class="feature-block__h4">В сложных условиях</h4>
+            <p class="feature-block__text">Осуществляем достаавку в отдаленные и труднодоступные места</p>
             <a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
           </div>
         </div>
@@ -244,7 +261,7 @@
           </svg>
           <div class="feature-block__text-block">
             <h4 class="feature-block__h4">Всегда на связи</h4>
-            <p class="feature-block__text">Мы готовы ответить на любые вопросы о статусе вашей перевозки и сами сообщаем о любых изменениях</p>
+            <p class="feature-block__text">Производим контроль движения грузов по всему маршруту</p>
             <a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
           </div>
         </div>
@@ -264,8 +281,8 @@
             </g>
           </svg>
           <div class="feature-block__text-block">
-            <h4 class="feature-block__h4">Сжатые сроки</h4>
-            <p class="feature-block__text">Мы понимаем, как важно бывает время, поэтому без промедлений доставляем ваше отправления к месту назначения</p>
+            <h4 class="feature-block__h4">Пунктуальность</h4>
+            <p class="feature-block__text">Соответствие установленным срокам, согласно договорным обязательствам</p>
             <a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
           </div>
         </div>
@@ -280,8 +297,8 @@
             </g>
           </svg>
           <div class="feature-block__text-block">
-            <h4 class="feature-block__h4">Свой автопарк</h4>
-            <p class="feature-block__text">Большой парк техники в нашем распоряжении позволяет моментально приступить к выполнению заказа</p>
+            <h4 class="feature-block__h4">Технические ресурсы</h4>
+            <p class="feature-block__text">В нашем распоряжении большой автопарк различной техники для перевозки</p>
             <a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
           </div>
         </div>
@@ -355,72 +372,6 @@
           </div>
         </div>
         <div class="facts__image-block"></div>
-      </div>
-    </div>
-  </section>
-  <!-- <section class="question">
-    <div class="question__request">
-      <h2 class="question__h2">Вам нужно отправить груз?</h2>
-      <p class="question__text">Вы уже знаете все необходимые подробности и вам нужно срочно подать транспорт? Нажмите эту кнопку и наши специалисты свяжутся с вами для уточнения сроков</p>
-      <a href="#" class="standart-button">Отправить груз</a>
-    </div>
-    <div class="question__request">
-      <h2 class="question__h2">Вам нужно уточнить подробности?</h2>
-      <p class="question__text">Вы хотите больше информации о нашей компании, транспорте, сроках и стоимости перевозки? Эта кнопка создана для таких задач - нажмите её и наши менеджеры ответят на все вопросы</p>
-      <a href="#" class="standart-button">Узнать подробности</a>
-    </div>
-  </section> -->
-  <section class="price">
-    <div class="main-container">
-      <div class="section-headers section-headers--price">
-        <h2 class="section-headers__h2">Наши цены</h2>
-        <h4 class="section-headers__h4">Тарифы на перевозки</h4>
-      </div>
-      <div class="price__items-wrapper">
-        <ul class="price__item">
-          <li class="price__list-item">
-            <p class="price__header">Тариф <br> "Базовый"</p>
-            <p class="price__amount">от <span>70</span> руб / км</p>
-          </li>
-          <li class="price__list-item">Один автомобиль</li>
-          <li class="price__list-item">Два водителя</li>
-          <li class="price__list-item">Без погрузочных работ</li>
-          <li class="price__list-item">Страхование груза</li>
-          <li class="price__list-item">Выбрать этот тариф</li>
-        </ul>
-        <ul class="price__item">
-          <li class="price__list-item">
-            <p class="price__header">Тариф <br> "Расширенный"</p>
-            <p class="price__amount">от <span>85</span> руб / км</p>
-          </li>
-          <li class="price__list-item">Один автомобиль</li>
-          <li class="price__list-item">Два водителя</li>
-          <li class="price__list-item">Погрузка и разгрузка</li>
-          <li class="price__list-item">Страхование груза</li>
-          <li class="price__list-item">Выбрать этот тариф</li>
-        </ul>
-        <ul class="price__item">
-          <li class="price__list-item">
-            <p class="price__header">Тариф <br> "Негабарит"</p>
-            <p class="price__amount">от <span>95</span> руб / км</p>
-          </li>
-          <li class="price__list-item">Специальный трал</li>
-          <li class="price__list-item">Мощный тягач</li>
-          <li class="price__list-item">Погрузка и разгрузка</li>
-          <li class="price__list-item">Страхование груза</li>
-          <li class="price__list-item">Выбрать этот тариф</li>
-        </ul>
-        <ul class="price__item">
-          <li class="price__list-item">
-            <p class="price__header">Тариф <br> "Проект"</p>
-            <p class="price__amount">от <span>110</span> руб / км</p>
-          </li>
-          <li class="price__list-item">Парк техники</li>
-          <li class="price__list-item">Расчёт маршрута</li>
-          <li class="price__list-item">Погрузка и разгрузка</li>
-          <li class="price__list-item">Страхование груза</li>
-          <li class="price__list-item">Выбрать этот тариф</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -499,6 +450,8 @@
     </div>
   </footer>
 </main>
+<script src="js/jquery.js"></script>
+<script src="js/vegas.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

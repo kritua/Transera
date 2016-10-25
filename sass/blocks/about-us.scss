@@ -19,16 +19,13 @@
   }
   &--image {
     display: none;
-    background: url('../img/bg-full.jpg') no-repeat 30% 50%;
+    background: linear-gradient(transparentize($clr-purple, 0.5), transparentize($clr-purple, 0.5)), url('../img/man.jpg') center no-repeat;
     background-size: cover;
     @include adaptive(tablet) {
       display: block;
       border-radius: 20px;
       box-shadow: 15px 15px 5px 0 transparentize($clr-darkblue, 0.3);
       flex-basis: 60%;
-    }
-    @include adaptive(desktop) {
-      background-position: 30% 82%;
     }
   }
   &--text {
@@ -59,9 +56,10 @@
 
 .about-us__radio-block {
   position: relative;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  min-height: 422px;
+  min-height: 400px;
   justify-content: space-between;
   margin-bottom: 29px;
   &::before {
@@ -74,7 +72,7 @@
     background-color: $clr-lightgrey-1;
   }
   @include adaptive(desktop) {
-    min-height: 380px;
+    min-height: 200px;
   }
 }
 
@@ -119,6 +117,8 @@
   @include font-regular();
   font-size: 14px;
   line-height: 24px;
+  text-indent: 10px;
+  margin-bottom: 7px;
 }
 
 .about-us__list-item {
