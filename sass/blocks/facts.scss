@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: center;
   @include adaptive(desktop) {
-    flex-basis: 50%;
+    flex-basis: 60%;
   }
 }
 
@@ -22,10 +22,10 @@
   display: none;
   @include adaptive(desktop) {
     display: block;
-    background: url(../img/map.png) no-repeat center;
+    background: url("../img/work/slide-1.jpg") no-repeat center;
     background-size: contain;
-    flex-basis: 46%;
-    margin-left: auto;
+    flex-basis: 40%;
+    min-height: 500px !important;
   }
 }
 
@@ -35,6 +35,9 @@
   line-height: 24px;
   color: $clr-darkblue;
   margin-bottom: 0;
+  @include adaptive(desktop) {
+    margin: 0 10px;
+  }
 }
 
 .facts__item {
@@ -46,6 +49,7 @@
     margin: 10px;
   }
   @include adaptive(desktop) {
+    margin: 0 20px;
     &:not(:first-child) {
       display: flex;
       align-items: center;
@@ -77,4 +81,5 @@
   line-height: 24px;
   color: $clr-grey-2;
   margin-top: 0;
+  text-align: justify;
 }

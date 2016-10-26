@@ -6,7 +6,7 @@
   background: linear-gradient(transparentize($clr-purple, 0.3), transparentize($clr-purple, 0.3)), url('../img/bg-full-1.jpg')center no-repeat;
   background-size: cover;
   &--menu-opened {
-   .header__logo {
+    .header__logo {
      border-bottom: 2px solid $clr-black;
      background-color: transparentize($clr-purple, 0.3);
      @include adaptive(desktop) {
@@ -23,7 +23,7 @@
   position: relative;
   z-index: 2;
   @include adaptive(desktop) {
-    padding: 20px 100px;
+    padding: 5px 100px 20px;
     align-items: center;
   }
 }
@@ -43,7 +43,7 @@
 .header__logo-img {
   width: 100px;
   @include adaptive(desktop) {
-    width: 150px;
+    width: 200px;
   }
 }
 
@@ -127,7 +127,7 @@
   display: none;
   @include adaptive(desktop) {
     display: block;
-    flex-basis: 20%;
+     flex-basis: 20%;
     margin-left: auto;
   }
   @include adaptive(desktop-ext) {

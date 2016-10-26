@@ -4,6 +4,10 @@
   @include adaptive(tablet) {
     margin-top: -100px;
   }
+  @include adaptive(desktop) {
+    padding: 50px 0;
+    margin-top: -120px;
+  }
   .main-container {
     max-width: 1170px;
     margin: 0 auto;
@@ -14,6 +18,7 @@
   }
 }
 
+
 .transport-types__wrapper {
   display: flex;
   position: relative;
@@ -23,14 +28,15 @@
   @include adaptive(tablet) {
     border-radius: 20px;
     box-shadow: 0 1px 2px 1px $clr-grey;
-    padding: 30px;
   }
 }
 
 .transport-types__item {
+  position: relative;
   flex-basis: 50%;
   text-align: center;
   padding: 10px;
+  transition: all 0.3s ease;
   &:nth-child(2n+1) {
     border-right: 1px solid $clr-lightgrey;
     @include adaptive(tablet) {
@@ -39,13 +45,36 @@
   }
   &:nth-child(n+3) {
     padding-bottom: 0;
+    @include adaptive(desktop) {
+      padding-bottom: 10px;
+    }
+  }
+  &:hover {
+    .transport-types__image {
+      transform: translateY(-20px);
+    }
   }
   @include adaptive(tablet) {
     flex-basis: 25%;
     padding-bottom: 0;
     &:not(:last-child) {
-      border-right: 1px solid $clr-lightgrey;
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        top: 20px;
+        width: 1px;
+        background: $clr-lightgrey;
+      }
     }
+  }
+  @include adaptive(desktop) {
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    justify-content: space-between;
+    padding-bottom: 10px;
   }
 }
 
@@ -54,6 +83,9 @@
   font-size: 14px;
   line-height: 24px;
   color: $clr-darkblue;
+  @include adaptive(desktop) {
+    margin: 0;
+  }
 }
 
 .transport-types__text {
@@ -61,6 +93,9 @@
   font-size: 12px;
   line-height: 20px;
   color: $clr-grey-2;
+  @include adaptive(desktop) {
+    margin-top: 0;
+  }
 }
 
 .transport-types__image-block {
@@ -82,5 +117,10 @@
   box-shadow: 0 1px 6px 1px $clr-grey;
   max-width: 100%;
   height: auto;
+  background: $clr-white;
+  transition: all 0.3s ease;
+}
+
+.transport-types__button {
 
 }
