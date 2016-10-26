@@ -115,13 +115,4 @@ $(document).ready(function() {
 
 
 
-/*var Circle = function(sel){
-  var circles = document.querySelectorAll(sel);
-  [].forEach.call(circles,function(el){
-    var value = parseFloat(el.innerHTML);
-    var valEl = value*408/100;
-    el.innerHTML = '<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:'+valEl+'px 408px;" r="65" cx="-80" cy="80" /><text x="50" y="90" style="font-family: Arial, sans-serif; font-size: 36px">'+ value + '%' +'</text></svg>';
-  });
-};
-Circle('.circle');*/
 
