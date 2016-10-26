@@ -4,18 +4,11 @@
   text-align: center;
 }
 
-.facts__items-wrapper {
-  display: flex;
-}
 
 .facts__text-block {
-  flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @include adaptive(desktop) {
-    flex-basis: 60%;
-  }
 }
 
 .facts__image-block {
@@ -46,13 +39,15 @@
   margin-bottom: 20px;
   @include adaptive(tablet) {
     flex-basis: 45%;
-    margin: 10px;
+    padding: 0 20px;
   }
   @include adaptive(desktop) {
-    margin: 0 20px;
+    flex-basis: 25%;
+    padding: 0 60px;
     &:not(:first-child) {
       display: flex;
       align-items: center;
+      flex-direction: column;
     }
   }
   &::before {
