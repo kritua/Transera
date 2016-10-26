@@ -9,6 +9,7 @@
   background-color: $clr-pink;
   padding: 10px 20px;
   border-radius: 20px;
+  cursor: pointer;
   @include adaptive(tablet) {
     font-size: 20px;
   }
