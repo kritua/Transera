@@ -13,7 +13,6 @@
   },
   "homepage": "https://github.com/kritua/Transera",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "0.0.7",
     "autoprefixer": "6.4.1",
     "browser-sync": "2.15.0",
     "del": "^2.2.2",
@@ -27,8 +26,6 @@
     "gulp-sass": "2.3.2",
     "gulp-svgmin": "^1.2.3",
     "gulp-uglify": "^2.0.0",
-    "jquery": "^3.1.1",
-    "requirejs": "^2.3.2",
     "run-sequence": "^1.2.2",
     "vegas": "^2.3.1"
   },

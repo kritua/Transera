@@ -19,9 +19,10 @@
         </picture>
       </div>
       <div class="header__button-menu">
-        <button class="header__button header__button-burger header__button--hidden" type="button"><img
-          src="./img/icon-menu-burger.svg" width="50" height="24"></button>
-        <button class="header__button header__button-close" type="button">
+        <button class="header__button header__button-burger header__button--hidden" type="button" id="menu-open">
+	        <img src="./img/icon-menu-burger.svg" width="50" height="24">
+        </button>
+        <button class="header__button header__button-close" type="button" id="menu-close">
 	        <img src="./img/icon-menu-cross.svg" width="24" height="24">
         </button>
       </div>
@@ -113,7 +114,7 @@
         <h4 class="section-headers__h4">Наши преимущества</h4>
       </div>
       <div class="about-us__wrapper">
-	      <div class="about-us__item about-us__item--radio">
+	      <!-- <div class="about-us__item about-us__item--radio">
 		      <div class="about-us__radio-block">
 			      <div class="about-us__radio-block-item">
 				      <input class="about-us__input" type="radio" name="first-feature" id="first-feature" checked>
@@ -128,7 +129,7 @@
 				      <label class="about-us__label" for="third-feature"><span>Эксклюзивные знания</span></label>
 			      </div>
 		      </div>
-	      </div>
+	      </div> -->
         <div class="about-us__item about-us__item--text">
           <div class="about-us__info-block">
             <div class="about-us__text-block">
@@ -144,11 +145,11 @@
 	              требованиями стандартов, норм и правил, в полном взаимодействии с Заказчиками и
 	              Партнерами.
               </p>
-	            <p class="about-us__text about-us__text--">
+	            <p class="about-us__text about-us__text--bold about-us__text--hidden">
 		            Подвижной состав компании и партнеров состоит из:
 	            </p>
             </div>
-            <div class="about-us__list-block">
+            <div class="about-us__list-block about-us__list-block--hidden">
               <ul class="about-us__list">
                 <li class="about-us__list-item">Тягачи на базе шоссейных и полноприводных автомобилей</li>
                 <li class="about-us__list-item">Полуприцепы открытые площадки</li>
@@ -163,47 +164,14 @@
               <a href="#" class="about-us__link">Читать дальше</a>
             </div>
           </div>
-          <div class="about-us__info-block about-us__info-block--hidden">
-            <div class="about-us__text-block"><p class="about-us__text">Здесь какой-то текст, много текста на самом
-              деле, но откуда мне взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне
-              взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста.
-              Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста.</div>
-            <div class="about-us__list-block">
-              <ul class="about-us__list">
-                <li class="about-us__list-item">Первая причина это ты</li>
-                <li class="about-us__list-item">А вторая все твои мечты</li>
-                <li class="about-us__list-item">Третья причина это бровь</li>
-                <li class="about-us__list-item">А четвертая - морковь</li>
-              </ul>
-            </div>
-            <div class="about-us__link-block">
-              <a href="#" class="about-us__link">Читать дальше</a>
-            </div>
-          </div>
-          <div class="about-us__info-block about-us__info-block--hidden">
-            <div class="about-us__text-block"><p class="about-us__text">Здесь какой-то текст, много текста на самом
-              деле, но откуда мне взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне
-              взять много текста. Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста.
-              Здесь какой-то текст, много текста на самом деле, но откуда мне взять много текста.</div>
-            <div class="about-us__list-block">
-              <ul class="about-us__list">
-                <li class="about-us__list-item">Первая причина это ты</li>
-                <li class="about-us__list-item">А вторая все твои мечты</li>
-                <li class="about-us__list-item">Третья причина это бровь</li>
-                <li class="about-us__list-item">А четвертая - морковь</li>
-              </ul>
-            </div>
-            <a href="#" class="about-us__link">Читать дальше</a>
-          </div>
         </div>
-        <div class="about-us__item about-us__item--image">
-        </div>
+        <div class="about-us__item about-us__item--image"></div>
       </div>
     </div>
   </section>
   <section class="features-slide">
     <div class="features-slide__item">
-      <h3 class="features-slide__h3">Настоящие<br> <span>мастера</span><br> негабаритных<br> перевозок</h3>
+      <h3 class="features-slide__h3">Вам нужна<br> <span>перевозка</span><br> негабаритного <br> <span>груза?</span></h3>
       <a href="#" class="standart-button standart-button--features">Оставить заявку</a>
     </div>
     <div class="features-slide__item features-slide__item--double-width">
@@ -343,28 +311,28 @@
             <p class="facts__item-text">Для нас нет ограничений по территориям и районам, по типам местности или погодным условиям. В любых, даже самых сложных, случаях мы эффективно и в оговоренные сроки доставляем ваши отправления. Грязь, слякость, колея или даже полное отсутствие дороги - не имеет значения. Есть транспорт. Есть груз. Есть задача перевезти - мы перевезём</p>
           </div>
           <div class="facts__item">
-            <div class="circle">65%</div>
+            <div class="circle"><strong><i></i></strong></div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Крупнотоннажные перевозки</h4>
               <p class="facts__item-text">Перевозка больших по массе, но компактных по габаритам грузов</p>
             </div>
           </div>
           <div class="facts__item">
-            <div class="circle">65%</div>
+	          <div class="circle circle--second"><strong><i></i></strong></div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Негабаритные перевозки</h4>
               <p class="facts__item-text">Транспортировка тяжелых и больших по габаритам изделий и техники</p>
             </div>
           </div>
           <div class="facts__item">
-            <div class="circle">46%</div>
+	          <div class="circle circle--third"><strong><i></i></strong></div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Проектные перевозки</h4>
               <p class="facts__item-text">Перевозка оборудования и оснащения предприятий в рамках проекта</p>
             </div>
           </div>
           <div class="facts__item">
-            <div class="circle">99%</div>
+	          <div class="circle circle--fourth"><strong><i></i></strong></div>
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Мультимодальные перевозки</h4>
               <p class="facts__item-text">Смешанный тип перевозки с применением оптимальных видов транспорта</p>
@@ -450,8 +418,10 @@
     </div>
   </footer>
 </main>
+
 <script src="js/jquery.js"></script>
 <script src="js/vegas.js"></script>
 <script src="js/script.js"></script>
+<script src="js/circle-progress.js"></script>
 </body>
 </html>
