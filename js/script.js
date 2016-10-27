@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   //Mobile menu
   var header = $(".header");
   $(".header__menu").addClass("header__menu--hidden");
@@ -19,7 +18,7 @@ $(document).ready(function () {
   });
 
 
-  //Header slideshow
+  //Header slideshowIntellijIdeaRulezzz
   header.vegas({
     delay: 10000,
     transition: 'fade',
@@ -84,6 +83,7 @@ $(document).ready(function () {
   el.appear({force_process: true});
   el.on('appear', function () {
     if (!inited) {
+    el.circleProgress({});
       inited = true;
     }
   });
@@ -113,9 +113,88 @@ $(document).ready(function () {
   });
 
   //Interactive map
-  $('.map__block').vectorMap({map: 'ru_mill'});
+  //$('.map__block').vectorMap({map: 'ru_mill'});
 });
 
-
+//Interactive map
+$(function(){
+  $('.map__block').vectorMap({
+    map: 'ru_mill',
+    backgroundColor: 'transparent',
+    regionsSelectableOne: !0,
+    onRegionClick: function(event, code) {
+        window.location.href = "/regions.html#" + code
+      },
+    markers: [
+          [61.18, -149.53],
+          [21.18, -157.49],
+          [40.66, -73.56],
+          [41.52, -87.37],
+          [35.22, -80.84],
+          [31.52, -87.37]
+        ],
+        series: {
+          markers: [{
+            attribute: 'fill',
+            scale: ['#C8EEFF', '#0071A4'],
+            normalizeFunction: 'polynomial',
+            values: [408, 512, 550, 781],
+            legend: {
+              vertical: true
+            }
+          },{
+            attribute: 'image',
+            scale: {
+              bank: '/img/icon-bank.png',
+              factory: '/img/icon-factory.png'
+            },
+            values: {
+              '4': 'bank',
+              '5': 'factory'
+            },
+            legend: {
+              horizontal: true,
+              cssClass: 'jvectormap-legend-icons',
+              title: 'Business type'
+            }
+          }],
+          regions: [{
+            scale: {
+              darkblue: '##2a5980',
+            },
+            attribute: 'fill',
+            values: {
+              "RU-SA": 'darkblue',
+              "RU-KRA": 'darkblue',
+            },
+            legend: {
+              horizontal: true,
+              title: 'Color'
+            }
+          },{
+            scale: {
+              redGreen: '/img/bg-red-green.png',
+              yellowBlue: '/img/bg-yellow-blue.png'
+            },
+            values: {
+              "US-TX": 'redGreen',
+              "US-CA": 'yellowBlue'
+            },
+            attribute: 'fill',
+            legend: {
+              horizontal: true,
+              cssClass: 'jvectormap-legend-bg',
+              title: 'Pattern',
+              labelRender: function(v){
+                return {
+                  redGreen: 'low',
+                  yellowBlue: 'high'
+                }[v];
+              }
+            }
+          }]
+        }
+  });
+});
 
 

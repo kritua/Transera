@@ -1,5 +1,12 @@
 @import '../vars';
 
+.map {
+  display: none;
+  @include adaptive(desktop) {
+    display: block;
+  }
+}
+
 svg {
   touch-action: none;
 }

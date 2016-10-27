@@ -48,21 +48,21 @@ gulp.task('serve', ['style'], function () {
   });
 
   gulp.watch('sass/**/*.{scss,sass}', ['style']);
-  gulp.watch('js/**/*.js', ['scripts']);
+  //gulp.watch('js/**/*.js', ['scripts']);
   gulp.watch('*.html').on('change', server.reload);
 });
 
-gulp.task('scripts', function () {
+/*gulp.task('scripts', function () {
   gulp.src([
     'js/*.js'
   ])
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('build/js'))
-    .pipe(rename('script.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('js'))
+    //.pipe(rename('script.min.js'))
+   // .pipe(uglify())
+    //.pipe(gulp.dest('build/js'))
     .pipe(server.stream());
-});
+});*/
 
 gulp.task('raster', function () {
   gulp.src([

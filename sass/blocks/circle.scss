@@ -7,8 +7,12 @@
   position: relative;
   text-align: center;
   line-height: 1.2;
-  @include adaptive(desktop) {
+  @include adaptive(tablet) {
     transform: scale(0.7);
+  }
+  @include adaptive(desktop-ext) {
+    transform: scale(1);
+    margin: 6px 20px 20px;
   }
 }
 

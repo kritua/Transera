@@ -29,14 +29,14 @@
     </div>
     <nav class="header__menu">
       <ul class="header__menu-list">
-        <li class="header__menu-item"><a href="#">Главная</a></li>
-        <li class="header__menu-item"><a href="#">О компании</a></li>
-        <li class="header__menu-item"><a href="#">Преимущества</a></li>
-        <li class="header__menu-item"><a href="#">Услуги</a></li>
-        <li class="header__menu-item"><a href="#">Наш опыт</a></li>
-        <li class="header__menu-item"><a href="#">Документация</a></li>
-        <li class="header__menu-item"><a href="#">Тендеры</a></li>
-        <li class="header__menu-item"><a href="#">Контакты</a></li>
+        <li class="header__menu-item header__menu-item--active"><a href="#">Главная</a></li>
+        <li class="header__menu-item"><a href="about.html">О компании</a></li>
+        <li class="header__menu-item"><a href="features.html">Преимущества</a></li>
+        <li class="header__menu-item"><a href="services.html">Услуги</a></li>
+        <li class="header__menu-item"><a href="experience.html">Наш опыт</a></li>
+        <li class="header__menu-item"><a href="docs.html">Документация</a></li>
+        <li class="header__menu-item"><a href="regions.html">Регионы</a></li>
+        <li class="header__menu-item"><a href="contacts.html">Контакты</a></li>
       </ul>
     </nav>
     <div class="header__button-order">
@@ -185,7 +185,7 @@
         регионов. Любые ваши требования и пожелания будут выполнены в чётком соответствии с техническим заданием. Наша
         компания с 2008 года осуществляет транспортировку любых негабаритных грузов в самые отдалённые места нашей
         страны - преимущетсвенно, это регионы Ямало-Ненецкого и Ханты-Мансийского Автономных Округов, Дальний Восток,
-        Саха-Якутия, Красноярский край, а также Свердловская и Тюменская области. Практически полное отсутствие
+        Республика Саха (Якутия), Красноярский край, а также Свердловская и Тюменская области. Практически полное отсутствие
         дорожного покрытия - не помеха. Мы привезём ваш груз в любую местность </p>
     </div>
   </section>
@@ -313,20 +313,36 @@
         <h4 class="section-headers__h4">Расчёт цены и сроков</h4>
       </div>
       <form>
-        <fieldset class="quote__item-wrapper">
-          <div class="quote__item">
-            <input class="quote__text-input" type="tel" name="Phone" id="Phone" required>
-            <label class="quote__label" for="Phone">Ваш номер телефона</label>
-          </div>
-          <div class="quote__item">
-            <input class="quote__text-input" type="text" name="From" id="From" required>
-            <label class="quote__label" for="From">Откуда забрать груз</label>
-          </div>
-          <div class="quote__item">
-            <input class="quote__text-input" type="text" name="To" id="To" required>
-            <label class="quote__label" for="To">Куда отвезти груз</label>
-          </div>
-        </fieldset>
+        <div class="quote__form">
+          <fieldset class="quote__item-wrapper">
+            <div class="quote__item">
+              <input class="quote__text-input" type="tel" name="Name" id="Name" required>
+              <label class="quote__label" for="Name">Ваше имя</label>
+            </div>
+            <div class="quote__item">
+              <input class="quote__text-input" type="tel" name="Phone" id="Phone" required>
+              <label class="quote__label" for="Phone">Номер телефона</label>
+            </div>
+            <div class="quote__item">
+              <input class="quote__text-input" type="email" name="Mail" id="Mail" required>
+              <label class="quote__label" for="Mail">Электронная почта</label>
+            </div>
+          </fieldset>
+          <fieldset class="quote__item-wrapper">
+            <div class="quote__item">
+              <input class="quote__text-input" type="text" name="From" id="From" required>
+              <label class="quote__label" for="From">Откуда забрать груз</label>
+            </div>
+            <div class="quote__item">
+              <input class="quote__text-input" type="text" name="To" id="To" required>
+              <label class="quote__label" for="To">Куда отвезти груз</label>
+            </div>
+            <div class="quote__item">
+              <textarea class="quote__text-input" name="Message" id="Message" rows="1" required></textarea>
+              <label class="quote__label" for="Message">Комментарии</label>
+            </div>
+          </fieldset>
+        </div>
         <a href="#" class="standart-button">Оставить заявку</a>
       </form>
     </div>
