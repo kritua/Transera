@@ -126,74 +126,48 @@ $(function(){
         window.location.href = "/regions.html#" + code
       },
     markers: [
-          [61.18, -149.53],
-          [21.18, -157.49],
-          [40.66, -73.56],
-          [41.52, -87.37],
-          [35.22, -80.84],
-          [31.52, -87.37]
+          [61.18, 149.53],
+          [70.18, 57.49],
+          [60.18, 149.53],
+          [62.18, 149.53],
+          [63.18, 149.53],
+          [64.18, 149.53]
         ],
-        series: {
-          markers: [{
-            attribute: 'fill',
-            scale: ['#C8EEFF', '#0071A4'],
-            normalizeFunction: 'polynomial',
-            values: [408, 512, 550, 781],
-            legend: {
-              vertical: true
-            }
-          },{
-            attribute: 'image',
-            scale: {
-              bank: '/img/icon-bank.png',
-              factory: '/img/icon-factory.png'
-            },
-            values: {
-              '4': 'bank',
-              '5': 'factory'
-            },
-            legend: {
-              horizontal: true,
-              cssClass: 'jvectormap-legend-icons',
-              title: 'Business type'
-            }
-          }],
-          regions: [{
-            scale: {
-              darkblue: '##2a5980',
-            },
-            attribute: 'fill',
-            values: {
-              "RU-SA": 'darkblue',
-              "RU-KRA": 'darkblue',
-            },
-            legend: {
-              horizontal: true,
-              title: 'Color'
-            }
-          },{
-            scale: {
-              redGreen: '/img/bg-red-green.png',
-              yellowBlue: '/img/bg-yellow-blue.png'
-            },
-            values: {
-              "US-TX": 'redGreen',
-              "US-CA": 'yellowBlue'
-            },
-            attribute: 'fill',
-            legend: {
-              horizontal: true,
-              cssClass: 'jvectormap-legend-bg',
-              title: 'Pattern',
-              labelRender: function(v){
-                return {
-                  redGreen: 'low',
-                  yellowBlue: 'high'
-                }[v];
-              }
-            }
-          }]
+    series: {
+      markers: [{
+        attribute: 'image',
+        scale: {
+          //oil: '../img/oil.png'
+          //'gas': '/img/gas.png'
+        },
+        values: {
+          '4': 'oil',
+          '5': 'oil'
         }
+      }],
+      regions: [{
+        scale: {
+          darkblue: '#2a5980'
+        },
+        attribute: 'fill',
+        values: {
+          "RU-SA": 'darkblue',
+          "RU-KYA": 'darkblue',
+          "RU-TYU": 'darkblue',
+          "RU-KHM": 'darkblue',
+          "RU-YAN": 'darkblue',
+          "RU-SVE": 'darkblue',
+          "RU-CHU": 'darkblue',
+          "RU-KHA": 'darkblue',
+          "RU-AMU": 'darkblue',
+          "RU-YEV": 'darkblue',
+          "RU-KAM": 'darkblue',
+          "RU-MAG": 'darkblue',
+          "RU-PRI": 'darkblue',
+          "RU-SAK": 'darkblue'
+        }
+      }]
+    }
   });
 });
 
