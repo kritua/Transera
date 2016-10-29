@@ -58,4 +58,12 @@ section {
 }
 
 
-#world-map-markers { width: 400px; height: 400px; }
+.clients__slider {
+  width: 80%;
+  margin: 0 auto;
+  img {
+    border: 1px solid $clr-lightgrey;
+    margin: 5px;
+    padding: 5px;
+  }
+}

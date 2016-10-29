@@ -2,8 +2,32 @@
 
 .facts {
   text-align: center;
+  &--pages {
+    @include adaptive(desktop) {
+      margin-top: 0;
+      padding-top: 0;
+    }
+    .facts__item {
+      &:not(:first-child) {
+        flex-basis: 33.33%;
+        flex-direction: column;
+      }
+    }
+    .facts__text-wrapper {
+      @include adaptive(desktop) {
+        margin-right: auto;
+      }
+    }
+    .facts__item-header {
+      @include adaptive(tablet) {
+        margin-top: -20px;
+      }
+      @include adaptive(desktop-ext) {
+        margin-top: 0;
+      }
+    }
+  }
 }
-
 
 .facts__text-block {
   display: flex;

@@ -29,6 +29,16 @@
   }
 }
 
+.section-headers__page-header {
+  display: none;
+  text-align: center;
+  @include adaptive(tablet) {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+
 .section-headers__main-header {
   position: relative;
   @include font-bold();

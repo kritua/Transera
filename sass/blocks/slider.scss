@@ -20,8 +20,8 @@
     top: 10px;
     left: 15px;
     border: 3px solid transparent;
-    border-left-color: transparentize($clr-lightgrey, 0.9);
-    border-bottom-color: transparentize($clr-lightgrey, 0.9);
+    border-left-color: transparentize($clr-lightgrey, 0.7);
+    border-bottom-color: transparentize($clr-lightgrey, 0.7);
     transform: rotate(45deg);
     transition: all 0.3s ease;
   }
@@ -34,8 +34,8 @@
   }
   &:hover {
     &::before {
-      border-left-color: transparentize($clr-lightgrey, 0.5);
-      border-bottom-color: transparentize($clr-lightgrey, 0.5);
+      border-left-color: transparentize($clr-lightgrey, 0.3);
+      border-bottom-color: transparentize($clr-lightgrey, 0.3);
     }
   }
   &:active {
@@ -46,5 +46,23 @@
   }
   @include adaptive(desktop) {
     display: block;
+  }
+  &--white-bg {
+    &::before {
+      border-left-color: transparentize($clr-darkblue, 0.8);
+      border-bottom-color: transparentize($clr-darkblue, 0.8);
+    }
+    &:hover {
+      &::before {
+        border-left-color: transparentize($clr-darkblue, 0.5);
+        border-bottom-color: transparentize($clr-darkblue, 0.5);
+      }
+    }
+    &:active {
+      &::before {
+        border-left-color: transparentize($clr-darkblue, 0);
+        border-bottom-color: transparentize($clr-darkblue, 0);
+      }
+    }
   }
 }

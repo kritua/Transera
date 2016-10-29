@@ -80,14 +80,16 @@ $(document).ready(function () {
     transition: 'fade2',
     transitionDuration: '1000',
     timer: false,
+    shuffle: true,
     slides: [
-      {src: "./img/trawl/slide-1.png"},
-      {src: "./img/trawl/slide-2.png"},
-      {src: "./img/trawl/slide-3.png"},
-      {src: "./img/trawl/slide-4.png"},
-      {src: "./img/trawl/slide-5.png"},
-      {src: "./img/trawl/slide-6.png"},
-      {src: "./img/trawl/slide-7.png"}
+      {src: "./img/trawl/slide-1.jpg"},
+      {src: "./img/trawl/slide-2.jpg"},
+      {src: "./img/trawl/slide-3.jpg"},
+      {src: "./img/trawl/slide-4.jpg"},
+      {src: "./img/trawl/slide-5.jpg"},
+      {src: "./img/trawl/slide-6.jpg"},
+      {src: "./img/trawl/slide-7.jpg"},
+      {src: "./img/trawl/slide-8.jpg"}
     ]
   });
   $("#specialist-previous").on('click', function () {
@@ -96,7 +98,8 @@ $(document).ready(function () {
   $("#specialist-next").on('click', function () {
     $(".specialist__item--image").vegas('next');
   });
-  
+
+
   //Extends jquery lib to add on scroll events
 $.fn.extend({
   // watching for element's appearance in browser viewport
@@ -219,27 +222,59 @@ $.fn.extend({
   //Circles 1-4
   $(el).circleProgress({
     startAngle: -Math.PI / 6 * 3,
-    value: 0.6,
+    value: 0.16,
     fill: {gradient: ['#3571a3', '#3571a3']}
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(6565 * progress) + '<br>' + '<i>тонн</i>');
+    $(this).find('strong').html(parseInt(276 * progress) + '<br>' + '<i>тыс. тонн</i>');
   });
   $(".circle--second").circleProgress({
-    value: 0.8
+    value: 0.07
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(87880 * progress) + '<br>' + '<i>тонн</i>');
+    $(this).find('strong').html(parseInt(124 * progress) + '<br>' + '<i>тыс. тонн</i>');
   });
   $(".circle--third").circleProgress({
-    value: 0.8
+    value: 0.72
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(80 * progress) + '<br>' + '<i>тонн</i>');
+    $(this).find('strong').html(parseInt(1250 * progress) + '<br>' + '<i>тыс. тонн</i>');
   });
   $(".circle--fourth").circleProgress({
-    value: 0.8
+    value: 0.05
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(7760 * progress) + '<br>' + '<i>тонн</i>');
+    $(this).find('strong').html(parseInt(85 * progress) + '<br>' + '<i>тыс. тонн</i>');
+  });
+
+
+  //Circles about page
+  $(".circle--about").circleProgress({
+    startAngle: -Math.PI / 6 * 3,
+    value: 0.66,
+    fill: {gradient: ['#3571a3', '#3571a3']}
+  }).on('circle-animation-progress', function (event, progress) {
+    $(this).find('strong').html(parseInt(1150 * progress) + '<br>' + '<i>тыс. тонн</i>');
+  });
+  $(".circle--about-second").circleProgress({
+    value: 0.29
+  }).on('circle-animation-progress', function (event, progress) {
+    $(this).find('strong').html(parseInt(500 * progress) + '<br>' + '<i>тыс. тонн</i>');
+  });
+  $(".circle--about-third").circleProgress({
+    value: 0.05
+  }).on('circle-animation-progress', function (event, progress) {
+    $(this).find('strong').html(parseInt(85 * progress) + '<br>' + '<i>тыс. тонн</i>');
+  });
+
+
+  //Clients slider
+  $('.clients__slider').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 3
   });
 });
+
+
+
+
 
 //Interactive map
 $(function(){

@@ -272,13 +272,4 @@
   }
 }
 
-.about-us__page-header {
-  display: none;
-  text-align: center;
-  @include adaptive(tablet) {
-    display: block;
-    margin: 0 auto;
-    width: 600px;
-  }
-}
 

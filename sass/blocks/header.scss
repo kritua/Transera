@@ -83,6 +83,7 @@
 }
 
 .header__menu-item {
+  position: relative;
   background-color: transparentize($clr-purple, 0.3);
   text-align: center;
   border-top: 1px solid $clr-white;
@@ -109,6 +110,41 @@
     border: none;
     background-color: transparent;
     flex-basis: 25%;
+    transition: all 0.5s ease;
+    &:hover {
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background: $clr-red;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    &:active {
+      a {
+        color: $clr-grey;
+      }
+    }
+    &--active {
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: $clr-red;
+      }
+      &::before {
+        top: 0;
+        left: -10px;
+      }
+      &::after {
+        bottom: 0;
+        left: 50%;
+        margin-left: -20px;
+      }
+    }
   }
   @include adaptive(desktop-ext) {
     flex-basis: 0;
