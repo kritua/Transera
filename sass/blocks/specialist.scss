@@ -40,5 +40,31 @@
   text-indent: 10px;
   margin-bottom: 7px;
   text-align: justify;
+}
 
+.specialist__item-header {
+  position: relative;
+  display: inline;
+  @include font-bold();
+  font-size: 20px;
+  line-height: 40px;
+  color: $clr-grey;
+  margin-left: 30px;
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+  }
+  &::before {
+    top: 0;
+    left: -25px;
+    background: url('../img/icons/cross-blue.svg') no-repeat center;
+  }
+  &::after {
+    top: 10px;
+    left: -17px;
+    background: url('../img/icons/cross-gray.svg') no-repeat center;
+  }
 }
