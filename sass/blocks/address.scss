@@ -3,7 +3,9 @@
 .address {
   text-align: left;
   .main-container {
-    padding: 0;
+    @include adaptive(desktop) {
+      padding: 0;
+    }
   }
   @include adaptive(desktop) {
     margin-top: 0;
@@ -48,14 +50,18 @@
 
 .address__item-header {
   @include font-medium();
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   color: $clr-pink;
   text-align: center;
+  @include adaptive(desktop) {
+    text-align: left;
+  }
   br {
     display: none;
     @include adaptive(tablet) {
       display: block;
+      text-align: center;
     }
     @include adaptive(desktop) {
       display: none;
@@ -65,6 +71,9 @@
 
 .address__text-block {
   margin-left: 40px;
+  @include adaptive(desktop) {
+    margin-left: 28px;
+  }
 
 }
 
@@ -72,6 +81,9 @@
   display: block;
   position: relative;
   margin-bottom: 10px;
+  @include font-regular();
+  font-size: 14px;
+  line-height: 24px;
   color: $clr-darkblue;
   &::before {
     content: '';
@@ -79,26 +91,26 @@
     left: -30px;
     width: 20px;
     height: 20px;
-    background: url('../img/spot.svg') no-repeat center;
+    background: url('../img/icons/spot.svg') no-repeat center;
     @include adaptive(desktop) {
-      background: url('../img/spot-white.svg') no-repeat center;
+      background: url('../img/icons/spot-white.svg') no-repeat center;
     }
   }
   &--contact {
     text-decoration: none;
     &::before {
-      background: url('../img/mail.svg') no-repeat center;
+      background: url('../img/icons/mail.svg') no-repeat center;
       @include adaptive(desktop) {
-        background: url('../img/mail-white.svg') no-repeat center;
+        background: url('../img/icons/mail-white.svg') no-repeat center;
       }
     }
   }
   &--phone {
     font-size: 20px;
     &::before {
-      background: url('../img/phone.svg') no-repeat center;
+      background: url('../img/icons/phone.svg') no-repeat center;
       @include adaptive(desktop) {
-        background: url('../img/phone-white.svg') no-repeat center;
+        background: url('../img/icons/phone-white.svg') no-repeat center;
       }
     }
   }

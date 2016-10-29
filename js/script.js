@@ -1,8 +1,7 @@
 $(document).ready(function () {
   //Mobile menu
-  var header = $(".header");
   $(".header__menu").addClass("header__menu--hidden");
-  header.removeClass("header--menu-opened");
+  $(".header").removeClass("header--menu-opened");
   $(".header__button-burger").removeClass("header__button--hidden").on("click", function () {
     $(this).addClass("header__button--hidden");
     $(".header__button-close").removeClass("header__button--hidden");
@@ -18,66 +17,195 @@ $(document).ready(function () {
   });
 
 
-  //Header slideshowIntellijIdeaRulezzz
-  header.vegas({
+  //Header slideshow
+  $(".header--index").vegas({
     delay: 10000,
     transition: 'fade',
     transitionDuration: '1000',
     timer: false,
     overlay: true,
     slides: [
-      {src: "../img/bg-full-1.jpg"},
-      {src: "../img/bg-full-2.jpg"},
-      {src: "../img/bg-full-3.jpg"},
-      {src: "../img/bg-full-4.jpg"}
+      {src: "./img/bg-full-1.jpg"},
+      {src: "./img/bg-full-2.jpg"},
+      {src: "./img/bg-full-3.jpg"},
+      {src: "./img/bg-full-4.jpg"}
     ]
   });
   $("#header-previous").on('click', function () {
-    $(".header").vegas('previous');
+    $(".header--index").vegas('previous');
   });
   $("#header-next").on('click', function () {
-    $(".header").vegas('next');
+    $(".header--index").vegas('next');
   });
 
 
   //Facts slideshow
-  $(".facts__image-block").vegas({
+  $(".about-us__item--image").vegas({
     delay: 5000,
     transition: 'fade',
     transitionDuration: '1000',
     timer: false,
     slides: [
-      {src: "../img/work/slide-1.jpg"},
-      {src: "../img/work/slide-2.jpg"},
-      {src: "../img/work/slide-3.jpg"},
-      {src: "../img/work/slide-4.jpg"},
-      {src: "../img/work/slide-5.jpg"},
-      {src: "../img/work/slide-6.jpg"},
-      {src: "../img/work/slide-7.jpg"},
-      {src: "../img/work/slide-8.jpg"},
-      {src: "../img/work/slide-9.jpg"},
-      {src: "../img/work/slide-10.jpg"},
-      {src: "../img/work/slide-11.jpg"},
-      {src: "../img/work/slide-12.jpg"},
-      {src: "../img/work/slide-13.jpg"},
-      {src: "../img/work/slide-14.jpg"},
-      {src: "../img/work/slide-15.jpg"},
-      {src: "../img/work/slide-16.jpg"},
-      {src: "../img/work/slide-17.jpg"},
-      {src: "../img/work/slide-18.jpg"},
-      {src: "../img/work/slide-19.jpg"},
-      {src: "../img/work/slide-20.jpg"}
+      {src: "./img/work/slide-1.jpg"},
+      {src: "./img/work/slide-2.jpg"},
+      {src: "./img/work/slide-3.jpg"},
+      {src: "./img/work/slide-4.jpg"},
+      {src: "./img/work/slide-5.jpg"},
+      {src: "./img/work/slide-6.jpg"},
+      {src: "./img/work/slide-7.jpg"},
+      {src: "./img/work/slide-8.jpg"},
+      {src: "./img/work/slide-9.jpg"},
+      {src: "./img/work/slide-10.jpg"},
+      {src: "./img/work/slide-11.jpg"},
+      {src: "./img/work/slide-12.jpg"},
+      {src: "./img/work/slide-13.jpg"},
+      {src: "./img/work/slide-14.jpg"},
+      {src: "./img/work/slide-15.jpg"},
+      {src: "./img/work/slide-16.jpg"},
+      {src: "./img/work/slide-17.jpg"},
+      {src: "./img/work/slide-18.jpg"},
+      {src: "./img/work/slide-19.jpg"},
+      {src: "./img/work/slide-20.jpg"}
     ]
   });
-  $("#facts-previous").on('click', function () {
-    $(".facts__image-block").vegas('previous');
+  $("#about-us-previous").on('click', function () {
+    $(".about-us__item--image").vegas('previous');
   });
-  $("#facts-next").on('click', function () {
-    $(".facts__image-block").vegas('next');
+  $("#about-us-next").on('click', function () {
+    $(".about-us__item--image").vegas('next');
   });
 
+  $(".specialist__item--image").vegas({
+    delay: 5000,
+    transition: 'fade2',
+    transitionDuration: '1000',
+    timer: false,
+    slides: [
+      {src: "./img/trawl/slide-1.png"},
+      {src: "./img/trawl/slide-2.png"},
+      {src: "./img/trawl/slide-3.png"},
+      {src: "./img/trawl/slide-4.png"},
+      {src: "./img/trawl/slide-5.png"},
+      {src: "./img/trawl/slide-6.png"},
+      {src: "./img/trawl/slide-7.png"}
+    ]
+  });
+  $("#specialist-previous").on('click', function () {
+    $(".specialist__item--image").vegas('previous');
+  });
+  $("#specialist-next").on('click', function () {
+    $(".specialist__item--image").vegas('next');
+  });
+  
+  //Extends jquery lib to add on scroll events
+$.fn.extend({
+  // watching for element's appearance in browser viewport
+  appear: function(options) {
+    var opts = $.extend({}, defaults, options || {});
+    var selector = this.selector || this;
+    if (!check_binded) {
+      var on_check = function() {
+        if (check_lock) {
+          return;
+        }
+        check_lock = true;
 
-  //Circle variable
+        setTimeout(process, opts.interval);
+      };
+
+      $(window).scroll(on_check).resize(on_check);
+      check_binded = true;
+    }
+
+    if (opts.force_process) {
+      setTimeout(process, opts.interval);
+    }
+    add_selector(selector);
+    return $(selector);
+  }
+});
+$.fn.extend({
+  // watching for element's appearance in browser viewport
+  appear: function(options) {
+    var check_binded = false;
+    var selectors = [];
+    var check_lock = false;
+    var $prior_appeared = [];
+    var defaults = {
+      interval: 250,
+      force_process: false
+    };
+    var $window = $(window);
+    function add_selector(selector) {
+      selectors.push(selector);
+      $prior_appeared.push();
+    }
+    function appeared(selector) {
+      return $(selector).filter(function() {
+        return $(this).is(':appeared');
+      });
+    }
+    function process() {
+      check_lock = false;
+      for (var index = 0, selectorsLength = selectors.length; index < selectorsLength; index++) {
+        var $appeared = appeared(selectors[index]);
+
+        $appeared.trigger('appear', [$appeared]);
+
+        if ($prior_appeared[index]) {
+          var $disappeared = $prior_appeared[index].not($appeared);
+          $disappeared.trigger('disappear', [$disappeared]);
+        }
+        $prior_appeared[index] = $appeared;
+      }
+    }
+    $.expr[':'].appeared = function(element) {
+      var $element = $(element);
+      if (!$element.is(':visible')) {
+        return false;
+      }
+
+      var window_left = $window.scrollLeft();
+      var window_top = $window.scrollTop();
+      var offset = $element.offset();
+      var left = offset.left;
+      var top = offset.top;
+
+      if (top + $element.height() >= window_top &&
+        top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
+        left + $element.width() >= window_left &&
+        left - ($element.data('appear-left-offset') || 0) <= window_left + $window.width()) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+    var opts = $.extend({}, defaults, options || {});
+    var selector = this.selector || this;
+    if (!check_binded) {
+      var on_check = function() {
+        if (check_lock) {
+          return;
+        }
+        check_lock = true;
+
+        setTimeout(process, opts.interval);
+      };
+
+      $(window).scroll(on_check).resize(on_check);
+      check_binded = true;
+    }
+
+    if (opts.force_process) {
+      setTimeout(process, opts.interval);
+    }
+    add_selector(selector);
+    return $(selector);
+  }
+});
+
+
+  //Circle variable. Starts animation on visibility
   var el = $('.circle'),
     inited = false;
   el.appear({force_process: true});
@@ -111,39 +239,38 @@ $(document).ready(function () {
   }).on('circle-animation-progress', function (event, progress) {
     $(this).find('strong').html(parseInt(7760 * progress) + '<br>' + '<i>тонн</i>');
   });
-
-  //Interactive map
-  //$('.map__block').vectorMap({map: 'ru_mill'});
 });
 
 //Interactive map
 $(function(){
+  var oils = [
+      {name: 111, coords: [60.18, 149.53], status: 'oil'},
+      {name: 222, coords: [61.18, 149.53], status: 'oil'},
+      {name: 'Салымское месторождение', coords: [64.5, 71], status: 'oil'},
+      {name: 'Приобское месторождение', coords: [65, 69], status: 'oil'},
+      {name: 'Губкинское месторождение', coords: [67, 76.39], status: 'oil'},
+      {name: 'Муравленковское месторождение', coords: [67.5, 74.53], status: 'oil'}
+    ];
   $('.map__block').vectorMap({
     map: 'ru_mill',
     backgroundColor: 'transparent',
     regionsSelectableOne: !0,
     onRegionClick: function(event, code) {
-        window.location.href = "/regions.html#" + code
+      window.location.href = "/regions.html#" + code
+    },
+    onMarkerClick: function(event, code) {
+        window.location.href = "/regions.html#field-" + code
       },
-    markers: [
-          [61.18, 149.53],
-          [70.18, 57.49],
-          [60.18, 149.53],
-          [62.18, 149.53],
-          [63.18, 149.53],
-          [64.18, 149.53]
-        ],
+
+
+    markers: oils.map(function(h){ return {name: h.name, latLng: h.coords} }),
     series: {
       markers: [{
         attribute: 'image',
         scale: {
-          //oil: '../img/oil.png'
-          //'gas': '/img/gas.png'
+          oil: './img/oil.png'
         },
-        values: {
-          '4': 'oil',
-          '5': 'oil'
-        }
+        values: oils.reduce(function(p, c, i){ p[i] = c.status; return p }, {})
       }],
       regions: [{
         scale: {

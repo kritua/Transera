@@ -36,6 +36,7 @@ $mobile-width: 320px;
 $tablet-width: 700px;
 $desktop-width: 1200px;
 $desktop-ext-width: 1366px;
+$desktop-extra-width: 1600px;
 $retina-res: "min-resolution: 144dpi";
 $retina-dpi: "min-resolution: 1.5dppx";
 
@@ -80,6 +81,11 @@ $retina-dpi: "min-resolution: 1.5dppx";
   }
   @if $media == desktop-ext {
     @media (min-width: $desktop-ext-width) {
+      @content;
+    }
+  }
+  @if $media == desktop-extra {
+    @media (min-width: $desktop-extra-width) {
       @content;
     }
   }

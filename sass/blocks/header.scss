@@ -15,6 +15,14 @@
      }
    }
   }
+  &--about {
+    @include adaptive(tablet) {
+      min-height: 120px;
+    }
+    @include adaptive(desktop) {
+      min-height: 200px;
+    }
+  }
 }
 
 .header__navbar {

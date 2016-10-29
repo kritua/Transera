@@ -20,10 +20,10 @@
       </div>
       <div class="header__button-menu">
         <button class="header__button header__button-burger header__button--hidden" type="button" id="menu-open">
-          <img src="./img/icon-menu-burger.svg" width="50" height="24">
+          <img src="./img/icons/icon-menu-burger.svg" width="50" height="24">
         </button>
         <button class="header__button header__button-close" type="button" id="menu-close">
-          <img src="./img/icon-menu-cross.svg" width="24" height="24">
+          <img src="./img/icons/icon-menu-cross.svg" width="24" height="24">
         </button>
       </div>
     </div>
@@ -168,7 +168,10 @@
             </div>
           </div>
         </div>
-        <div class="about-us__item about-us__item--image"></div>
+        <div class="about-us__item about-us__item--image">
+          <button class="slider slider--previous" type="button" id="about-us-previous"></button>
+          <button class="slider slider--next" type="button" id="about-us-next"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -399,18 +402,14 @@
         <h4 class="section-headers__h4">Где мы работаем</h4>
       </div>
       <div class="map__block"></div>
-      <!-- <div class="facts__image-block">
-        <button class="slider slider--previous" type="button" id="facts-previous"></button>
-        <button class="slider slider--next" type="button" id="facts-next"></button>
-      </div> -->
     </div>
   </section>
   <section class="address">
     <div class="main-container">
-      <div class="section-headers section-headers--address">
+      <!-- <div class="section-headers section-headers--address">
         <h2 class="section-headers__h2">Наши офисы</h2>
         <h4 class="section-headers__h4">Адреса и телефоны</h4>
-      </div>
+      </div> -->
       <div class="address__item-wrapper">
         <div class="address__item">
           <h3 class="address__item-header">Главный<br> офис</h3>
@@ -494,7 +493,6 @@
     </div>
   </footer>
 </main>
-
 <script src="js/jquery.js"></script>
 <script src="js/vegas.js"></script>
 <script src="js/script.js"></script>

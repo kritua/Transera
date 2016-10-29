@@ -6,6 +6,50 @@
   @include adaptive(desktop) {
     display: flex;
   }
+  &--pages {
+    .features-slide__list-block {
+      text-align: left;
+    }
+    .features-slide__item {
+      @include adaptive(desktop) {
+        position: relative;
+        z-index: 1;
+      }
+      &--double-width {
+        z-index: 0;
+      }
+      @include adaptive(desktop-ext) {
+        @include adaptive(desktop) {
+          flex-basis: 25%;
+        }
+        &--double-width {
+          flex-basis: 75%;
+        }
+      }
+    }
+  }
+  &--pages-second {
+    .features-slide__list-block {
+      text-align: left;
+      @include adaptive(desktop-extra) {
+        margin-left: 100px;
+      }
+    }
+    .features-slide__item {
+      flex-basis: 50%;
+      &:first-child {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-section-1.jpg) 50% 50% no-repeat;
+        background-size: cover;
+      }
+      &:last-child {
+        .features-slide__h3 {
+          span {
+            color: $clr-darkblue;
+          }
+        }
+      }
+    }
+  }
 }
 
 .features-slide__h3 {
@@ -78,9 +122,16 @@
   }
   background: $clr-pink;
   &--double-width {
-    background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url('../img/man.jpg')center no-repeat;
+    background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-full-3.jpg) 50% 20% no-repeat;
+    background-size: cover;
     @include adaptive(desktop) {
       flex-basis: 67%;
+    }
+  }
+  &--hidden {
+    display: none;
+    @include adaptive(desktop) {
+      display: block;
     }
   }
 }
@@ -91,5 +142,48 @@
   line-height: 24px;
   color: $clr-lightgrey-2;
   text-align: justify;
+}
+
+.features-slide__list-block {
+  &--hidden {
+    display: none;
+    @include adaptive(desktop) {
+      display: block;
+    }
+  }
+}
+
+.features-slide__list-item {
+  position: relative;
+  @include font-regular();
+  font-size: 14px;
+  line-height: 30px;
+  list-style: none;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border: 3px solid transparent;
+    border-right-color: $clr-grey;
+    border-top-color: $clr-grey;
+    transform: rotate(45deg);
+  }
+}
+
+.features-slide__image {
+  @include adaptive(desktop) {
+    position: absolute;
+    left: -50px;
+    top: 5px;
+  }
+  @include adaptive(desktop-ext) {
+    left: -120px;
+  }
+  @include adaptive(desktop-extra) {
+    left: -50px;
+  }
 }
 
