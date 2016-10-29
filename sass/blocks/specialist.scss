@@ -1,0 +1,44 @@
+@import '../vars';
+
+.specialist {
+  margin-top: 0;
+  .main-container {
+    @include adaptive(desktop-extra) {
+      padding: 0 220px 0 0;
+    }
+  }
+}
+
+.specialist__page-header {
+  display: none;
+  text-align: center;
+  @include adaptive(tablet) {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+
+.specialist__items-wrapper {
+  display: flex;
+}
+
+.specialist__item {
+  @include adaptive(desktop-ext) {
+    flex-basis: 50%;
+  }
+  &:last-child {
+    margin-left: 70px;
+  }
+}
+
+.specialist__text {
+  margin: 0;
+  @include font-regular();
+  font-size: 14px;
+  line-height: 24px;
+  text-indent: 10px;
+  margin-bottom: 7px;
+  text-align: justify;
+
+}
