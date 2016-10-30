@@ -288,9 +288,6 @@ $.fn.extend({
           slidesToScroll: 2
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 });
@@ -302,7 +299,7 @@ $.fn.extend({
 //Interactive map
 $(function(){
   var oils = [
-      {name: 111, coords: [60.18, 149.53], status: 'oil'},
+      {name: 'Шапшинское месторождение', coords: [64, 72], status: 'oil'},
       {name: 222, coords: [61.18, 149.53], status: 'oil'},
       {name: 'Салымское месторождение', coords: [64.5, 71], status: 'oil'},
       {name: 'Приобское месторождение', coords: [65, 69], status: 'oil'},
@@ -319,7 +316,6 @@ $(function(){
     onMarkerClick: function(event, code) {
         window.location.href = "/regions.html#field-" + code
       },
-
 
     markers: oils.map(function(h){ return {name: h.name, latLng: h.coords} }),
     series: {
@@ -349,7 +345,9 @@ $(function(){
           "RU-KAM": 'darkblue',
           "RU-MAG": 'darkblue',
           "RU-PRI": 'darkblue',
-          "RU-SAK": 'darkblue'
+          "RU-SAK": 'darkblue',
+          "RU-TOM": 'darkblue',
+          "RU-IRK": 'darkblue'
         }
       }]
     }

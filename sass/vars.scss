@@ -32,7 +32,7 @@ $clr-red: #d22856;
 $content-padding: 0 20px;
 
 //Media queries
-$mobile-width: 320px;
+$mobile-width: 321px;
 $tablet-width: 700px;
 $desktop-width: 1200px;
 $desktop-ext-width: 1366px;
@@ -69,6 +69,11 @@ $retina-dpi: "min-resolution: 1.5dppx";
 }
 
 @mixin adaptive($media) {
+  @if $media == mobile {
+    @media (max-width: $mobile-width) {
+      @content;
+    }
+  }
   @if $media == tablet {
     @media (min-width: $tablet-width) {
       @content;

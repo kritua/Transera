@@ -68,6 +68,9 @@
   @include adaptive(desktop) {
     flex-basis: 50%;
   }
+  @include adaptive(desktop-ext) {
+    flex-basis: 55%;
+  }
 }
 
 
@@ -103,51 +106,49 @@
     }
   }
   &:last-child {
-    border-bottom: none;
+    @include adaptive(mobile) {
+      border-bottom: none;
+    }
   }
   @include adaptive(desktop) {
     padding: 0;
-    border: none;
+    border: 1px solid transparent;
     background-color: transparent;
     flex-basis: 25%;
-    transition: all 0.5s ease;
+    transition: background 0.2s ease;
     &:hover {
-      &::before {
-        content: '';
-        position: absolute;
-        height: 1px;
-        background: $clr-red;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
+      border-color: $clr-lightgrey;
     }
     &:active {
-      a {
-        color: $clr-grey;
-      }
+      background-color: $clr-red;
+      border-color: transparent;
     }
     &--active {
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 40px;
-        height: 2px;
-        background: $clr-red;
-      }
-      &::before {
-        top: 0;
-        left: -10px;
-      }
-      &::after {
-        bottom: 0;
-        left: 50%;
-        margin-left: -20px;
+      @include adaptive(desktop) {
+        border: 1px solid transparent !important;
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 40px;
+          height: 2px;
+          background: $clr-red;
+        }
+        &::before {
+          top: 0;
+          left: 50%;
+          margin-left: -40px;
+        }
+        &::after {
+          bottom: 0;
+          left: 50%;
+          margin-left: -20px;
+        }
       }
     }
   }
   @include adaptive(desktop-ext) {
     flex-basis: 0;
+    padding: 0 10px;
   }
 }
 

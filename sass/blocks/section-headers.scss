@@ -30,17 +30,17 @@
 }
 
 .section-headers__page-header {
-  display: none;
   text-align: center;
-  @include adaptive(tablet) {
-    display: block;
-    margin: 0 auto;
-    width: 600px;
+  &--dark-bg {
+    .section-headers__main-header {
+      color: $clr-lightgrey;
+    }
   }
 }
 
 .section-headers__main-header {
   position: relative;
+  display: inline;
   @include font-bold();
   font-size: 30px;
   line-height: 48px;
@@ -48,8 +48,8 @@
   color: $clr-darkblue;
   span {
     position: absolute;
-    top: 13px;
-    left: 30px;
+    top: 8px;
+    left: -20px;
     height: 4px;
     width: 15px;
     background: $clr-pink;
