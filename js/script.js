@@ -101,111 +101,115 @@ $(document).ready(function () {
 
 
   //Extends jquery lib to add on scroll events
-$.fn.extend({
-  // watching for element's appearance in browser viewport
-  appear: function(options) {
-    var opts = $.extend({}, defaults, options || {});
-    var selector = this.selector || this;
-    if (!check_binded) {
-      var on_check = function() {
-        if (check_lock) {
-          return;
-        }
-        check_lock = true;
+  $.fn.extend({
+    // watching for element's appearance in browser viewport
+    appear: function (options) {
+      var opts = $.extend({}, defaults, options || {});
+      var selector = this.selector || this;
+      if (!check_binded) {
+        var on_check = function () {
+          if (check_lock) {
+            return;
+          }
+          check_lock = true;
 
+          setTimeout(process, opts.interval);
+        };
+
+        $(window).scroll(on_check).resize(on_check);
+        check_binded = true;
+      }
+
+      if (opts.force_process) {
         setTimeout(process, opts.interval);
+      }
+      add_selector(selector);
+      return $(selector);
+    }
+  });
+  $.fn.extend({
+    // watching for element's appearance in browser viewport
+    appear: function (options) {
+      var check_binded = false;
+      var selectors = [];
+      var check_lock = false;
+      var $prior_appeared = [];
+      var defaults = {
+        interval: 250,
+        force_process: false
       };
+      var $window = $(window);
 
-      $(window).scroll(on_check).resize(on_check);
-      check_binded = true;
-    }
+      function add_selector(selector) {
+        selectors.push(selector);
+        $prior_appeared.push();
+      }
 
-    if (opts.force_process) {
-      setTimeout(process, opts.interval);
-    }
-    add_selector(selector);
-    return $(selector);
-  }
-});
-$.fn.extend({
-  // watching for element's appearance in browser viewport
-  appear: function(options) {
-    var check_binded = false;
-    var selectors = [];
-    var check_lock = false;
-    var $prior_appeared = [];
-    var defaults = {
-      interval: 250,
-      force_process: false
-    };
-    var $window = $(window);
-    function add_selector(selector) {
-      selectors.push(selector);
-      $prior_appeared.push();
-    }
-    function appeared(selector) {
-      return $(selector).filter(function() {
-        return $(this).is(':appeared');
-      });
-    }
-    function process() {
-      check_lock = false;
-      for (var index = 0, selectorsLength = selectors.length; index < selectorsLength; index++) {
-        var $appeared = appeared(selectors[index]);
+      function appeared(selector) {
+        return $(selector).filter(function () {
+          return $(this).is(':appeared');
+        });
+      }
 
-        $appeared.trigger('appear', [$appeared]);
+      function process() {
+        check_lock = false;
+        for (var index = 0, selectorsLength = selectors.length; index < selectorsLength; index++) {
+          var $appeared = appeared(selectors[index]);
 
-        if ($prior_appeared[index]) {
-          var $disappeared = $prior_appeared[index].not($appeared);
-          $disappeared.trigger('disappear', [$disappeared]);
+          $appeared.trigger('appear', [$appeared]);
+
+          if ($prior_appeared[index]) {
+            var $disappeared = $prior_appeared[index].not($appeared);
+            $disappeared.trigger('disappear', [$disappeared]);
+          }
+          $prior_appeared[index] = $appeared;
         }
-        $prior_appeared[index] = $appeared;
-      }
-    }
-    $.expr[':'].appeared = function(element) {
-      var $element = $(element);
-      if (!$element.is(':visible')) {
-        return false;
       }
 
-      var window_left = $window.scrollLeft();
-      var window_top = $window.scrollTop();
-      var offset = $element.offset();
-      var left = offset.left;
-      var top = offset.top;
-
-      if (top + $element.height() >= window_top &&
-        top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
-        left + $element.width() >= window_left &&
-        left - ($element.data('appear-left-offset') || 0) <= window_left + $window.width()) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-    var opts = $.extend({}, defaults, options || {});
-    var selector = this.selector || this;
-    if (!check_binded) {
-      var on_check = function() {
-        if (check_lock) {
-          return;
+      $.expr[':'].appeared = function (element) {
+        var $element = $(element);
+        if (!$element.is(':visible')) {
+          return false;
         }
-        check_lock = true;
 
+        var window_left = $window.scrollLeft();
+        var window_top = $window.scrollTop();
+        var offset = $element.offset();
+        var left = offset.left;
+        var top = offset.top;
+
+        if (top + $element.height() >= window_top &&
+          top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
+          left + $element.width() >= window_left &&
+          left - ($element.data('appear-left-offset') || 0) <= window_left + $window.width()) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+      var opts = $.extend({}, defaults, options || {});
+      var selector = this.selector || this;
+      if (!check_binded) {
+        var on_check = function () {
+          if (check_lock) {
+            return;
+          }
+          check_lock = true;
+
+          setTimeout(process, opts.interval);
+        };
+
+        $(window).scroll(on_check).resize(on_check);
+        check_binded = true;
+      }
+
+      if (opts.force_process) {
         setTimeout(process, opts.interval);
-      };
-
-      $(window).scroll(on_check).resize(on_check);
-      check_binded = true;
+      }
+      add_selector(selector);
+      return $(selector);
     }
-
-    if (opts.force_process) {
-      setTimeout(process, opts.interval);
-    }
-    add_selector(selector);
-    return $(selector);
-  }
-});
+  });
 
 
   //Circle variable. Starts animation on visibility
@@ -214,7 +218,7 @@ $.fn.extend({
   el.appear({force_process: true});
   el.on('appear', function () {
     if (!inited) {
-    el.circleProgress({});
+      el.circleProgress({});
       inited = true;
     }
   });
@@ -290,41 +294,77 @@ $.fn.extend({
       }
     ]
   });
+
+
+  //Gallery
+  $(document).ready(function () {
+    $('.features-slide__item--images').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {
+          return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+        }
+      }
+    });
+  });
+
+  //Slow scrolling
+  /*$(document).on('click', 'a', function(event){
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+  });*/
 });
 
 
-
-
-
 //Interactive map
-$(function(){
+$(function () {
   var oils = [
-      {name: 'Шапшинское месторождение', coords: [64, 72], status: 'oil'},
-      {name: 222, coords: [61.18, 149.53], status: 'oil'},
-      {name: 'Салымское месторождение', coords: [64.5, 71], status: 'oil'},
-      {name: 'Приобское месторождение', coords: [65, 69], status: 'oil'},
-      {name: 'Губкинское месторождение', coords: [67, 76.39], status: 'oil'},
-      {name: 'Муравленковское месторождение', coords: [67.5, 74.53], status: 'oil'}
-    ];
+    {name: 'Шапшинское месторождение', coords: [64, 72], status: 'oil'},
+    {name: 222, coords: [61.18, 149.53], status: 'oil'},
+    {name: 'Салымское месторождение', coords: [64.5, 71], status: 'oil'},
+    {name: 'Приобское месторождение', coords: [65, 69], status: 'oil'},
+    {name: 'Губкинское месторождение', coords: [67, 76.39], status: 'oil'},
+    {name: 'Муравленковское месторождение', coords: [67.5, 74.53], status: 'oil'}
+  ];
   $('.map__block').vectorMap({
     map: 'ru_mill',
     backgroundColor: 'transparent',
     regionsSelectableOne: !0,
-    onRegionClick: function(event, code) {
-      window.location.href = "/regions.html#" + code
+    onRegionClick: function (event, code) {
+      window.location.href = "/regions.html#" + code;
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: $(window.location.href).offset().top
+      }, 500)
     },
-    onMarkerClick: function(event, code) {
-        window.location.href = "/regions.html#field-" + code
-      },
+    onMarkerClick: function (event, code) {
+      window.location.href = "/regions.html#field-" + code
+    },
 
-    markers: oils.map(function(h){ return {name: h.name, latLng: h.coords} }),
+    markers: oils.map(function (h) {
+      return {name: h.name, latLng: h.coords}
+    }),
     series: {
       markers: [{
         attribute: 'image',
         scale: {
           oil: './img/oil.png'
         },
-        values: oils.reduce(function(p, c, i){ p[i] = c.status; return p }, {})
+        values: oils.reduce(function (p, c, i) {
+          p[i] = c.status;
+          return p
+        }, {})
       }],
       regions: [{
         scale: {
