@@ -344,9 +344,6 @@ $(function () {
     onRegionClick: function (event, code) {
       window.location.href = "/regions.html#" + code;
       event.preventDefault();
-      $('html, body').animate({
-        scrollTop: $(window.location.href).offset().top
-      }, 500)
     },
     onMarkerClick: function (event, code) {
       window.location.href = "/regions.html#field-" + code

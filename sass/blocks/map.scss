@@ -9,6 +9,21 @@
   }
 }
 
+.map__regions,
+.map__block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.map__block {
+  width: 75%;
+}
+
+.map__regions {
+  width: 20%;
+  margin-left: 2%;
+}
+
 svg {
   touch-action: none;
 }

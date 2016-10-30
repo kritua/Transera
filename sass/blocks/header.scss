@@ -117,7 +117,7 @@
     flex-basis: 25%;
     transition: background 0.2s ease;
     &:hover {
-      border-color: $clr-lightgrey;
+      border-color: $clr-red;
     }
     &:active {
       background-color: $clr-red;

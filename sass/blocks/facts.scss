@@ -12,6 +12,16 @@
         flex-basis: 33.33%;
         flex-direction: column;
       }
+      &--full {
+        .facts__item-header {
+          margin-top: 0;
+        }
+      }
+      &:not(.facts__item--full) {
+        &::before {
+          display: none;
+        }
+      }
     }
     .facts__text-wrapper {
       @include adaptive(desktop) {
@@ -20,7 +30,7 @@
     }
     .facts__item-header {
       @include adaptive(tablet) {
-        margin-top: -20px;
+          margin-top: -20px;
       }
       @include adaptive(desktop-ext) {
         margin-top: 0;
