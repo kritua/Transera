@@ -40,7 +40,10 @@
 .about-us__wrapper {
   display: flex;
   @include adaptive(tablet) {
-    margin-right: -56px;
+    flex-direction: column;
+  }
+  @include adaptive(desktop) {
+    flex-direction :row;
   }
 }
 
@@ -54,6 +57,9 @@
     background-size: cover;
     @include adaptive(tablet) {
       display: block;
+      margin-top: 20px;
+    }
+    @include adaptive(desktop) {
       box-shadow: 15px 15px 5px 0 transparentize($clr-darkblue, 0.3);
       flex-basis: 60%;
     }
@@ -61,7 +67,7 @@
   &--text {
     display: flex;
     flex-basis: 100%;
-    @include adaptive(tablet) {
+    @include adaptive(desktop) {
       flex-basis: 40%;
       margin-right: 70px;
     }
