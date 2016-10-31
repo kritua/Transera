@@ -298,7 +298,7 @@ $(document).ready(function () {
 
   //Gallery
   $(document).ready(function () {
-    $('.features-slide__item--images').magnificPopup({
+    $('.features-slide__item--images.gallery__one').magnificPopup({
       delegate: 'a',
       type: 'image',
       tLoading: 'Loading image #%curr%...',
@@ -318,35 +318,42 @@ $(document).ready(function () {
   });
 
   //Slow scrolling
-  /*$(document).on('click', 'a', function(event){
+  $('a[href*="#"]').on('click', function(event){
     event.preventDefault();
-    $('html, body').animate({
+    $('body').animate({
       scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
-  });*/
+  });
 });
 
 
 //Interactive map
 $(function () {
   var oils = [
-    {name: 'Шапшинское месторождение', coords: [64, 72], status: 'oil'},
-    {name: 222, coords: [61.18, 149.53], status: 'oil'},
-    {name: 'Салымское месторождение', coords: [64.5, 71], status: 'oil'},
-    {name: 'Приобское месторождение', coords: [65, 69], status: 'oil'},
-    {name: 'Губкинское месторождение', coords: [67, 76.39], status: 'oil'},
-    {name: 'Муравленковское месторождение', coords: [67.5, 74.53], status: 'oil'}
+    //ХМАО
+    {name: 'Шапшинское месторождение', coords: [60.75, 70.25], status: 'oil'},
+    {name: 'Приразломное месторождение', coords: [69.333333, 57.25], status: 'oil'},
+    {name: 'Салымское месторождение', coords: [60, 71], status: 'oil'},
+    {name: 'Приобское месторождение', coords: [61.166667, 70.166667], status: 'oil'},
+    {name: 'Губкинское месторождение', coords: [64.750000, 76.666667], status: 'oil'},
+    {name: 'Муравленковское месторождение', coords: [64.083333, 74.75], status: 'oil'},
+    {name: 'Самотлорское месторождение', coords: [61.166667, 76.633333], status: 'oil'},
+    {name: 'Вынгапуровское месторождение', coords: [63.000000, 76.666667], status: 'oil'},
+    {name: 'Малобалыкское месторождение', coords: [0.500000, 72.166667], status: 'oil'},
+    {name: 'Киняминское месторождение', coords: [60.500000, 74.250000], status: 'oil'},
+    {name: 'Нивагальское месторождение', coords: [62.500000, 75.333333], status: 'oil'},
+    {name: 'Покачевское месторождение', coords: [61.733333, 75.300000], status: 'oil'}
+    //ЯНАО
   ];
   $('.map__block').vectorMap({
     map: 'ru_mill',
     backgroundColor: 'transparent',
     regionsSelectableOne: !0,
     onRegionClick: function (event, code) {
-      window.location.href = "/regions.html#" + code;
-      event.preventDefault();
+      window.location.href = "regions.html#" + code
     },
     onMarkerClick: function (event, code) {
-      window.location.href = "/regions.html#field-" + code
+      window.location.href = "regions.html#field-" + code
     },
 
     markers: oils.map(function (h) {

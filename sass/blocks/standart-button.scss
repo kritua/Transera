@@ -14,7 +14,7 @@
     font-size: 20px;
   }
   &--features {
-    background-color: $clr-darkblue;
+    background: linear-gradient($clr-red, 50%, darken($clr-red, 3%) 50%);
   }
   &--header {
     padding: 10px 15px;

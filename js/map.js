@@ -2,7 +2,7 @@ jQuery.fn.vectorMap('addMap', 'ru_mill', {
   "insets": [{
     "width": 900,
     "top": 0,
-    "height": 400,
+    "height": 344.85258690118116,
     "bbox": [{"y": -12178456.231950931, "x": 903208.6719108557}, {"y": -4863989.504817909, "x": 19992582.811667882}],
     "left": 0
   }],
@@ -340,7 +340,7 @@ jQuery.fn.vectorMap('addMap', 'ru_mill', {
       "name": "Чувашская республика"
     }
   },
-  "height": 400,
+  "height": 344.85258690118116,
   "projection": {"type": "mill", "centralMeridian": 11.5},
   "width": 900.0
 });

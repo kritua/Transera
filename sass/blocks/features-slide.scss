@@ -1,10 +1,12 @@
 @import '../vars';
 
 .features-slide {
-  text-align: center;
-  color: white;
-  @include adaptive(desktop) {
-    display: flex;
+  .features-slide__items-wrapper {
+    text-align: center;
+    color: white;
+    @include adaptive(desktop) {
+      display: flex;
+    }
   }
   &--pages {
     .features-slide__list-block {
@@ -53,16 +55,39 @@
       }
     }
   }
-  &--regions {
-    display: flex;
-    flex-direction: column;
-    @include adaptive(desktop) {
-      margin-top: 0;
-      padding: 0;
+
+  &--revert {
+    .main-container {
+      @include adaptive(mobile) {
+        padding: 0 40px;
+      }
     }
-    @include adaptive(desktop-ext) {
-      flex-direction: row;
-      overflow: hidden;
+    .features-slide__item {
+      @include adaptive(desktop) {
+        &--text {
+          order: 2;
+        }
+        &--images {
+          order: 1;
+        }
+      }
+    }
+  }
+  &--regions {
+    .features-slide__items-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      color: $clr-white;
+      text-align: center;
+      @include adaptive(desktop) {
+        margin-top: 0;
+        padding: 0;
+      }
+      @include adaptive(desktop-ext) {
+        flex-direction: row;
+        overflow: hidden;
+      }
     }
     .features-slide__list-block {
       text-align: left;
@@ -73,28 +98,20 @@
     }
     .features-slide__list {
       flex-basis: 50%;
-    }
-    .features-slide__item {
-      @include adaptive(desktop) {
-        flex-basis: 50%;
-      }
-      &--text {
-        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-section-1.jpg) 50% 50% no-repeat;
-        background-size: cover;
-      }
-      &--images {
-        padding: 0;
+      @include adaptive(mobile) {
+        padding-left: 25px;
       }
     }
-  }
-  &--revert {
     .features-slide__item {
       @include adaptive(desktop) {
         &--text {
-          order: 2;
+          background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-section-1.jpg) 50% 50% no-repeat;
+          background-size: cover;
+          flex-basis: 40%;
         }
         &--images {
-          order: 1;
+          padding: 0;
+          flex-basis: 60%;
         }
       }
     }
@@ -164,7 +181,7 @@
 }
 
 .features-slide__item {
-  padding: 20px 20px 40px;
+  padding: 10px 20px;
   @include adaptive(tablet) {
     padding: 20px 40px 40px;
   }
@@ -188,7 +205,6 @@
   &--images {
     display: flex;
     flex-wrap: wrap;
-
   }
 }
 
@@ -245,9 +261,11 @@
 }
 
 .features-slide__image-item {
-  flex-basis: 25%;
-  @include adaptive(desktop-ext) {
-    flex-basis: 33.33%;
+  flex-basis: 33.33%;
+  height: 130%;
+  @include adaptive(desktop) {
+    flex-basis: 25%;
+    height: 50%;
   }
   &--test {
     background: url('../img/work/slide-1.jpg') no-repeat center;

@@ -42,32 +42,49 @@
   position: relative;
   display: inline;
   @include font-bold();
-  font-size: 30px;
-  line-height: 48px;
+  font-size: 18px;
+  line-height: 30px;
   margin: 20px 0;
   color: $clr-darkblue;
+  @include adaptive(desktop) {
+    font-size: 30px;
+    line-height: 48px;
+  }
   span {
     position: absolute;
-    top: 8px;
+    top: 4px;
     left: -20px;
-    height: 4px;
+    height: 2px;
     width: 15px;
     background: $clr-pink;
+    @include adaptive(desktop) {
+      top: 8px;
+      height: 4px;
+    }
     &::before, &::after {
       content: '';
       position: absolute;
-      height: 4px;
+      height: 2px;
       background: $clr-pink;
+      @include adaptive(desktop) {
+        height: 4px;
+      }
     }
     &::before {
       width: 25px;
-      top: 9px;
+      top: 6px;
       left: -10px;
+      @include adaptive(desktop) {
+        top: 9px;
+      }
     }
     &::after {
       width: 35px;
-      top: 18px;
+      top: 13px;
       left: -20px;
+      @include adaptive(desktop) {
+        top: 18px;
+      }
     }
   }
 }
