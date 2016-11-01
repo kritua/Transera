@@ -54,18 +54,3 @@ section {
   overflow: hidden;
 }
 
-.circle {
-  display: block;
-
-}
-circle {
-  fill: none;
-  stroke: $clr-lightgrey-2;
-  stroke-width: 15;
-  stroke-dasharray: 408px 408px;
-}
-circle:nth-child(2n) {
-  fill: none;
-  stroke: $clr-pink;
-  stroke-width: 15;
-}
