@@ -105,9 +105,13 @@
     border: none;
     background-color: transparent;
     flex-basis: 25%;
+    &:hover {
+
+    }
   }
   @include adaptive(desktop-ext) {
     flex-basis: 0;
+    padding: 10px 15px;
   }
 }
 
