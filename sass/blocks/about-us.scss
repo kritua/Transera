@@ -1,6 +1,11 @@
 @import '../vars';
 
 .about-us {
+  .main-container {
+    @include adaptive(desktop) {
+      padding: 0 220px;
+    }
+  }
   background-color: $clr-darkblue;
   margin-top: 0;
   input[type="radio"] {
@@ -21,24 +26,15 @@
   @include adaptive(tablet) {
     flex-basis: 50%;
   }
-  &--image {
-    display: none;
-    background: url('../img/bg-full.jpg') no-repeat 30% 50%;
-    background-size: cover;
-    @include adaptive(tablet) {
-      display: block;
-      box-shadow: 15px 15px 5px 0 transparentize($clr-darkblue, 0.3);
-      flex-basis: 60%;
-    }
-    @include adaptive(desktop) {
-      background-position: 30% 82%;
-    }
+  &--circles {
+    display: flex;
+    flex-wrap: wrap;
   }
   &--text {
     display: flex;
     @include adaptive(tablet) {
       flex-basis: 40%;
-      margin-right: 10px;
+      margin-right: auto;
     }
   }
   &--radio {
@@ -55,6 +51,13 @@
 .about-us__info-block {
   &--hidden {
     display: none;
+  }
+}
+
+.about-us__circle {
+  text-align: center;
+  @include adaptive(desktop) {
+    flex-basis: 50%;
   }
 }
 

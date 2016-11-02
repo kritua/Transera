@@ -227,7 +227,8 @@ $(document).ready(function () {
   $(el).circleProgress({
     startAngle: -Math.PI / 6 * 3,
     value: 0.16,
-    fill: {gradient: ['#3571a3', '#3571a3']}
+    emptyFill: 'rgba(255, 255, 255, 0.3)',
+    fill: {gradient: ['#d22856', '#d22856']}
   }).on('circle-animation-progress', function (event, progress) {
     $(this).find('strong').html(parseInt(276 * progress) + '<br>' + '<i>тыс. тонн</i>');
   });

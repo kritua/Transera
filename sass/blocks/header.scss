@@ -149,7 +149,7 @@
   display: none;
   background-color: $clr-white;
   padding: 0 100px;
-  border-bottom: 1px solid $clr-grey-2;
+  border-bottom: 1px solid $clr-lightgrey;
   @include adaptive(desktop) {
     display: flex;
   }
