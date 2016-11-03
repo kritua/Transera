@@ -226,21 +226,21 @@ $(document).ready(function () {
   //Circles 1-4
   $(el).circleProgress({
     startAngle: -Math.PI / 6 * 3,
-    value: 0.16,
+    value: 1,
     emptyFill: 'rgba(255, 255, 255, 0.3)',
     fill: {gradient: ['#d22856', '#d22856']}
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(276 * progress) + '<br>' + '<i>тыс. тонн</i>');
+    $(this).find('strong').html(parseInt(8 * progress) + '<br>' + '<i>лет на<br> рынке</i>');
   });
   $(".circle--second").circleProgress({
-    value: 0.07
+    value: 0.8
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(124 * progress) + '<br>' + '<i>тыс. тонн</i>');
+    $(this).find('strong').html(parseInt(35 * progress) + '<br>' + '<i>единиц</i>');
   });
   $(".circle--third").circleProgress({
     value: 0.72
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(1250 * progress) + '<br>' + '<i>тыс. тонн</i>');
+    $(this).find('strong').html(parseInt(107 * progress) + '<br>' + '<i>тысяч<br> тонн</i>');
   });
   $(".circle--fourth").circleProgress({
     value: 0.05

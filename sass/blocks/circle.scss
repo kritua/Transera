@@ -22,17 +22,18 @@
 
 .circle strong {
   position: absolute;
-  top: 37%;
+  top: 30%;
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   line-height: 24px;
   color: $clr-lightgrey;
 }
 
 .circle strong i {
   font-style: normal;
-  font-size: 0.6em;
+  font-size: 0.4em;
+  line-height: 0.6;
   font-weight: normal;
 }

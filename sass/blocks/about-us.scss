@@ -15,6 +15,7 @@
 
 .about-us__wrapper {
   display: flex;
+  flex-wrap: wrap;
   @include adaptive(tablet) {
     margin-right: -56px;
     margin-left: -40px;
@@ -29,6 +30,7 @@
   &--circles {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   &--text {
     display: flex;
@@ -56,11 +58,18 @@
 
 .about-us__circle {
   text-align: center;
+  flex-basis: 50%;
   @include adaptive(desktop) {
     flex-basis: 50%;
   }
 }
 
+.about-us__header {
+  @include font-medium();
+  font-size: 20px;
+  line-height: 24px;
+  color: $clr-lightgrey;
+}
 
 .about-us__radio-block {
   position: relative;
