@@ -25,10 +25,10 @@ $(document).ready(function () {
     timer: false,
     overlay: true,
     slides: [
+      {src: "./img/bg-full.jpg"},
       {src: "./img/bg-full-1.jpg"},
       {src: "./img/bg-full-2.jpg"},
-      {src: "./img/bg-full-3.jpg"},
-      {src: "./img/bg-full-4.jpg"}
+      {src: "./img/bg-full-3.jpg"}
     ]
   });
   $("#header-previous").on('click', function () {
@@ -230,7 +230,7 @@ $(document).ready(function () {
     emptyFill: 'rgba(255, 255, 255, 0.3)',
     fill: {gradient: ['#d22856', '#d22856']}
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(8 * progress) + '<br>' + '<i>лет на<br> рынке</i>');
+    $(this).find('strong').html(parseInt(8 * progress) + '<br>' + '<i>лет</i>');
   });
   $(".circle--second").circleProgress({
     value: 0.8
@@ -240,12 +240,12 @@ $(document).ready(function () {
   $(".circle--third").circleProgress({
     value: 0.72
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(107 * progress) + '<br>' + '<i>тысяч<br> тонн</i>');
+    $(this).find('strong').html(parseInt(107 * progress) + '<br>' + '<i>тыс. тонн</i>');
   });
   $(".circle--fourth").circleProgress({
-    value: 0.05
+    value: 0.8
   }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(85 * progress) + '<br>' + '<i>тыс. тонн</i>');
+    $(this).find('strong').html(parseInt(1500 * progress) + '<br>' + '<i>городов</i>');
   });
 
 

@@ -106,7 +106,10 @@
     background-color: transparent;
     flex-basis: 25%;
     &:hover {
-
+      background-color: $clr-darkblue;
+      a {
+        color: $clr-white;
+      }
     }
   }
   @include adaptive(desktop-ext) {
@@ -179,6 +182,13 @@
   @include adaptive(tablet) {
     margin-left: auto;
   }
+  @include adaptive(desktop) {
+    &:hover {
+      svg {
+        fill: $clr-darkblue;
+      }
+    }
+  }
 }
 
 .header__contact-item {
@@ -197,5 +207,11 @@
     vertical-align: middle;
     margin-right: 5px;
     fill: $clr-grey-2;
+  }
+  &:hover {
+    color: $clr-darkblue;
+    svg {
+      fill: $clr-darkblue;
+    }
   }
 }

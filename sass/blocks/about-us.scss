@@ -16,21 +16,25 @@
 .about-us__wrapper {
   display: flex;
   flex-wrap: wrap;
-  @include adaptive(tablet) {
-    margin-right: -56px;
-    margin-left: -40px;
-    padding-left: 20px;
-  }
 }
 
 .about-us__item {
   @include adaptive(tablet) {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
   &--circles {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    @include adaptive(desktop) {
+      .about-us__header {
+        br {
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+    }
   }
   &--text {
     display: flex;
@@ -60,7 +64,7 @@
   text-align: center;
   flex-basis: 50%;
   @include adaptive(desktop) {
-    flex-basis: 50%;
+    flex-basis: 25%;
   }
 }
 
