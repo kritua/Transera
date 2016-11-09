@@ -31,72 +31,11 @@ $(document).ready(function () {
       {src: "./img/bg-full-3.jpg"}
     ]
   });
-  $("#header-previous").on('click', function () {
+  $(".slider--previous").on('click', function () {
     $(".header--index").vegas('previous');
   });
-  $("#header-next").on('click', function () {
+  $(".slider--next").on('click', function () {
     $(".header--index").vegas('next');
-  });
-
-
-  //Facts slideshow
-  $(".about-us__item--image").vegas({
-    delay: 5000,
-    transition: 'fade',
-    transitionDuration: '1000',
-    timer: false,
-    slides: [
-      {src: "./img/work/slide-1.jpg"},
-      {src: "./img/work/slide-2.jpg"},
-      {src: "./img/work/slide-3.jpg"},
-      {src: "./img/work/slide-4.jpg"},
-      {src: "./img/work/slide-5.jpg"},
-      {src: "./img/work/slide-6.jpg"},
-      {src: "./img/work/slide-7.jpg"},
-      {src: "./img/work/slide-8.jpg"},
-      {src: "./img/work/slide-9.jpg"},
-      {src: "./img/work/slide-10.jpg"},
-      {src: "./img/work/slide-11.jpg"},
-      {src: "./img/work/slide-12.jpg"},
-      {src: "./img/work/slide-13.jpg"},
-      {src: "./img/work/slide-14.jpg"},
-      {src: "./img/work/slide-15.jpg"},
-      {src: "./img/work/slide-16.jpg"},
-      {src: "./img/work/slide-17.jpg"},
-      {src: "./img/work/slide-18.jpg"},
-      {src: "./img/work/slide-19.jpg"},
-      {src: "./img/work/slide-20.jpg"}
-    ]
-  });
-  $("#about-us-previous").on('click', function () {
-    $(".about-us__item--image").vegas('previous');
-  });
-  $("#about-us-next").on('click', function () {
-    $(".about-us__item--image").vegas('next');
-  });
-
-  $(".specialist__item--image").vegas({
-    delay: 5000,
-    transition: 'fade2',
-    transitionDuration: '1000',
-    timer: false,
-    shuffle: true,
-    slides: [
-      {src: "./img/trawl/slide-1.jpg"},
-      {src: "./img/trawl/slide-2.jpg"},
-      {src: "./img/trawl/slide-3.jpg"},
-      {src: "./img/trawl/slide-4.jpg"},
-      {src: "./img/trawl/slide-5.jpg"},
-      {src: "./img/trawl/slide-6.jpg"},
-      {src: "./img/trawl/slide-7.jpg"},
-      {src: "./img/trawl/slide-8.jpg"}
-    ]
-  });
-  $("#specialist-previous").on('click', function () {
-    $(".specialist__item--image").vegas('previous');
-  });
-  $("#specialist-next").on('click', function () {
-    $(".specialist__item--image").vegas('next');
   });
 
 
@@ -246,26 +185,6 @@ $(document).ready(function () {
     value: 0.8
   }).on('circle-animation-progress', function (event, progress) {
     $(this).find('strong').html(parseInt(1500 * progress) + '<br>' + '<i>городов</i>');
-  });
-
-
-  //Circles about page
-  $(".circle--about").circleProgress({
-    startAngle: -Math.PI / 6 * 3,
-    value: 0.66,
-    fill: {gradient: ['#3571a3', '#3571a3']}
-  }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(1150 * progress) + '<br>' + '<i>тыс. тонн</i>');
-  });
-  $(".circle--about-second").circleProgress({
-    value: 0.29
-  }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(500 * progress) + '<br>' + '<i>тыс. тонн</i>');
-  });
-  $(".circle--about-third").circleProgress({
-    value: 0.05
-  }).on('circle-animation-progress', function (event, progress) {
-    $(this).find('strong').html(parseInt(85 * progress) + '<br>' + '<i>тыс. тонн</i>');
   });
 
 
