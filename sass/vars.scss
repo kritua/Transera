@@ -42,6 +42,10 @@ $retina-dpi: "min-resolution: 1.5dppx";
 
 //Mixins
 
+@mixin merry() {
+  font-family: "Merriweather Light", 'Courier New', Courier, monospace;
+  font-weight: normal;
+}
 
 @mixin font-regular() {
   font-family: "Roboto", 'Helvetica Neue', Arial, sans-serif;
