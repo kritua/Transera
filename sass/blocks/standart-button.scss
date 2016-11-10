@@ -23,6 +23,13 @@
   }
   &:hover {
     box-shadow: 0 0 1px 1px transparentize($clr-white, 0.3);
-    transform: translateX(100px);
+  }
+  &:active {
+    color: transparentize($clr-white, 0.5);
+  }
+  &--white-bg {
+    &:hover {
+      box-shadow: 0 0 4px 1px transparentize($clr-darkblue, 0.4);
+    }
   }
 }

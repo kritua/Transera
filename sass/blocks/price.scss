@@ -24,7 +24,36 @@
   }
   @include adaptive(desktop) {
     flex-basis: 23%;
+    &:hover {
+      background-color: $clr-pink;
+      .price__header {
+        color: $clr-white;
+      }
+      .price__amount {
+        color: $clr-white;
+        span {
+          color: $clr-darkblue;
+        }
+      }
+      .price__list-item {
+        color: $clr-white;
+        &:last-child {
+          background-color: $clr-white;
+        }
+      }
+      .price__link {
+        color: $clr-darkblue;
+        background: transparent;
+        background-size: 100px 100px;
+      }
+    }
   }
+}
+
+.price__link {
+  text-decoration: none;
+  color: $clr-white;
+  display: block;
 }
 
 .price__list-item {
@@ -59,7 +88,6 @@
 .price__amount {
   @include font-regular();
   font-size: 20px;
-
   span {
     @include font-bold();
     font-size: 52px;

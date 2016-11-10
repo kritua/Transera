@@ -32,6 +32,9 @@
     flex-basis: 33.33%;
     padding: 10px;
   }
+  @include adaptive(desktop-extra) {
+    flex-basis: 16.6%;
+  }
   &:hover {
     .feature-block__image {
       border-color: $clr-pink;
