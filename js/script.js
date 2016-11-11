@@ -217,7 +217,7 @@ $(document).ready(function () {
 
 
 	//Gallery
-	$('.features-slide__item--images.gallery__one').magnificPopup({
+	$('.gallery__item--images.gallery__one').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
