@@ -7,17 +7,15 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="header header--index header--background header--menu-opened">
-	<button class="slider slider--previous" type="button" id="header-previous"></button>
-	<button class="slider slider--next" type="button" id="header-next"></button>
+<header class="header header--about header--background header--menu-opened">
 	<div class="header__navbar">
 		<div class="header__logo">
-			<div class="header__logo-img">
+			<a href="index.html" class="header__logo-img">
 				<picture>
 					<source media="(min-width: 700px)" srcset="./img/logo.svg">
 					<img src="./img/logo.svg" alt="Logo">
 				</picture>
-			</div>
+			</a>
 			<div class="header__button-menu">
 				<button class="header__button header__button-burger header__button--hidden" type="button" id="menu-open">
 					<img src="./img/icons/icon-menu-burger.svg" width="50" height="24">
@@ -29,9 +27,9 @@
 		</div>
 		<nav class="header__menu">
 			<ul class="header__menu-list">
-				<li class="header__menu-item header__menu-item--active"><a href="#">Главная</a></li>
+				<li class="header__menu-item"><a href="index.html">Главная</a></li>
 				<li class="header__menu-item"><a href="about.html">О компании</a></li>
-				<li class="header__menu-item"><a href="features.html">Преимущества</a></li>
+				<li class="header__menu-item header__menu-item--active"><a href="#">Преимущества</a></li>
 				<li class="header__menu-item"><a href="services.html">Услуги</a></li>
 				<li class="header__menu-item"><a href="experience.html">Наш опыт</a></li>
 				<li class="header__menu-item"><a href="docs.html">Документация</a></li>
@@ -43,181 +41,20 @@
 			<a href="#" class="standart-button standart-button--header">Заказать звонок</a>
 		</div>
 	</div>
-	<section class="page-headers">
-		<div class="main-container">
-			<h1 class="page-headers__h1">Перевозим<br> <span>негабаритные</span><br>грузы</h1>
-			<h2 class="page-headers__h2">&nbsp;<!-- В любую погоду, по асфальту и бездорожью, быстро и надёжно --></h2>
-			<p class="page-headers__text"></p>
-			<a href="#" class="standart-button">Отправить заявку</a>
-		</div>
-	</section>
 </header>
 <main>
-	<section class="transport-types">
+	<section class="transport-types transport-types--pages">
 		<div class="main-container">
-			<div class="section-headers section-headers--hidden">
-				<h2 class="section-headers__h2">Что мы возим</h2>
-				<h4 class="section-headers__h4">Типы перевозимых грузов</h4>
-			</div>
 			<div class="transport-types__wrapper">
-				<div class="transport-types__item">
-					<div class="transport-types__image-block">
-						<img class="transport-types__image" src="./img/types/oil.svg" width="120" height="120">
-					</div>
-					<div class="transport-types__header-block">
-						<h3 class="transport-types__header-text">Нефтяная<br> отрасль</h3>
-					</div>
-					<div class="transport-types__text-block">
-						<p class="transport-types__text">Мы осуществляем транспортировку любого типа грузов для нефтяной отрасли -
-							вышки, буровые установки, насосы - перевезём всё!</p>
-					</div>
-					<div class="transport-types__button transport-types__button--hidden">
-						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
-
-					</div>
+				<div class="section-headers section-headers--pages">
+					<h2 class="section-headers__h2">Преимущества</h2>
+					<h4 class="section-headers__h4">Почему именно мы</h4>
 				</div>
-				<div class="transport-types__item">
-					<div class="transport-types__image-block">
-						<img class="transport-types__image" src="./img/types/gas.svg" width="120" height="120">
-					</div>
-					<div class="transport-types__header-block">
-						<h3 class="transport-types__header-text">Газовая<br> отрасль</h3>
-					</div>
-					<div class="transport-types__text-block">
-						<p class="transport-types__text">Перевозим все необходимые компоненты, устройства и агрегаты для добычи,
-							хранения и перемещения продукции газовой отрасли</p>
-					</div>
-					<div class="transport-types__button transport-types__button--hidden">
-						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
-					</div>
-				</div>
-				<div class="transport-types__item">
-					<div class="transport-types__image-block">
-						<img class="transport-types__image" src="./img/types/electric.svg" width="120" height="120">
-					</div>
-					<div class="transport-types__header-block">
-						<h3 class="transport-types__header-text">Энергетическая<br> отрасль</h3>
-					</div>
-					<div class="transport-types__text-block">
-						<p class="transport-types__text">Наш автопарк включает в себя всю необходимую технику для транспортировки
-							изделий для энергетической отрасли</p>
-					</div>
-					<div class="transport-types__button transport-types__button--hidden">
-						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
-					</div>
-				</div>
-				<div class="transport-types__item">
-					<div class="transport-types__image-block">
-						<img class="transport-types__image" src="./img/types/coal.svg" width="120" height="120">
-					</div>
-					<div class="transport-types__header-block">
-						<h3 class="transport-types__header-text">Угольная<br> отрасль</h3>
-					</div>
-					<div class="transport-types__text-block">
-						<p class="transport-types__text">Мы можем перевезти технические средства для добычи и транспортировки
-							продукции горнодобывающей и угольной отрасли</p>
-					</div>
-					<div class="transport-types__button transport-types__button--hidden">
-						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
-					</div>
-				</div>
-				<div class="transport-types__item">
-					<div class="transport-types__image-block">
-						<img class="transport-types__image" src="./img/types/goz.svg" width="120" height="120">
-					</div>
-					<div class="transport-types__header-block">
-						<h3 class="transport-types__header-text">Государственный<br> оборонзаказ</h3>
-					</div>
-					<div class="transport-types__text-block">
-						<p class="transport-types__text">Перевозим компоненты, технику и цельные изделия военного назначения в целях выполнения Гособоронзаказа</p>
-					</div>
-					<div class="transport-types__button transport-types__button--hidden">
-						<a href="#" class="feature-block__link feature-block__link--hidden">Подробнее</a>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="about-us">
-		<div class="main-container">
-			<div class="section-headers">
-				<h2 class="section-headers__h2">О компании</h2>
-				<h4 class="section-headers__h4">Наши преимущества</h4>
-			</div>
-			<div class="about-us__wrapper">
-				<div class="about-us__item about-us__item--text">
-					<div class="about-us__info-block">
-						<div class="about-us__text-block">
-							<p class="about-us__text">
-								Компания ООО «СпецТрансСервис» специализируется на транспортировке тяжеловесных,
-								негабаритных и наливных грузов. Так же предоставляем погрузочно-разгрузочную технику любой
-								грузоподъемности, вместе с бригадой стропальщиков. По согласованию с заказчиком погрузочно-
-								разгрузочные работы могут осуществляться такелажным способом, с предоставлением бригады
-								такелажников и необходимым оборудованием.
-							</p>
-							<p class="about-us__text">
-								Все работы выполняются с высоким качеством и производительностью, в соответствии с
-								требованиями стандартов, норм и правил, в полном взаимодействии с Заказчиками и
-								Партнерами.
-							</p>
-							<p class="about-us__text about-us__text--bold about-us__text--hidden">
-								Подвижной состав компании и партнеров состоит из:
-							</p>
-						</div>
-						<div class="about-us__list-block about-us__list-block--hidden">
-							<ul class="about-us__list">
-								<li class="about-us__list-item">Тягачи на базе шоссейных и полноприводных автомобилей</li>
-								<li class="about-us__list-item">Полуприцепы открытые площадки</li>
-								<li class="about-us__list-item">Полуприцепы тралы грузоподъемностью от 20 до 100 тн</li>
-								<li class="about-us__list-item">Модульные тралы грузоподъемностью от 100 до 800 тн</li>
-								<li class="features-slide__list-item">Полуприцепы тралы телескопические, погрузочной длиной от 15 и более метров</li>
-								<li class="about-us__list-item">Полуприцепы тент/борт</li>
-								<li class="about-us__list-item">Автоцистерны (для транспортировки наливных грузов)</li>
-								<li class="about-us__list-item">Автокрановая техника на базе шоссейных и полноприводных автомобилей
-									грузоподъемностью от 15 до 220 тн
-								</li>
-							</ul>
-						</div>
-						<div class="about-us__link-block">
-							<a href="about.html" class="about-us__link">Читать дальше</a>
-						</div>
-					</div>
-				</div>
-				<div class="about-us__item about-us__item--image">
-					<button class="slider slider--previous" type="button" id="about-us-previous"></button>
-					<button class="slider slider--next" type="button" id="about-us-next"></button>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="features-slide">
-		<div class="features-slide__items-wrapper">
-			<div class="features-slide__item">
-				<h3 class="features-slide__h3">Вам нужна<br> <span>перевозка</span><br> негабаритного <br> <span>груза?</span>
-				</h3>
-				<a href="#" class="standart-button standart-button--features">Оставить заявку</a>
-			</div>
-			<div class="features-slide__item features-slide__item--double-width">
-				<h3 class="features-slide__h3 features-slide__h3--custom">Простое<br> <span>Решение</span><br> сложных задач
-				</h3>
-				<h4 class="features-slide__h4">Индивидуальный подход к каждому клиенту</h4>
-				<p class="features-slide__text">Наши специалисты - профессионалы своего дела, знающие специфику труднодоступных
-					регионов. Любые ваши требования и пожелания будут выполнены в чётком соответствии с техническим заданием. Наша
-					компания с 2008 года осуществляет транспортировку любых негабаритных грузов в самые отдалённые места нашей
-					страны - преимущетсвенно, это регионы Ямало-Ненецкого и Ханты-Мансийского Автономных Округов, Дальний Восток,
-					Республика Саха (Якутия), Красноярский край, а также Свердловская и Тюменская области. Практически полное
-					отсутствие
-					дорожного покрытия - не помеха. Мы привезём ваш груз в любую местность </p>
 			</div>
 		</div>
 	</section>
 	<section class="feature-block">
 		<div class="main-container">
-			<div class="section-headers">
-				<h2 class="section-headers__h2">Особенности</h2>
-				<h4 class="section-headers__h4">Чем мы лучше</h4>
-			</div>
 			<div class="feature-block__items-wrapper">
 				<div class="feature-block__item">
 					<svg class="feature-block__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120"
@@ -329,125 +166,12 @@
 			</div>
 		</div>
 	</section>
-	<section class="quote">
-		<div class="main-container">
-			<div class="section-headers section-headers--quote">
-				<h2 class="section-headers__h2">Форма заявки</h2>
-				<h4 class="section-headers__h4">Расчёт цены и сроков</h4>
-			</div>
-			<form>
-				<div class="quote__form">
-					<fieldset class="quote__item-wrapper">
-						<div class="quote__item">
-							<input class="quote__text-input" type="tel" name="Name" id="Name" required>
-							<label class="quote__label" for="Name">Ваше имя</label>
-						</div>
-						<div class="quote__item">
-							<input class="quote__text-input" type="tel" name="Phone" id="Phone" required>
-							<label class="quote__label" for="Phone">Номер телефона</label>
-						</div>
-						<div class="quote__item">
-							<input class="quote__text-input" type="email" name="Mail" id="Mail" required>
-							<label class="quote__label" for="Mail">Электронная почта</label>
-						</div>
-					</fieldset>
-					<fieldset class="quote__item-wrapper">
-						<div class="quote__item">
-							<input class="quote__text-input" type="text" name="From" id="From" required>
-							<label class="quote__label" for="From">Откуда забрать груз</label>
-						</div>
-						<div class="quote__item">
-							<input class="quote__text-input" type="text" name="To" id="To" required>
-							<label class="quote__label" for="To">Куда отвезти груз</label>
-						</div>
-						<div class="quote__item">
-							<textarea class="quote__text-input" name="Message" id="Message" rows="1" required></textarea>
-							<label class="quote__label" for="Message">Комментарии</label>
-						</div>
-					</fieldset>
-				</div>
-				<a href="#" class="standart-button">Оставить заявку</a>
-			</form>
-		</div>
-	</section>
-	<section class="facts">
-		<div class="main-container">
-			<div class="section-headers">
-				<h2 class="section-headers__h2">Возможности</h2>
-				<h4 class="section-headers__h4">Что мы предлагаем</h4>
-			</div>
-			<div class="facts__text-block">
-				<div class="facts__item facts__item--full">
-					<h4 class="facts__item-header">Перевезём ваш груз в любую точку России</h4>
-					<p class="facts__item-text">Для нас нет ограничений по территориям и районам, по типам местности или
-						погодным условиям. В любых, даже самых сложных, случаях мы эффективно и в оговоренные сроки доставляем
-						ваши отправления. Грязь, слякость, колея или даже полное отсутствие дороги - не имеет значения. Есть
-						транспорт. Есть груз. Есть задача перевезти - мы перевезём</p>
-				</div>
-				<div class="facts__item">
-					<div class="circle"><strong><i></i></strong></div>
-					<div class="facts__text-wrapper">
-						<h4 class="facts__item-header">Крупнотоннажные<br> перевозки</h4>
-						<p class="facts__item-text">Перевозка больших по массе, но компактных по габаритам грузов</p>
-					</div>
-				</div>
-				<div class="facts__item">
-					<div class="circle circle--second"><strong><i></i></strong></div>
-					<div class="facts__text-wrapper">
-						<h4 class="facts__item-header">Негабаритные<br> перевозки</h4>
-						<p class="facts__item-text">Транспортировка тяжелых и больших по габаритам изделий и техники</p>
-					</div>
-				</div>
-				<div class="facts__item">
-					<div class="circle circle--third"><strong><i></i></strong></div>
-					<div class="facts__text-wrapper">
-						<h4 class="facts__item-header">Проектные<br> перевозки</h4>
-						<p class="facts__item-text">Перевозка оборудования и оснащения предприятий в рамках проекта</p>
-					</div>
-				</div>
-				<div class="facts__item">
-					<div class="circle circle--fourth"><strong><i></i></strong></div>
-					<div class="facts__text-wrapper">
-						<h4 class="facts__item-header">Мультимодальные<br> перевозки</h4>
-						<p class="facts__item-text">Смешанный тип перевозки с применением оптимальных видов транспорта</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="map">
-		<div class="main-container">
-			<div class="section-headers">
-				<h2 class="section-headers__h2">Регионы</h2>
-				<h4 class="section-headers__h4">Где мы работаем</h4>
-			</div>
-		</div>
-		<div class="map__block map__block--main"></div>
-	</section>
-	<section class="clients">
-		<div class="main-container">
-			<div class="section-headers">
-				<h2 class="section-headers__h2">Партнёры</h2>
-				<h4 class="section-headers__h4">Нам доверяют компании</h4>
-			</div>
-			<div class="clients__slider">
-				<img src="img/company/bke.png">
-				<img src="img/company/cck.png">
-				<img src="img/company/gzp-bur.png">
-				<img src="img/company/igs.png">
-				<img src="img/company/ng.png">
-				<img src="img/company/gzp-n.png">
-				<img src="img/company/nobel.png">
-				<img src="img/company/gzp-snab.png">
-				<img src="img/company/sgk.png">
-				<img src="img/company/sn.png">
-				<img src="img/company/suek.png">
-				<img src="img/company/gzp-rem.png">
-			</div>
-		</div>
-	</section>
 	<section class="address">
 		<div class="main-container">
+			<div class="section-headers section-headers--address">
+				<h2 class="section-headers__h2">Наши офисы</h2>
+				<h4 class="section-headers__h4">Адреса и телефоны</h4>
+			</div>
 			<div class="address__item-wrapper">
 				<div class="address__item">
 					<h3 class="address__item-header">Главный<br> офис</h3>
@@ -483,12 +207,12 @@
 <footer class="footer">
 	<div class="main-container">
 		<div class="footer__wrapper">
-			<div class="footer__item">
+			<a href="index.html" class="footer__item">
 				<picture>
 					<source media="(min-width: 700px)" srcset="./img/logo.svg">
 					<img src="./img/logo.svg" alt="Pink" width="100" height="50">
 				</picture>
-			</div>
+			</a>
 			<div class="footer__item">
 				<p class="footer__designed-by">&copy; S.Terki Inc.</p>
 			</div>
@@ -533,12 +257,8 @@
 </footer>
 <script src="js/jquery.js"></script>
 <script src="js/vegas.js"></script>
-<script src="js/circle-progress.js"></script>
-<script src="js/jquery-jvectormap-2.0.3.min.js"></script>
-<script src="js/map.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/magnific-gallery.js"></script>
-
 <script src="js/script.js"></script>
+<script src="js/circle-progress.js"></script>
+<script src="js/slick.js"></script>
 </body>
 </html>
