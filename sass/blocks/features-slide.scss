@@ -144,6 +144,13 @@
       }
     }
   }
+  &--transport {
+    .features-slide__item {
+      &--double-width {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-5.jpg) 50% 20% no-repeat;
+      }
+    }
+  }
 }
 
 

@@ -25,7 +25,7 @@
       max-width: 500px;
     }
     @include adaptive(tablet) {
-      margin-top: -100px;
+      margin-top: -60px;
       padding-bottom: 10px;
     }
     @include adaptive(desktop) {
@@ -37,7 +37,6 @@
       }
     }
   }
-
 }
 
 
@@ -57,7 +56,7 @@
   position: relative;
   flex-basis: 50%;
   text-align: center;
-  padding: 10px;
+  padding: 9px;
   transition: all 0.3s ease;
   &:nth-child(2n+1) {
     border-right: 1px solid $clr-lightgrey;
@@ -136,4 +135,13 @@
   height: auto;
   background: lighten($clr-pink, 10%);
   transition: all 0.3s ease;
+}
+
+.transport-types__button {
+  &--hidden {
+    display: none;
+    @include adaptive(desktop) {
+      display: block;
+    }
+  }
 }

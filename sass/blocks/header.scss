@@ -6,6 +6,9 @@
   background: linear-gradient(transparentize($clr-purple, 0.3), transparentize($clr-purple, 0.3)), url('../img/bg-full-1.jpg')center no-repeat;
   background-size: cover;
   &--menu-opened {
+    .header--about {
+      margin-bottom: 30px;
+    }
     .header__logo {
      border-bottom: 2px solid $clr-black;
      background-color: transparentize($clr-purple, 0.3);
@@ -13,7 +16,7 @@
        border: none;
        background-color: transparent;
      }
-   }
+    }
   }
   &--about {
     @include adaptive(tablet) {
@@ -95,6 +98,9 @@
   border-top: 1px solid $clr-white;
   border-bottom: 2px solid $clr-black;
   padding: 15px 0;
+  &:last-child {
+    visibility: hidden;
+  }
   a {
     @include merry();
     font-size: 18px;

@@ -9,8 +9,11 @@
     }
     .facts__item {
       &:not(:first-child) {
-        flex-basis: 33.33%;
-        flex-direction: column;
+        flex-basis: 100%;
+        @include adaptive(tablet) {
+          flex-basis: 33.33%;
+          flex-direction: column;
+        }
       }
       &--full {
         .facts__item-header {
