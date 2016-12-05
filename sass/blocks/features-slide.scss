@@ -116,6 +116,34 @@
       }
     }
   }
+  &--guarantee {
+    .features-slide__item {
+      &--double-width {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-1.jpg) 50% 20% no-repeat;
+      }
+    }
+  }
+  &--hard {
+    .features-slide__item {
+      &--double-width {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-2.jpg) 50% 20% no-repeat;
+      }
+    }
+  }
+  &--oncall {
+    .features-slide__item {
+      &--double-width {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-3.jpg) 50% 20% no-repeat;
+      }
+    }
+  }
+  &--ontime {
+    .features-slide__item {
+      &--double-width {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-4.jpg) 50% 20% no-repeat;
+      }
+    }
+  }
 }
 
 
