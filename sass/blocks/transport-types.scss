@@ -27,21 +27,18 @@
   padding: 10px;
   background-color: $clr-white;
   transition: margin 0.5s ease;
-  &:nth-child(2n+1) {
+  &:not(:last-child) {
     border-right: 1px solid $clr-lightgrey;
-    @include adaptive(tablet) {
-      border: none;
-    }
+  }
+  &:last-child {
+    flex-grow: 1;
   }
   &:nth-child(n+3) {
     padding-bottom: 0;
   }
   @include adaptive(tablet) {
-    flex-basis: 25%;
     padding-bottom: 0;
-    &:not(:last-child) {
-      border-right: 1px solid $clr-lightgrey;
-    }
+    flex-basis: 33.33%;
   }
   @include adaptive(desktop) {
     &:hover {
