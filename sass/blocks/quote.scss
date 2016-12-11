@@ -106,3 +106,13 @@
 .map-block__item {
   padding: 30px;
 }
+
+.services__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services__item {
+  flex-basis: 50%;
+  text-align: center;
+}

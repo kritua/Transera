@@ -145,9 +145,33 @@
     }
   }
   &--transport {
+    padding-bottom: 0;
     .features-slide__item {
       &--double-width {
         background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-5.jpg) 50% 20% no-repeat;
+      }
+    }
+  }
+  &--services {
+    .features-slide__items-wrapper {
+      flex-wrap: wrap;
+    }
+    .features-slide__item {
+      flex-basis: 100%;
+      @include adaptive(tablet) {
+        flex-basis: 50%;
+      }
+      &--oversize {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-6.jpg) 50% 20% no-repeat;
+      }
+      &--heavy {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-7.jpg) 50% 20% no-repeat;
+      }
+      &--project {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-8.jpg) 50% 20% no-repeat;
+      }
+      &--multimodal {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-9.jpg) 50% 20% no-repeat;
       }
     }
   }
