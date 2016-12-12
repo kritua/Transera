@@ -10,7 +10,8 @@
   }
   &--quote,
   &--price,
-  &--about-us {
+  &--about-us,
+  &--feature {
     .section-headers__h2,
     .section-headers__h4 {
       color: $clr-white;
@@ -34,9 +35,9 @@
     content: '';
     position: absolute;
     top: 16px;
-    width: 300px;
+    width: 320px;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -160px;
     height: 4px;
     background: linear-gradient(to right, #d22856 10%, transparent 10%, transparent 90%, #d22856 90%);
   }

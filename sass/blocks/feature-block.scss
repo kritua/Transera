@@ -3,6 +3,7 @@
 .feature-block {
   text-align: center;
   margin-top: 0;
+  background: $clr-darkblue;
 }
 
 .feature-block__items-wrapper {
@@ -19,7 +20,7 @@
     bottom: -21px;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-top: 25px solid $clr-darkblue;
+    border-top: 25px solid $clr-pink;
     visibility: hidden;
     transition: border 0.3s ease;
   }
@@ -37,16 +38,16 @@
   }
   &:hover {
     .feature-block__image {
-      border-color: $clr-pink;
+      border-color:  $clr-white;
       transition: all 0.3s ease;
-      fill: $clr-pink;
+      fill: lighten($clr-pink, 30%);
     }
     .feature-block__svg-wrapper {
       &::before {
         visibility: visible;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 25px solid $clr-pink;
+        border-top: 25px solid $clr-white;
       }
     }
   }
@@ -57,7 +58,7 @@
   @include font-medium();
   font-size: 18px;
   line-height: 26px;
-  color: $clr-darkblue;
+  color: $clr-white;
   margin-bottom: 0;
 }
 
@@ -65,7 +66,7 @@
   @include font-regular();
   font-size: 14px;
   line-height: 24px;
-  color: $clr-grey-2;
+  color: $clr-grey;
   margin-top: 0;
 }
 
@@ -88,6 +89,9 @@
 }
 
 .feature-block__image {
-  border: 10px solid $clr-darkblue;
+  border: 10px solid $clr-pink;
   transition: all 0.5s ease;
+  .st1 {
+    fill: $clr-white;
+  }
 }

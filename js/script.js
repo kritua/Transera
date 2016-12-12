@@ -15,6 +15,33 @@ $(document).ready(function () {
 		$(".header").removeClass("header--menu-opened");
 		$(".header__menu").addClass("header__menu--hidden");
 	});
+	
+	
+	//Form send
+	$(".click").click(function () {
+		$('.form').fadeIn();
+		$('.modal-bg').fadeIn();
+		$('.desc').val($(this).data('desc'));
+	});
+	$(".close-form").click(function () {
+		$(this).parent().fadeOut();
+		$('.modal-bg').fadeOut();
+	});
+	$('.modal-bg').click(function () {
+		$(this).fadeOut();
+		$('.form').fadeOut();
+	});
+	if ($(window).width() >= 768) {
+		$('a').each(function () {
+			if ($(this).attr('href') && $(this).attr('href').indexOf('tel:') > -1) $(this).removeAttr('href');
+		});
+	}
+	
+	
+	//Number validation
+	var countryCode = '+7';
+	$("#phone").mask(countryCode + ' ' + '(999) 999-99-99');
+	$("#phone2").mask(countryCode + ' ' + '(999) 999-99-99');
 
 
 	//Header slideshow
