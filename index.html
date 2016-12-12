@@ -34,6 +34,7 @@
     <div class="message"></div>
     <button id="submit-order" type="submit" class="standart-button">Оставить заявку</button>
 </form>
+
 <header class="header header--index header--background header--menu-opened">
 	<button class="slider slider--previous" type="button"></button>
 	<button class="slider slider--next" type="button"></button>
@@ -208,7 +209,7 @@
 					</div>
 					<div class="feature-block__text-block">
 						<h4 class="feature-block__h4">Всегда на связи</h4>
-						<p class="feature-block__text">Информаируем вас о любом изменении статуса заявки на разрешение</p>
+						<p class="feature-block__text">Информируем вас о любом изменении статуса заявки на разрешение</p>
 					</div>
 				</div>
 				<div class="feature-block__item">
@@ -238,33 +239,27 @@
       <div class="facts__items-wrapper">
         <div class="facts__text-block">
           <div class="facts__item">
-            <img class="facts__image" src="http://placehold.it/350x280">
+            <img class="facts__image" src="./img/docs/oversize.jpg">
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Негабаритные грузы</h4>
-              <p class="facts__item-text">Разрешения на перевозку негабаритных грузов</p>
+              <p class="facts__item-text">Перед вами стоит задача перевозки негабаритного груза по дорогам общего пользования, но вы не хотите самостоятельно тратить время и оформлять разрешение? Наша компания возьмёт на себя все заботы и поможет вам с организацией процесса перевозки буквально от начала и до конца. Помимо бумажной работы мы можем предложить вам лучшие тарифы на саму перевозку благодаря собственному автопарку и опытным водителям. </p>
             </div>
           </div>
           <div class="facts__item">
-            <img class="facts__image" src="http://placehold.it/350x280">
+            <img class="facts__image" src="./img/docs/heavy.jpg">
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Тяжеловесные грузы</h4>
-              <p class="facts__item-text">Разрешения на перевозку тяжеловесных грузов</p>
+              <p class="facts__item-text">Перевозка тяжеловесных грузов требует от транспортной компании серьёзной подготовки и наличия разрешения, оформление которого может занять значительное время, а сжатые сроки не дают пространства для манёвра. В таких случаях лучше всего обратиться к нам - мы поможем вам подготовить все бумаги для транспортировки и, при необходимости, осуществим саму перевозку с применением современных технических средств, полностью соответствющих требованиям. </p>
             </div>
           </div>
           <div class="facts__item">
-            <img class="facts__image" src="http://placehold.it/350x280">
+            <img class="facts__image" src="./img/docs/danger.jpg">
             <div class="facts__text-wrapper">
               <h4 class="facts__item-header">Опасные грузы</h4>
-              <p class="facts__item-text">Разрешения на перевозку опасных грузов</p>
+              <p class="facts__item-text">Перевозка опасных грузов - самый сложный тип транспортироки, требующий максимального профессионализма от перевозчика и строгого соблюдения всех требований и предписаний. Кроме того, необходимо разрешение на перевозку такого типа грузов. Наша компания поможет вам не только подготовить всю необходимую документацию, но также предоставит транспорт и предложит выгодные тарифы.</p>
             </div>
           </div>
-          <div class="facts__item">
-            <img class="facts__image" src="http://placehold.it/350x280">
-            <div class="facts__text-wrapper">
-              <h4 class="facts__item-header">Перевозки</h4>
-              <p class="facts__item-text">Организация процесса перевозки грузов</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -317,10 +312,15 @@
 				<h2 class="section-headers__h2">Форма заявки</h2>
 				<h4 class="section-headers__h4">Расчёт цены и сроков</h4>
 			</div>
-			<form>
+			<form id="contact" method="post">
+        <input type="hidden" name="utm_source" value="<?= $_GET['utm_source'] ?>">
+        <input type="hidden" name="utm_medium" value="<?= $_GET['utm_medium'] ?>">
+        <input type="hidden" name="utm_term" value="<?= $_GET['utm_term'] ?>">
+        <input type="hidden" name="utm_campaign" value="<?= $_GET['utm_campaign'] ?>">
+        <input type="hidden" name="source" value="<?= $_SERVER['HTTP_HOST'] ?>">
 				<fieldset class="quote__item-wrapper">
 					<div class="quote__item">
-						<input class="quote__text-input" type="tel" name="Phone" id="phone" required>
+						<input class="quote__text-input" type="tel" name="phone" id="phone" required>
 						<label class="quote__label" for="Phone">Ваш номер телефона</label>
 					</div>
 					<div class="quote__item">
@@ -346,25 +346,26 @@
 				<div class="address__item">
 					<h3 class="address__item-header">Главный<br> офис</h3>
 					<div class="address__text-block">
-						<p class="address__text">г. Москва, ул. Советская, д. 24</p>
-						<a href="tel:88008008000" class="address__text address__text--contact address__text--phone">8 (800)800-80-00</a>
-						<a href="mailto:mainoffice@transera.com" class="address__text address__text--contact">mainoffice@transera.com</a>
+						<p class="address__text">г. Химки, ул. Рабочая, д. 2а</p>
+						<a href="tel:88001002264" class="address__text address__text--contact address__text--phone">&nbsp;8 (800) 100 22 64</a>
+						<a href="tel:+77058148776" class="address__text address__text--contact address__text--phone">+7 (705) 814-87-76</a>
+						<a href="mailto:info@gtrans.group" class="address__text address__text--contact">info@gtrans.group</a>
 					</div>
 				</div>
 				<div class="address__item">
 					<h3 class="address__item-header">Дополнительный<br> офис</h3>
 					<div class="address__text-block">
-						<p class="address__text">г. Москва, ул. Советская, д. 24</p>
-						<a href="tel:88008008000" class="address__text address__text--contact address__text--phone">8 (800)800-80-00</a>
-						<a href="mailto:mainoffice@transera.com" class="address__text address__text--contact">mainoffice@transera.com</a>
+						<p class="address__text">г. Химки, ул. Рабочая, д. 2а</p>
+						<a href="tel:88001002264" class="address__text address__text--contact address__text--phone">8 (800) 100 22 64</a>
+						<a href="mailto:info@gtrans.group" class="address__text address__text--contact">info@gtrans.group</a>
 					</div>
 				</div>
 				<div class="address__item">
 					<h3 class="address__item-header">Дополнительный<br> офис</h3>
 					<div class="address__text-block">
-						<p class="address__text">г. Москва, ул. Советская, д. 24</p>
-						<a href="tel:88008008000" class="address__text address__text--contact address__text--phone">8 (800)800-80-00</a>
-						<a href="mailto:mainoffice@transera.com" class="address__text address__text--contact">mainoffice@transera.com</a>
+						<p class="address__text">г. Химки, ул. Рабочая, д. 2а</p>
+						<a href="tel:88001002264" class="address__text address__text--contact address__text--phone">8 (800) 100 22 64</a>
+						<a href="mailto:info@gtrans.group" class="address__text address__text--contact">info@gtrans.group</a>
 					</div>
 				</div>
 			</div>

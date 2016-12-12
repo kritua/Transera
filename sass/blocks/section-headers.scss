@@ -27,17 +27,20 @@
 .section-headers__h2 {
   position: relative;
   @include font-bold();
-  font-size: 30px;
+  font-size: 24px;
   line-height: 36px;
   text-transform: uppercase;
   margin-bottom: 0;
+  @include adaptive(tablet) {
+    font-size: 30px;
+  }
   &::after {
     content: '';
     position: absolute;
     top: 16px;
-    width: 320px;
+    width: 11em;
     left: 50%;
-    margin-left: -160px;
+    margin-left: -5.5em;
     height: 4px;
     background: linear-gradient(to right, #d22856 10%, transparent 10%, transparent 90%, #d22856 90%);
   }
