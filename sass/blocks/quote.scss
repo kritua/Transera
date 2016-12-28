@@ -19,6 +19,9 @@
   @include adaptive(tablet) {
     flex-direction: row;
   }
+  &--modal {
+
+  }
   @include adaptive(desktop) {
     width: 80%;
     margin: 0 auto;

@@ -65,6 +65,12 @@
     left: -40px;
     background: url('../img/icons/white-arrow-blue.svg') no-repeat center;
   }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: transparentize($clr-darkblue, 0.5);
+  }
 }
 
 .feature-block__image {

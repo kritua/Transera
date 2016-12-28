@@ -72,4 +72,20 @@ section {
   }
 }
 
+.alert {
+  text-align: center;
+  color: $clr-white;
+  padding: 20px;
+}
 
+.alert-danger {
+  background: $clr-red;
+}
+
+.alert-success {
+  background: $clr-green;
+}
+
+.message {
+  margin: 0 auto;
+}

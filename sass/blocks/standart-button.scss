@@ -12,6 +12,8 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
+  outline: none;
+  border: none;
   @include adaptive(tablet) {
     font-size: 20px;
   }
@@ -20,6 +22,10 @@
   }
   &--header {
     padding: 10px 15px;
+  }
+  &--submit {
+    display: block;
+    margin: 0 auto;
   }
   &:hover {
     box-shadow: 0 0 0 1px $clr-white;

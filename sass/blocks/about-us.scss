@@ -217,6 +217,12 @@
   &:visited {
     color: $clr-darkblue;
   }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: transparentize($clr-darkblue, 0.5);
+  }
 }
 
 .about-us__image {

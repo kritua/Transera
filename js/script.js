@@ -318,11 +318,43 @@ $(document).ready(function () {
 	});
 	
 	
-	//Slow scrolling
-	$('a[href*="#"]').on('click', function(event){
-		event.preventDefault();
-		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+	
+	//Modal form
+	$(".modal-window__click").click(function () {
+		$('.modal-window__form').fadeIn();
+		$('.modal-window').fadeIn();
 	});
+	$(".modal-window__close-form").click(function () {
+		$(this).parent().fadeOut();
+		$('.modal-window').fadeOut();
+	});
+
+	if ($(window).width() >= 768) {
+		$('a').each(function () {
+			if ($(this).attr('href') && $(this).attr('href').indexOf('tel:') > -1) $(this).removeAttr('href');
+		});
+	}
+
+
+  //Submit button script
+
+  $('button[type="submit"]').click(function(){
+    var $form = $(this).closest('form');
+    $.post('form.php', $form.serialize(), function(data){
+      //if(data.res == 'success') yaCounter39711875.reachGoal('zayavka');
+      $form.find('.message').html('<div class="alert alert-' + data.res + '">' + data.msg + '</div>');
+    }, 'json');
+    $form.trigger('reset');
+    return false;
+  });
+
+
+  //Slow scrolling
+  $('a[href*="#"]').on('click', function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
+  });
+
 });
 
 
