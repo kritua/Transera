@@ -161,17 +161,58 @@
       @include adaptive(tablet) {
         flex-basis: 50%;
       }
+      &--oversize,
+      &--research {
+        @include adaptive(desktop) {
+          flex-basis: calc(50% - 1px);
+          margin-right: 1px;
+          margin-bottom: 1px;
+        }
+      }
       &--oversize {
         background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-6.jpg) 50% 20% no-repeat;
+        background-size: cover;
+      }
+      &--research {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-10.jpg) 50% 20% no-repeat;
+        background-size: cover;
+      }
+      &--heavy,
+      &--rigging {
+        @include adaptive(desktop) {
+          margin-bottom: 1px;
+        }
       }
       &--heavy {
         background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-7.jpg) 50% 20% no-repeat;
+        background-size: cover;
+      }
+      &--rigging {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-11.jpg) 50% 20% no-repeat;
+        background-size: cover;
+      }
+      &--project,
+      &--crane {
+        @include adaptive(desktop) {
+          flex-basis: calc(50% - 1px);
+          margin-right: 1px;
+        }
       }
       &--project {
         background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-8.jpg) 50% 20% no-repeat;
+        background-size: cover;
+      }
+      &--crane {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-13.jpg) 50% 20% no-repeat;
+        background-size: cover;
       }
       &--multimodal {
         background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-9.jpg) 50% 20% no-repeat;
+        background-size: cover;
+      }
+      &--install {
+        background: linear-gradient(transparentize($clr-blue-gray, 0.3), transparentize($clr-blue-gray, 0.3)), url(../img/bg-half-12.jpg) 50% 20% no-repeat;
+        background-size: cover;
       }
     }
   }
@@ -199,12 +240,9 @@
   }
   &--custom {
     span {
-      font-size: 34px;
+      font-size: 4.5vh;
       line-height: 36px;
       color: $clr-pink;
-      @include adaptive(tablet) {
-        font-size: 40px;
-      }
     }
     @include adaptive(tablet) {
       position: relative;
