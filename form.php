@@ -1,17 +1,5 @@
 <?php
 
-/*
-
-	name
-	phone
-	email
-	address
-	question
-	type - hidden
-	utm_* - hidden
- || !preg_match('#^\+?[0-9]{10,11}$#', $_POST['phone'])
-*/
-
 session_start();
 
 if((time() - $_SESSION['send']) < 1) exit(json_encode(array('res' => 'info', 'msg' => 'Вы уже отправили заявку. Наши менеджеры свяжутся с вами')));
@@ -26,11 +14,13 @@ $info = $SxGeo->getCityFull($ip);
 $city = $info['city']['name_ru'];
 $country = $info['country']['name_ru'];
 
-$body = ($_POST['name'] ? "\nИмя: {$_POST['name']}" : null).
+$body =
+		($_POST['name'] ? "\nИмя: {$_POST['name']}" : null).
 		($_POST['phone'] ? "\nТелефон: {$_POST['phone']}" : null).
-		($_POST['email'] ? "\nПочта: {$_POST['email']}" : null).
-		($_POST['address'] ? "\nОткуда и куда: {$_POST['address']}" : null).
-		($_POST['question'] ? "\nВопрос: {$_POST['question']}" : null).
+		($_POST['mail'] ? "\nПочта: {$_POST['mail']}" : null).
+		($_POST['from'] ? "\nОткуда: {$_POST['from']}" : null).
+    ($_POST['to'] ? "\nКуда: {$_POST['to']}" : null).
+		($_POST['message'] ? "\nВопрос: {$_POST['message']}" : null).
 		($_POST['utm_source'] ? "\nutm_source: {$_POST['utm_source']}" : null).
 		($_POST['utm_medium'] ? "\nutm_medium: {$_POST['utm_medium']}" : null).
 		($_POST['utm_term'] ? "\nutm_term: {$_POST['utm_term']}" : null).
@@ -43,7 +33,7 @@ $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 $mail->setFrom('info@sts.ru', 'SpecTransService', $_POST['source']);
 $mail->addAddress('kritua2@gmail.com');
-$mail->Subject = $_POST['type'] ? $_POST['type'] : 'Заявка на расчет с сайта '.$_POST['source'];
+$mail->Subject = $_POST['type'] ? $_POST['type'] : 'Заявка с сайта '.$_POST['source'];
 $mail->Body    = $body;
 
 if($mail->send()) {

@@ -13,7 +13,11 @@
   position: fixed;
 }
 
-.modal-window form {
+.modal-window__wrapper {
+  display: none;
+}
+
+.modal-window__form {
   position: fixed;
   left: 0;
   top: 35%;

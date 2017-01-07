@@ -364,15 +364,9 @@
     flex-basis: 25%;
     height: 50%;
   }
-  &--test {
-    background: url('../img/work/slide-1.jpg') no-repeat center;
-    background-size: cover;
-  }
-  &--test-2 {
-    background: url('../img/work/slide-2.jpg') no-repeat center;
-    background-size: cover;
-  }
 }
+
+@include bg-images();
 
 .features-slide__picture {
   max-width: 100%;

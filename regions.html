@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Регионы работы</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 </head>
 <body>
 <header class="header header--about header--background header--menu-opened">
   <div class="header__navbar">
     <div class="header__logo">
-      <a href="index.html" class="header__logo-img">
+      <a href="index.php" class="header__logo-img">
         <picture>
           <source media="(min-width: 700px)" srcset="./img/logo.svg">
           <img src="./img/logo.svg" alt="Logo">
@@ -28,14 +28,14 @@
     </div>
     <nav class="header__menu">
       <ul class="header__menu-list">
-        <li class="header__menu-item"><a href="index.html">Главная</a></li>
-        <li class="header__menu-item"><a href="about.html">О компании</a></li>
-        <li class="header__menu-item"><a href="features.html">Преимущества</a></li>
-        <li class="header__menu-item"><a href="services.html">Услуги</a></li>
-        <li class="header__menu-item"><a href="experience.html">Наш опыт</a></li>
-        <li class="header__menu-item"><a href="docs.html">Документация</a></li>
+        <li class="header__menu-item"><a href="index.php">Главная</a></li>
+        <li class="header__menu-item"><a href="about.php">О компании</a></li>
+        <li class="header__menu-item"><a href="features.php">Преимущества</a></li>
+        <li class="header__menu-item"><a href="services.php">Услуги</a></li>
+        <li class="header__menu-item"><a href="experience.php">Наш опыт</a></li>
+        <li class="header__menu-item"><a href="docs.php">Документация</a></li>
         <li class="header__menu-item header__menu-item--active"><a href="#">Регионы</a></li>
-        <li class="header__menu-item"><a href="contacts.html">Контакты</a></li>
+        <li class="header__menu-item"><a href="contacts.php">Контакты</a></li>
 	      <li class="header__menu-item"></li>
       </ul>
     </nav>
@@ -104,14 +104,14 @@
         </div>
       </div>
       <div class="features-slide__item features-slide__item--images gallery__one">
-        <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-        <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
-        <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-        <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
-        <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-        <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
-        <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-        <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
+        <a href="./img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--image-1"></a>
+        <a href="./img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--image-2"></a>
+        <a href="./img/work/slide-3.jpg" class="features-slide__image-item features-slide__image-item--image-3"></a>
+        <a href="./img/work/slide-4.jpg" class="features-slide__image-item features-slide__image-item--image-4"></a>
+        <a href="./img/work/slide-5.jpg" class="features-slide__image-item features-slide__image-item--image-5"></a>
+        <a href="./img/work/slide-6.jpg" class="features-slide__image-item features-slide__image-item--image-6"></a>
+        <a href="./img/work/slide-7.jpg" class="features-slide__image-item features-slide__image-item--image-7"></a>
+        <a href="./img/work/slide-8.jpg" class="features-slide__image-item features-slide__image-item--image-8"></a>
       </div>
     </div>
   </section>
@@ -126,31 +126,108 @@
 	      <h3 class="features-slide__h3 features-slide__h3--custom">Список месторождений</h3>
 	      <div class="features-slide__list-block">
 	        <ul class="features-slide__list">
-	          <li class="features-slide__list-item">Уренгойские</li>
-	          <li class="features-slide__list-item">Тарко-Салинское</li>
-	          <li class="features-slide__list-item">Русское</li>
-	          <li class="features-slide__list-item">Заполярное</li>
-	          <li class="features-slide__list-item">Самбургское</li>
+	          <li class="features-slide__list-item" id="field-13">Уренгойские</li>
+	          <li class="features-slide__list-item" id="field-14">Тарко-Салинское</li>
+	          <li class="features-slide__list-item" id="field-15">Русское</li>
+	          <li class="features-slide__list-item" id="field-16">Заполярное</li>
+	          <li class="features-slide__list-item" id="field-17">Самбургское</li>
 	        </ul>
 	        <ul class="features-slide__list">
-		        <li class="features-slide__list-item">Хадырьяхинское</li>
-		        <li class="features-slide__list-item">Ярудейское</li>
-	          <li class="features-slide__list-item">Медвежье</li>
-	          <li class="features-slide__list-item">Береговое</li>
+		        <li class="features-slide__list-item" id="field-18">Хадырьяхинское</li>
+		        <li class="features-slide__list-item" id="field-19">Ярудейское</li>
+	          <li class="features-slide__list-item" id="field-20">Медвежье</li>
+	          <li class="features-slide__list-item" id="field-21">Береговое</li>
 	        </ul>
 	      </div>
 	    </div>
 		  <div class="features-slide__item features-slide__item--images">
-			  <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-			  <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
-			  <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-			  <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
-			  <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-			  <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
-			  <a href="../img/work/slide-1.jpg" class="features-slide__image-item features-slide__image-item--test"></a>
-			  <a href="../img/work/slide-2.jpg" class="features-slide__image-item features-slide__image-item--test-2"></a>
+			  <a href="./img/work/slide-9.jpg" class="features-slide__image-item features-slide__image-item--image-9"></a>
+			  <a href="./img/work/slide-10.jpg" class="features-slide__image-item features-slide__image-item--image-10"></a>
+			  <a href="./img/work/slide-11.jpg" class="features-slide__image-item features-slide__image-item--image-11"></a>
+			  <a href="./img/work/slide-12.jpg" class="features-slide__image-item features-slide__image-item--image-12"></a>
+			  <a href="./img/work/slide-13.jpg" class="features-slide__image-item features-slide__image-item--image-13"></a>
+			  <a href="./img/work/slide-14.jpg" class="features-slide__image-item features-slide__image-item--image-14"></a>
+			  <a href="./img/work/slide-15.jpg" class="features-slide__image-item features-slide__image-item--image-15"></a>
+			  <a href="./img/work/slide-16.jpg" class="features-slide__image-item features-slide__image-item--image-16"></a>
 		  </div>
 		</div>
+  </section>
+  <section class="features-slide features-slide--regions" id="RU-KYA">
+    <div class="main-container">
+      <div class="section-headers__page-header">
+        <h2 class="section-headers__main-header"><span></span>Красноярский край</h2>
+      </div>
+    </div>
+    <div class="features-slide__items-wrapper">
+      <div class="features-slide__item features-slide__item--text">
+        <h3 class="features-slide__h3 features-slide__h3--custom">Список месторождений</h3>
+        <div class="features-slide__list-block">
+          <ul class="features-slide__list">
+            <li class="features-slide__list-item" id="field-22">Шапшинское</li>
+            <li class="features-slide__list-item" id="field-23">Приразломное</li>
+            <li class="features-slide__list-item" id="field-24">Салымское</li>
+            <li class="features-slide__list-item" id="field-25">Приобское</li>
+            <li class="features-slide__list-item" id="field-26">Губкинское</li>
+            <li class="features-slide__list-item" id="field-27">Муравленковское</li>
+          </ul>
+          <ul class="features-slide__list">
+            <li class="features-slide__list-item" id="field-28">Самотлорское</li>
+            <li class="features-slide__list-item" id="field-29">Вынгапуровское</li>
+            <li class="features-slide__list-item" id="field-30">Малобалыкское</li>
+            <li class="features-slide__list-item" id="field-31">Киняминское</li>
+            <li class="features-slide__list-item" id="field-32">Нивагальское</li>
+            <li class="features-slide__list-item" id="field-33">Покачевское</li>
+          </ul>
+        </div>
+      </div>
+      <div class="features-slide__item features-slide__item--images gallery__one">
+        <a href="./img/work/slide-17.jpg" class="features-slide__image-item features-slide__image-item--image-17"></a>
+        <a href="./img/work/slide-18.jpg" class="features-slide__image-item features-slide__image-item--image-18"></a>
+        <a href="./img/work/slide-19.jpg" class="features-slide__image-item features-slide__image-item--image-19"></a>
+        <a href="./img/work/slide-20.jpg" class="features-slide__image-item features-slide__image-item--image-20"></a>
+        <a href="./img/work/slide-21.jpg" class="features-slide__image-item features-slide__image-item--image-21"></a>
+        <a href="./img/work/slide-22.jpg" class="features-slide__image-item features-slide__image-item--image-22"></a>
+        <a href="./img/work/slide-23.jpg" class="features-slide__image-item features-slide__image-item--image-23"></a>
+        <a href="./img/work/slide-24.jpg" class="features-slide__image-item features-slide__image-item--image-24"></a>
+      </div>
+    </div>
+  </section>
+  <section class="features-slide features-slide--regions features-slide--revert" id="RU-YAN">
+    <div class="main-container">
+      <div class="section-headers__page-header">
+        <h2 class="section-headers__main-header"><span></span>Ямало-Ненецкий<br> Автономный Округ</h2>
+      </div>
+    </div>
+    <div class="features-slide__items-wrapper">
+      <div class="features-slide__item features-slide__item--text">
+        <h3 class="features-slide__h3 features-slide__h3--custom">Список месторождений</h3>
+        <div class="features-slide__list-block">
+          <ul class="features-slide__list">
+            <li class="features-slide__list-item" id="field-34">Уренгойские</li>
+            <li class="features-slide__list-item" id="field-35">Тарко-Салинское</li>
+            <li class="features-slide__list-item" id="field-36">Русское</li>
+            <li class="features-slide__list-item" id="field-37">Заполярное</li>
+            <li class="features-slide__list-item" id="field-38">Самбургское</li>
+          </ul>
+          <ul class="features-slide__list">
+            <li class="features-slide__list-item" id="field-39">Хадырьяхинское</li>
+            <li class="features-slide__list-item" id="field-40">Ярудейское</li>
+            <li class="features-slide__list-item" id="field-41">Медвежье</li>
+            <li class="features-slide__list-item" id="field-42">Береговое</li>
+          </ul>
+        </div>
+      </div>
+      <div class="features-slide__item features-slide__item--images">
+        <a href="./img/work/slide-9.jpg" class="features-slide__image-item features-slide__image-item--image-9"></a>
+        <a href="./img/work/slide-10.jpg" class="features-slide__image-item features-slide__image-item--image-10"></a>
+        <a href="./img/work/slide-11.jpg" class="features-slide__image-item features-slide__image-item--image-11"></a>
+        <a href="./img/work/slide-12.jpg" class="features-slide__image-item features-slide__image-item--image-12"></a>
+        <a href="./img/work/slide-13.jpg" class="features-slide__image-item features-slide__image-item--image-13"></a>
+        <a href="./img/work/slide-14.jpg" class="features-slide__image-item features-slide__image-item--image-14"></a>
+        <a href="./img/work/slide-15.jpg" class="features-slide__image-item features-slide__image-item--image-15"></a>
+        <a href="./img/work/slide-16.jpg" class="features-slide__image-item features-slide__image-item--image-16"></a>
+      </div>
+    </div>
   </section>
   <section class="address">
     <div class="main-container">
@@ -192,7 +269,7 @@
   <footer class="footer">
     <div class="main-container">
       <div class="footer__wrapper">
-        <a href="index.html" class="footer__item">
+        <a href="index.php" class="footer__item">
           <picture>
             <source media="(min-width: 700px)" srcset="./img/logo.svg">
             <img src="./img/logo.svg" alt="Pink" width="100" height="50">
@@ -232,14 +309,6 @@
     </div>
   </footer>
 </main>
-<script src="js/jquery.js"></script>
-<script src="js/vegas.js"></script>
-<script src="js/circle-progress.js"></script>
-<script src="js/jquery-jvectormap-2.0.3.min.js"></script>
-<script src="js/map.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/magnific-gallery.js"></script>
-<script src="js/vectormap.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

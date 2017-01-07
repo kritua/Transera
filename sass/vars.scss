@@ -28,6 +28,8 @@ $clr-red: #d22856;
 
 $clr-green: #58d298;
 
+$clr-blue: #63b2d2;
+
 //Margin Padding
 
 $content-padding: 0 20px;
@@ -102,6 +104,15 @@ $retina-dpi: "min-resolution: 1.5dppx";
   @if $media == retina {
     @media ($retina-res), ($retina-dpi) {
       @content;
+    }
+  }
+}
+
+@mixin bg-images() {
+  @for $i from 1 to 31 {
+    .features-slide__image-item--image-#{$i} {
+      background: url('../img/work/slide-#{$i}.jpg') no-repeat center;
+      background-size: cover;
     }
   }
 }

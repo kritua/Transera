@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<title>Контакты</title>
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 </head>
 <body>
 <header class="header header--about header--background header--menu-opened">
 	<div class="header__navbar">
 		<div class="header__logo">
-			<a href="index.html" class="header__logo-img">
+			<a href="index.php" class="header__logo-img">
 				<picture>
 					<source media="(min-width: 700px)" srcset="./img/logo.svg">
 					<img src="./img/logo.svg" alt="Logo">
@@ -28,13 +28,13 @@
 		</div>
 		<nav class="header__menu">
 			<ul class="header__menu-list">
-				<li class="header__menu-item"><a href="index.html">Главная</a></li>
-				<li class="header__menu-item"><a href="about.html">О компании</a></li>
-				<li class="header__menu-item"><a href="features.html">Преимущества</a></li>
-				<li class="header__menu-item"><a href="services.html">Услуги</a></li>
-				<li class="header__menu-item"><a href="experience.html">Наш опыт</a></li>
-				<li class="header__menu-item"><a href="docs.html">Документация</a></li>
-				<li class="header__menu-item"><a href="regions.html">Регионы</a></li>
+				<li class="header__menu-item"><a href="index.php">Главная</a></li>
+				<li class="header__menu-item"><a href="about.php">О компании</a></li>
+				<li class="header__menu-item"><a href="features.php">Преимущества</a></li>
+				<li class="header__menu-item"><a href="services.php">Услуги</a></li>
+				<li class="header__menu-item"><a href="experience.php">Наш опыт</a></li>
+				<li class="header__menu-item"><a href="docs.php">Документация</a></li>
+				<li class="header__menu-item"><a href="regions.php">Регионы</a></li>
 				<li class="header__menu-item header__menu-item--active"><a href="#">Контакты</a></li>
 				<li class="header__menu-item"></li>
 			</ul>
@@ -64,20 +64,20 @@
 					<div class="quote__form">
 						<fieldset class="quote__item-wrapper">
 							<div class="quote__item">
-								<input class="quote__text-input" type="tel" name="Name" id="Name" required>
-								<label class="quote__label" for="Name">Ваше имя</label>
+								<input class="quote__text-input" type="tel" name="name" id="name" required>
+								<label class="quote__label" for="name">Ваше имя</label>
 							</div>
 							<div class="quote__item">
-								<input class="quote__text-input" type="tel" name="Phone" id="Phone" required>
-								<label class="quote__label" for="Phone">Номер телефона</label>
+								<input class="quote__text-input" type="tel" name="phone" id="phone" required>
+								<label class="quote__label" for="phone">Номер телефона</label>
 							</div>
 							<div class="quote__item">
-								<input class="quote__text-input" type="email" name="Mail" id="Mail" required>
-								<label class="quote__label" for="Mail">Электронная почта</label>
+								<input class="quote__text-input" type="email" name="mail" id="mail" required>
+								<label class="quote__label" for="mail">Электронная почта</label>
 							</div>
 							<div class="quote__item">
-								<textarea class="quote__text-input" name="Message" id="Message" rows="1" required></textarea>
-								<label class="quote__label" for="Message">Ваш вопрос</label>
+								<textarea class="quote__text-input" name="message" id="message" rows="1" required></textarea>
+								<label class="quote__label" for="message">Ваш вопрос</label>
 							</div>
 						</fieldset>
 					</div>
@@ -152,7 +152,7 @@
 <footer class="footer">
 	<div class="main-container">
 		<div class="footer__wrapper">
-			<a href="index.html" class="footer__item">
+			<a href="index.php" class="footer__item">
 				<picture>
 					<source media="(min-width: 700px)" srcset="./img/logo.svg">
 					<img src="./img/logo.svg" alt="Pink" width="100" height="50">
@@ -200,11 +200,6 @@
 		</div>
 	</div>
 </footer>
-<script src="js/jquery.js"></script>
-<script src="js/vegas.js"></script>
-<script src="js/circle-progress.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/magnific-gallery.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>
