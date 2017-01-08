@@ -22,6 +22,25 @@
   position: relative;
   margin-bottom: 30px;
   flex-basis: 100%;
+  &--contacts {
+    flex-basis: 50%;
+    .address__text {
+      color: $clr-darkblue;
+      &::before {
+        background: url('../img/icons/spot.svg') no-repeat center;
+      }
+      &--contact {
+        &::before {
+          background: url('../img/icons/mail.svg') no-repeat center;
+        }
+      }
+      &--phone {
+        &::before {
+          background: url('../img/icons/phone.svg') no-repeat center;
+        }
+      }
+    }
+  }
   &:not(:last-child)::after {
     content: '';
     position: absolute;

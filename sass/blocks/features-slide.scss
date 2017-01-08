@@ -366,7 +366,7 @@
   }
 }
 
-@include bg-images();
+@include bg-images(features-slide__image-item--image, '../img/work/slide');
 
 .features-slide__picture {
   max-width: 100%;

@@ -108,14 +108,13 @@ $retina-dpi: "min-resolution: 1.5dppx";
   }
 }
 
-@mixin bg-images() {
+@mixin bg-images($item, $source) {
   @for $i from 1 to 31 {
-    .features-slide__image-item--image-#{$i} {
-      background: url('../img/work/slide-#{$i}.jpg') no-repeat center;
+    .#{$item}-#{$i} {
+      background: url('#{$source}-#{$i}.jpg') no-repeat center;
       background-size: cover;
     }
   }
 }
-
 
 
