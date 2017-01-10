@@ -32,7 +32,7 @@
         <li class="header__menu-item"><a href="about.php">О компании</a></li>
         <li class="header__menu-item"><a href="features.php">Преимущества</a></li>
         <li class="header__menu-item"><a href="services.php">Услуги</a></li>
-        <li class="header__menu-item"><a href="experience.php">Наш опыт</a></li>
+        <!-- <li class="header__menu-item"><a href="experience.php">Наш опыт</a></li> -->
         <li class="header__menu-item"><a href="docs.php">Документация</a></li>
         <li class="header__menu-item"><a href="regions.php">Регионы</a></li>
         <li class="header__menu-item header__menu-item--active"><a href="#">Контакты</a></li>
@@ -40,7 +40,7 @@
       </ul>
     </nav>
     <div class="header__button-order">
-      <a href="#" class="standart-button standart-button--header">Заказать звонок</a>
+      <a class="standart-button standart-button--header modal-window__click">Заказать звонок</a>
     </div>
   </div>
 </header>
@@ -87,14 +87,14 @@
     </div>
   </section>
   <section class="map-block">
-    <div class="section-headers__page-header">
-      <h2 class="section-headers__main-header"><span></span>Контакты</h2>
-    </div>
     <div class="map-block__wrapper">
+      <div class="section-headers__page-header section-headers__page-header--contacts">
+        <h2 class="section-headers__main-header"><span></span>Контакты</h2>
+      </div>
       <div class="map-block__item">
         <div class="map-block__contacts-wrapper">
           <div class="map-block__contacts-item">
-            <img src="./img/other/location.jpg">
+            <img class="map-block__image" src="./img/other/location.jpg">
           </div>
         </div>
         <div class="address__item address__item--contacts">
@@ -104,6 +104,12 @@
             <a href="tel:88008008000" class="address__text address__text--contact address__text--phone">8 (800)
               800-80-00</a>
             <a href="mailto:mainoffice@transera.com" class="address__text address__text--contact">mainoffice@transera.com</a>
+          </div>
+        </div>
+        <div class="address__item address__item--contacts">
+          <h3 class="address__item-header">Наши<br> филиалы</h3>
+          <div class="address__text-block">
+            <p class="address__text">Расположены в городах: <br><br> Омск, Санкт-Петербург, Тюмень, Екатеринбург</p>
           </div>
         </div>
       </div>
@@ -199,6 +205,31 @@
     </div>
   </div>
 </footer>
+
+
+<!-- modal window -->
+<div class="modal-window"></div>
+<div class="modal-window__wrapper">
+  <form class="modal-window__form">
+    <div class="modal-window__close-form">&#735;</div>
+    <h4 class="modal-window__header">Введите свой телефон и мы перезвоним вам в течение 5 минут</h4>
+    <input type="hidden" name="utm_source" value="<?= $_GET['utm_source'] ?>">
+    <input type="hidden" name="utm_medium" value="<?= $_GET['utm_medium'] ?>">
+    <input type="hidden" name="utm_term" value="<?= $_GET['utm_term'] ?>">
+    <input type="hidden" name="utm_campaign" value="<?= $_GET['utm_campaign'] ?>">
+    <input type="hidden" name="source" value="<?= $_SERVER['HTTP_HOST'] ?>">
+    <div class="quote__form quote__form--modal">
+      <fieldset class="quote__item-wrapper">
+        <div class="quote__item">
+          <input class="quote__text-input" type="tel" name="phone" id="phone-number" required>
+          <label class="quote__label" for="phone-number">Номер телефона</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="message"></div>
+    <button id="submit-order" type="submit" class="standart-button standart-button--submit">Оставить заявку</button>
+  </form>
+</div>
 <script src="js/script.min.js"></script>
 </body>
 </html>

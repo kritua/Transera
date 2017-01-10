@@ -47,7 +47,26 @@
 
 .map-block__item {
   display: flex;
-  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include adaptive(desktop) {
+    padding: 30px 100px;
+  }
+}
+
+.map-block__contacts-wrapper {
+  flex-basis: 100%;
+  @include adaptive(tablet) {
+    flex-basis: auto;
+  }
+}
+
+.map-block__contacts-item {
+  text-align: center;
+}
+
+.map-block__image {
+  max-width: 170px;
 }
 
 .map__list {

@@ -22,8 +22,42 @@
   position: relative;
   margin-bottom: 30px;
   flex-basis: 100%;
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -27px;
+    width: 100px;
+    height: 1px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: $clr-darkblue;
+    @include adaptive(tablet) {
+      display: none;
+    }
+  }
+  @include adaptive(tablet) {
+    flex-basis: 33%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @include adaptive(desktop) {
+    flex-basis: 25%;
+    margin: 0 auto;
+  }
+  @include adaptive(desktop-ext) {
+    flex-basis: 21%;
+  }
   &--contacts {
-    flex-basis: 50%;
+    flex-basis: 80%;
+    @include adaptive(tablet) {
+      flex-basis: 50%;
+    }
+    @include adaptive(tablet) {
+      flex-basis: 33.33%;
+    }
     .address__text {
       color: $clr-darkblue;
       &::before {
@@ -41,30 +75,6 @@
       }
     }
   }
-  &:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    bottom: -27px;
-    width: 100px;
-    height: 1px;
-    left: 50%;
-    margin-left: -50px;
-    background-color: $clr-darkblue;
-    @include adaptive(tablet) {
-      display: none;
-    }
-  }
-  @include adaptive(tablet) {
-    flex-basis: 33%;
-    padding: 0 10px;
-  }
-  @include adaptive(desktop) {
-    flex-basis: 25%;
-    margin: 0 auto;
-  }
-  @include adaptive(desktop-ext) {
-    flex-basis: 21%;
-  }
 }
 
 .address__item-header {
@@ -75,6 +85,7 @@
   text-align: center;
   @include adaptive(desktop) {
     text-align: left;
+    flex-basis: 60%;
   }
   br {
     display: none;

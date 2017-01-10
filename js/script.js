@@ -82,6 +82,7 @@ $(document).ready(function () {
     transition: 'fade2',
     transitionDuration: '1000',
     timer: false,
+    cover: false,
     shuffle: true,
     slides: [
       {src: "./img/trawl/slide-1.jpg"},
@@ -95,12 +96,31 @@ $(document).ready(function () {
     ]
   });
   $("#specialist-previous").on('click', function () {
-    $(".specialist__item--image").vegas('previous');
+    $(".specialist__item--docs").vegas('previous');
   });
   $("#specialist-next").on('click', function () {
-    $(".specialist__item--image").vegas('next');
+    $(".specialist__item--docs").vegas('next');
   });
 
+  $(".specialist__item--docs").vegas({
+    delay: 5000,
+    transition: 'fade2',
+    transitionDuration: '1000',
+    timer: false,
+    shuffle: true,
+    slides: [
+      {src: "./img/docs/slide-1.jpg", cover: false},
+      {src: "./img/docs/slide-2.jpg", cover: false},
+      {src: "./img/docs/slide-3.jpg", cover: false}
+    ]
+  });
+  $("#specialist-docs-prev").on('click', function () {
+    $(".specialist__item--docs").vegas('previous');
+  });
+  $("#specialist-docs-next").on('click', function () {
+    $(".specialist__item--docs").vegas('next');
+  });
+  
 
   //Extends jquery lib to add on scroll events
   $.fn.extend({

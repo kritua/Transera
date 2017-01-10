@@ -15,6 +15,7 @@ $city = $info['city']['name_ru'];
 $country = $info['country']['name_ru'];
 
 $body =
+		($_POST['source'] ? "\nИсточник: {$_POST['source']}" : null).
 		($_POST['name'] ? "\nИмя: {$_POST['name']}" : null).
 		($_POST['phone'] ? "\nТелефон: {$_POST['phone']}" : null).
 		($_POST['mail'] ? "\nПочта: {$_POST['mail']}" : null).
@@ -25,7 +26,6 @@ $body =
 		($_POST['utm_medium'] ? "\nutm_medium: {$_POST['utm_medium']}" : null).
 		($_POST['utm_term'] ? "\nutm_term: {$_POST['utm_term']}" : null).
 		($_POST['utm_campaign'] ? "\nutm_campaign: {$_POST['utm_campaign']}" : null).
-		($_POST['source'] ? "\nИсточник: {$_POST['source']}" : null).
         "\nМестонахождение: {$city} ({$ip})";
 
 include 'classes/mailer/PHPMailerAutoload.php';
