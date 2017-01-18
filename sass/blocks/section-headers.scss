@@ -45,8 +45,8 @@
   position: relative;
   display: inline;
   @include font-bold();
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 2rem;
+  line-height: 1.5;
   margin: 20px 0;
   color: $clr-darkblue;
   @include adaptive(desktop) {
