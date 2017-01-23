@@ -16,7 +16,7 @@
 
 .page-headers__h1 {
   position: relative;
-  @include font-bold();
+  @include font-light();
   font-size: 6.5vh;
   line-height: 6.5vh;
   color: $clr-white;

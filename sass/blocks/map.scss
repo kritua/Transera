@@ -41,6 +41,9 @@
     right: 0;
     top: 0;
     bottom: 0;
+    width: 65%;
+  }
+  @include adaptive(desktop-ext) {
     width: 50%;
   }
 }
@@ -50,6 +53,9 @@
   flex-wrap: wrap;
   justify-content: center;
   @include adaptive(desktop) {
+    padding: 20px;
+  }
+  @include adaptive(desktop-ext) {
     padding: 30px 100px;
   }
 }

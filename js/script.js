@@ -372,7 +372,7 @@ $(document).ready(function () {
   $('button[type="submit"]').click(function(){
     var $form = $(this).closest('form');
     $.post('./form.php', $form.serialize(), function(data){
-      //if(data.res == 'success') yaCounter39711875.reachGoal('zayavka');
+      if(data.res == 'success') yaCounter42155824.reachGoal('zayavka');
       $form.find('.message').html('<div class="alert alert-' + data.res + '">' + data.msg + '</div>');
     }, 'json');
     $form.trigger('reset');

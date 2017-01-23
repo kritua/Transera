@@ -76,6 +76,12 @@
   }
 }
 
+.header__phone {
+  @include font-thin();
+  font-size: 30px;
+  color: $clr-white;
+}
+
 
 .header__menu-list {
   margin: 0;
