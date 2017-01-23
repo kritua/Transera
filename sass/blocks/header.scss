@@ -77,9 +77,10 @@
 }
 
 .header__phone {
-  @include font-thin();
-  font-size: 30px;
-  color: $clr-white;
+  @include font-regular();
+  font-size: 24px;
+  color: $clr-red;
+  white-space: nowrap;
 }
 
 
