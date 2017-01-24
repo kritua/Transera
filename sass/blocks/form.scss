@@ -77,18 +77,3 @@
   display: block;
 }
 
-.alert {
-
-}
-
-.message {
-  @include adaptive(desktop) {
-    width: 30%;
-    background: $clr-green;
-    margin: -20px auto 30px;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-  }
-}

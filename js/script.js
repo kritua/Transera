@@ -40,8 +40,7 @@ $(document).ready(function () {
 	
 	//Number validation
 	var countryCode = '+7';
-	$("#phone").mask(countryCode + ' ' + '(999) 999-99-99');
-	$("#phone2").mask(countryCode + ' ' + '(999) 999-99-99');
+	$("input[type='tel'").mask(countryCode + ' ' + '(999) 999-99-99');
 
 
 	//Header slideshow
@@ -54,8 +53,7 @@ $(document).ready(function () {
 		slides: [
 			{src: "./img/bg-full.jpg"},
 			{src: "./img/bg-full-1.jpg"},
-			{src: "./img/bg-full-2.jpg"},
-			{src: "./img/bg-full-3.jpg"}
+			{src: "./img/bg-full-2.jpg"}
 		]
 	});
 	$(".slider--previous").on('click', function () {
@@ -267,7 +265,7 @@ $(document).ready(function () {
 		event.preventDefault();
 		$('body, html').animate({
 			scrollTop: $($.attr(this, 'href')).offset().top
-		}, 'ease');
+		}, 500);
 	});
 });
 
