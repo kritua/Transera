@@ -92,10 +92,10 @@ gulp.task('vector', function () {
 });
 
 gulp.task('copy', function () {
-  gulp.src([
+  return gulp.src([
+    '*.php',
     'classes/**/*',
     'fonts/*.*',
-    '*.php',
     'css/*.gif'
   ], {
     base: '.'
