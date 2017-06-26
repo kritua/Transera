@@ -112,34 +112,42 @@ $(function () {
 
 
 	//Map on main page
-	$('.map__block--main').vectorMap({
-		map: 'ru_mill',
-		backgroundColor: 'transparent',
-		regionsSelectableOne: !0,
-		onRegionClick: function (event, code) {
-			window.location.href = "regions.php#" + code
+	var $mainMap = $('.map__block--main');
 
-		},
-		onMarkerClick: function (event, code) {
-			window.location.href = "regions.php#field-" + code
-		},
-		markers: markersSpot,
-		series: seriesVar
-	});
+	if($mainMap) {
+		$mainMap.vectorMap({
+			map: 'ru_mill',
+			backgroundColor: 'transparent',
+			regionsSelectableOne: !0,
+			onRegionClick: function (event, code) {
+				window.location.href = "regions.php#" + code
+
+			},
+			onMarkerClick: function (event, code) {
+				window.location.href = "regions.php#field-" + code
+			},
+			markers: markersSpot,
+			series: seriesVar
+		});
+	}
 
 	//Map on regions page
-	$('.map__block--regions').vectorMap({
-		onRegionClick: function (event, code) {
-			$('body').animate({
-				scrollTop: $('#' + code).offset().top
-			}, 500)
-		},
-		onMarkerClick: function (event, code) {
-			$('body').animate({
-				scrollTop: $('#' + 'field-' + code).offset().top
-			}, 500)
-		},
-		markers: markersSpot,
-		series: seriesVar
-	});
+	var $regionsMap = $('.map__block--regions');
+
+	if($regionsMap) {
+		$regionsMap.vectorMap({
+			onRegionClick: function (event, code) {
+				$('body').animate({
+					scrollTop: $('#' + code).offset().top
+				}, 500)
+			},
+			onMarkerClick: function (event, code) {
+				$('body').animate({
+					scrollTop: $('#' + 'field-' + code).offset().top
+				}, 500)
+			},
+			markers: markersSpot,
+			series: seriesVar
+		});
+	}
 });
