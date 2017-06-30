@@ -46,6 +46,49 @@
 			}
 		}
 	}
+
+	&--about {
+
+		.about-us__wrapper {
+			flex-wrap: wrap;
+
+			@include adaptive(desktop) {
+				flex-wrap: nowrap;
+			}
+		}
+	}
+}
+
+.about-us__item-header {
+	@include font-medium();
+	font-size: 18px;
+	line-height: 24px;
+	color: $clr-darkblue;
+	margin-bottom: 0;
+	@include adaptive(desktop) {
+		margin: 0 10px;
+	}
+	@include adaptive(desktop-ext) {
+		margin-bottom: 20px;
+		br {
+			display: none;
+		}
+	}
+}
+
+.about-us__graph-block {
+	flex-basis: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	@include adaptive(desktop) {
+		flex-basis: 50%;
+	}
+	& > * {
+		flex-basis: 100%;
+		text-align: center;
+	}
 }
 
 .about-us__wrapper {

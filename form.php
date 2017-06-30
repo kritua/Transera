@@ -33,7 +33,7 @@ $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 $mail->setFrom('info@sts.ru', 'SpecTransService', $_POST['source']);
 $mail->addAddress('kritua2@gmail.com');
-//$mail->addAddress('info@pro-sts.ru');
+$mail->addAddress('sale@pro-sts.ru');
 $mail->Subject = $_POST['type'] ? $_POST['type'] : 'Заявка с сайта ' . $_POST['source'];
 $mail->Body = $body;
 
