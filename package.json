@@ -1,17 +1,17 @@
 {
-  "name": "Transera",
+  "name": "Bopp",
   "version": "0.1.0",
   "private": true,
-  "description": "Transera Company",
+  "description": "Omega print",
   "author": "Никита Брежнев",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kritua/Transera.git"
+    "url": "https://github.com/kritua/Bopp.git"
   },
   "bugs": {
-    "url": "https://github.com/kritua/Transera/issues"
+    "url": "https://github.com/kritua/Bopp/issues"
   },
-  "homepage": "https://github.com/kritua/Transera",
+  "homepage": "https://github.com/kritua/Bopp",
   "devDependencies": {
     "autoprefixer": "6.4.1",
     "browser-sync": "2.15.0",
