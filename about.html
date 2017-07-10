@@ -40,7 +40,7 @@
 		</nav>
 		<div class="header__button-order">
 			<a class="standart-button standart-button--header modal-window__click header__order-button">Заказать звонок</a>
-			<a class="standart-button standart-button--header modal-window__click header__order-button">Оформить заявку</a>
+			<a href="index.php#quote" class="standart-button standart-button--header header__order-button">Оформить заявку</a>
 		</div>
 	</div>
 </header>
@@ -229,11 +229,7 @@
 	<form class="modal-window__form">
 		<div class="modal-window__close-form">&#735;</div>
 		<h4 class="modal-window__header">Введите свой телефон и мы перезвоним вам в течение 5 минут</h4>
-		<input type="hidden" name="utm_source" value="<?= $_GET['utm_source'] ?>">
-		<input type="hidden" name="utm_medium" value="<?= $_GET['utm_medium'] ?>">
-		<input type="hidden" name="utm_term" value="<?= $_GET['utm_term'] ?>">
-		<input type="hidden" name="utm_campaign" value="<?= $_GET['utm_campaign'] ?>">
-		<input type="hidden" name="source" value="<?= $_SERVER['HTTP_HOST'] ?>">
+
 		<div class="quote__form quote__form--modal">
 			<fieldset class="quote__item-wrapper">
 				<div class="quote__item">

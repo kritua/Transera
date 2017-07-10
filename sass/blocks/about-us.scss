@@ -233,10 +233,13 @@
 
 .about-us__list-item {
 	position: relative;
+
 	@include font-regular();
 	font-size: 14px;
-	line-height: 30px;
+	line-height: 1.8;
 	list-style: none;
+	text-align: justify;
+
 	&::before {
 		content: '';
 		position: absolute;
