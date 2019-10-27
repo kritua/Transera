@@ -40,17 +40,19 @@ gulp.task('style', function () {
 		.pipe(server.stream());
 });
 
-gulp.task('serve', ['style'], function () {
-	server.init({
-		server: '.',
-		notify: false,
-		open: true,
-		ui: false
-	});
+gulp.task('serve', async () => {
+	gulp.series('style', () => {
+		server.init({
+			server: '.',
+			notify: false,
+			open: true,
+			ui: false
+		});
 
-	gulp.watch('sass/**/*.{scss,sass}', ['style']);
-	gulp.watch(['js/*.js', '!js/script.min.js'], ['scripts']);
-	gulp.watch('*.html').on('change', server.reload);
+		gulp.watch('sass/**/*.{scss,sass}', ['style']);
+		gulp.watch(['js/*.js', '!js/script.min.js'], ['scripts']);
+		gulp.watch('*.html').on('change', server.reload);
+	})
 });
 
 gulp.task('scripts', function () {
